@@ -3,11 +3,22 @@
 extends CanvasLayer
 class_name LineReader
 
-@export_group("Timing")
+@export_group("UX")
+@export_subgroup("Timing")
 @export_range(1.0, 101.0, 1.0) var text_speed := 60.0
 @export var auto_pause_duration := 0.2
 @export var auto_continue := false
 @export_range(0.1, 60.0, 0.1) var auto_continue_delay := 4.0
+
+@export_subgroup("Other")
+@export var show_text_during_choices := false
+
+@export_subgroup("Advance")
+@export var show_advance_available := true
+@export_range(0.0, 1.0) var advance_available_lerp_weight := 0.1
+@export_range(0.0, 10.0) var advance_available_delay := 0.5
+var remaining_advance_delay := advance_available_delay
+#var remaining_auto_continue_duration := auto_continue_delay
 
 @export_group("Name Setup")
 ## The name of the dropdown property used for keying names. Usually something like "character"
@@ -20,7 +31,7 @@ var name_for_blank_name := ""
 @export var name_colors := {}
 
 @export_group("Mandatory Children")
-## The Control holding Choice Option Container. Should be set to block all inputs outside of the choice buttons.
+## The Control holding Choice Option Container. Should have its mouse_filter set to Stop and FullRect Layout.
 @export var choice_container:PanelContainer:
 	get:
 		return choice_container
@@ -85,13 +96,6 @@ var name_container: Control:
 @export var next_prompt_container: Control
 ## Node that has vars and funcs to evaluate in dynamic Strings.
 @export var inline_evaluator: Node
-
-@export_group("Advance")
-@export var show_advance_available := true
-@export_range(0.0, 1.0) var advance_available_lerp_weight := 0.1
-@export_range(0.0, 10.0) var advance_available_delay := 0.5
-var remaining_advance_delay := advance_available_delay
-#var remaining_auto_continue_duration := auto_continue_delay
 
 
 @export_group("Parser Event Configurations")
@@ -192,7 +196,7 @@ func deserialize(data: Dictionary):
 	chunk_index = int(data.get("chunk_index"))
 	terminated = data.get("terminated")
 	
-	text_container.visible = line_type == Parser.LineType.Text
+	text_container.visible = line_type == Parser.LineType.Text or (line_type == Parser.LineType.Choice and show_text_during_choices)
 	showing_text = line_type == Parser.LineType.Text
 	choice_container.visible = line_type == Parser.LineType.Choice
 	
@@ -332,7 +336,7 @@ func read_new_line(new_line: Dictionary):
 		content = line_data.get("content").get("choices")
 	var content_name = line_data.get("content").get("name") # wtf is this
 	
-	text_container.visible = line_type == Parser.LineType.Text
+	text_container.visible = line_type == Parser.LineType.Text or (line_type == Parser.LineType.Choice and show_text_during_choices)
 	showing_text = line_type == Parser.LineType.Text
 	choice_container.visible = line_type == Parser.LineType.Choice
 	match line_type:
