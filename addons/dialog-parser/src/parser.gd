@@ -85,8 +85,11 @@ func reset_and_start():
 	line_reader.visible = true
 	paused = false
 	reset_facts()
-	read_page(0)
+	read_page(17)
 	history = []
+
+func fact(fact_name: String):
+	return facts.get(fact_name, false)
 
 func handle_event(event_name: String, event_args: Dictionary):
 	match event_name:

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://duch6buu4x3ns"]
+
+[ext_resource type="Script" path="res://systems/sound/sound.gd" id="1_ko61a"]
+
+[node name="Sound" type="Node"]
+script = ExtResource("1_ko61a")
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]

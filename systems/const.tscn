@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bacu3dk8w7vil"]
+
+[ext_resource type="Script" path="res://systems/const.gd" id="1_piubw"]
+
+[node name="CONST" type="Node"]
+script = ExtResource("1_piubw")

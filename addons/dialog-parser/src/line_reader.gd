@@ -642,7 +642,8 @@ func find_next_pause():
 	if pause_types.size() > 0 and next_pause_position_index < pause_types.size():
 		next_pause_type = pause_types[next_pause_position_index]
 	
-
+func set_actor_name(actor_key:String, new_name:String):
+	name_map[actor_key] = new_name
 
 func build_choices(choices):
 	for c in choice_option_container.get_children():

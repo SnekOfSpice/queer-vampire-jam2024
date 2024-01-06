@@ -17,8 +17,18 @@ config/icon="res://icon.svg"
 
 [autoload]
 
+Const="*res://systems/const.tscn"
 ParserEvents="*res://addons/dialog-parser/src/parser_events.tscn"
 Parser="*res://addons/dialog-parser/src/parser.tscn"
+GameState="*res://systems/game_state.tscn"
+Options="*res://systems/options/options.tscn"
+Sound="*res://systems/sound/sound.tscn"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="canvas_items"
 
 [rendering]
 
