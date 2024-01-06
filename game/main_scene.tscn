@@ -1,10 +1,45 @@
-[gd_scene load_steps=6 format=3 uid="uid://k107v18q8nny"]
+[gd_scene load_steps=12 format=3 uid="uid://k107v18q8nny"]
 
 [ext_resource type="Script" path="res://game/main_scene.gd" id="1_8qkgv"]
 [ext_resource type="PackedScene" uid="uid://bb8yvsx0g14vl" path="res://addons/dialog-parser/src/line_reader.tscn" id="1_wgwtm"]
 [ext_resource type="Script" path="res://game/InstructionHandlerCustom.gd" id="2_8k1vr"]
 [ext_resource type="PackedScene" uid="uid://jehkf8i5k1og" path="res://game/game.tscn" id="2_im3iw"]
 [ext_resource type="Script" path="res://game/Evaluator.gd" id="5_loefn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ldi65"]
+content_margin_left = 14.0
+content_margin_right = 24.0
+bg_color = Color(0.12549, 0.105882, 0.0627451, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r6p7q"]
+bg_color = Color(0.133333, 0.0627451, 0.00392157, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.537255, 0.45098, 0.278431, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 4
+
+[sub_resource type="Theme" id="Theme_k7ovv"]
+Label/styles/normal = SubResource("StyleBoxFlat_ldi65")
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_r6p7q")
+
+[sub_resource type="Gradient" id="Gradient_cw7l5"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_5dn0v"]
+gradient = SubResource("Gradient_cw7l5")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mm5ej"]
+bg_color = Color(0.133333, 0.133333, 0.133333, 0.290196)
+border_width_left = 10
+border_width_top = 20
+border_width_right = 10
+border_color = Color(0, 0, 0, 1)
+border_blend = true
 
 [node name="MainScene" type="Control"]
 layout_mode = 3
@@ -39,13 +74,16 @@ show_text_during_choices = true
 show_advance_available = false
 property_for_name = "character"
 name_for_blank_name = "narrator"
+name_map = {
+"capra": "Capra"
+}
 choice_container = NodePath("../CanvasLayer/Control/ChoiceContainer")
 choice_option_container = NodePath("../CanvasLayer/Control/ChoiceContainer/ChoiceItemContainer")
 instruction_handler = NodePath("InstructionHandlerCustom")
-text_content = NodePath("../CanvasLayer/Control/TextContainer/VBoxContainer/PanelContainer/RichTextLabel")
+text_content = NodePath("../CanvasLayer/Control/TextContainer/MarginContainer/VBoxContainer/PanelContainer/BottomText")
 text_container = NodePath("../CanvasLayer/Control/TextContainer")
-name_label = NodePath("../CanvasLayer/Control/TextContainer/VBoxContainer/Label")
-name_container = NodePath("../CanvasLayer/Control/TextContainer/VBoxContainer/Label")
+name_label = NodePath("../CanvasLayer/Control/TextContainer/MarginContainer/VBoxContainer/Label")
+name_container = NodePath("../CanvasLayer/Control/TextContainer/MarginContainer/VBoxContainer/Label")
 inline_evaluator = NodePath("../Evaluator")
 
 [node name="InstructionHandlerCustom" type="Node" parent="LineReader"]
@@ -61,6 +99,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+theme = SubResource("Theme_k7ovv")
 
 [node name="TextContainer" type="CenterContainer" parent="CanvasLayer/Control"]
 layout_mode = 1
@@ -73,22 +112,30 @@ grow_horizontal = 2
 grow_vertical = 0
 mouse_filter = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/TextContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Control/TextContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_bottom = 25
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/TextContainer/MarginContainer"]
 layout_mode = 2
 mouse_filter = 2
 alignment = 2
 
-[node name="Label" type="Label" parent="CanvasLayer/Control/TextContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="CanvasLayer/Control/TextContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 0
+text = "name here"
 
-[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/Control/TextContainer/VBoxContainer"]
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/Control/TextContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 8
 mouse_filter = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Control/TextContainer/VBoxContainer/PanelContainer"]
+[node name="BottomText" type="RichTextLabel" parent="CanvasLayer/Control/TextContainer/MarginContainer/VBoxContainer/PanelContainer"]
 custom_minimum_size = Vector2(900, 130)
 layout_mode = 2
+text = "enter bottom text here"
 fit_content = true
 autowrap_mode = 2
 visible_characters = 0
@@ -102,14 +149,23 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/FullTextContainer"]
+layout_mode = 2
+texture = SubResource("GradientTexture2D_5dn0v")
 
 [node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/Control/FullTextContainer"]
 custom_minimum_size = Vector2(900, 600)
 layout_mode = 2
+mouse_filter = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Control/FullTextContainer/CenterContainer"]
+[node name="FullText" type="RichTextLabel" parent="CanvasLayer/Control/FullTextContainer/CenterContainer"]
 custom_minimum_size = Vector2(900, 600)
 layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 60
+bbcode_enabled = true
 text = "jghjkgkhjkjhk ghjk"
 fit_content = true
 
@@ -120,6 +176,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_mm5ej")
 
 [node name="ChoiceItemContainer" type="VBoxContainer" parent="CanvasLayer/Control/ChoiceContainer"]
 layout_mode = 2
@@ -130,3 +187,4 @@ size_flags_vertical = 4
 script = ExtResource("5_loefn")
 
 [connection signal="set_actor_name" from="LineReader/InstructionHandlerCustom" to="LineReader" method="set_actor_name"]
+[connection signal="set_text_content" from="LineReader/InstructionHandlerCustom" to="." method="set_text_content"]

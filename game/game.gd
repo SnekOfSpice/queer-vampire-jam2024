@@ -39,11 +39,14 @@ func arrange_characters():
 			continue
 		if c.position_preference == "left":
 			c.position = $CharacterPositions/Left.position + Vector2(40, 0) * left_count
+			c.z_index = 10 - left_count
 			left_count += 1
 		elif c.position_preference == "right":
 			c.position = $CharacterPositions/Right.position - Vector2(40, 0) * right_count
+			c.z_index = 10 - right_count
 			right_count += 1
 		else:
 			var mid = ($CharacterPositions/Left.position + $CharacterPositions/Right.position) * 0.5
 			c.position = mid + Vector2(20, 0) * neutral_count * 1 if neutral_count % 2 == 0 else -1
+			c.z_index = 10 - neutral_count
 			neutral_count += 1

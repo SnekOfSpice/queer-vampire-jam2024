@@ -11,15 +11,15 @@ script = ExtResource("1_lbr4s")
 
 [node name="Characters" type="Node2D" parent="."]
 
-[node name="Character" parent="Characters" instance=ExtResource("2_5j4u0")]
+[node name="Capra" parent="Characters" instance=ExtResource("2_5j4u0")]
 character_name = "capra"
 position_preference = "left"
 
-[node name="Character2" parent="Characters" instance=ExtResource("2_5j4u0")]
+[node name="Crosscull" parent="Characters" instance=ExtResource("2_5j4u0")]
 character_name = "crosscull"
 position_preference = "right"
 
-[node name="Character3" parent="Characters" instance=ExtResource("2_5j4u0")]
+[node name="Angel" parent="Characters" instance=ExtResource("2_5j4u0")]
 character_name = "angel"
 
 [node name="CharacterPositions" type="Node2D" parent="."]

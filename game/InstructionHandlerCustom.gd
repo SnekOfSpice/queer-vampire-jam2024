@@ -1,6 +1,7 @@
 extends InstructionHandler
 
 signal set_actor_name(actor_key, new_name)
+signal set_text_content(style)
 
 func execute(instruction_name, args):
 	prints("executing ", instruction_name, " with ", args)
@@ -16,6 +17,8 @@ func execute(instruction_name, args):
 				push_warning("idk get fucked")
 				return
 			GameState.game.set_character_visible(args.get("name"), vis)
+		"hide-all-characters":
+			GameState.game.set_all_characters_visible(false)
 		"play-bgm":
 			var track_name = args.get("track_name")
 			var fade_in = float(args.get("fade_in_time"))
@@ -28,3 +31,5 @@ func execute(instruction_name, args):
 			var actor_key = args.get("actor_key")
 			var new_name = args.get("new_name")
 			emit_signal("set_actor_name", actor_key, new_name)
+		"set-display-style":
+			emit_signal("set_text_content", args.get("style"))
