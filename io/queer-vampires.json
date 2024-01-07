@@ -62,13 +62,6 @@
 	"instruction_templates": [
 		{
 			"args": [
-				"character-name",
-				"clear-others"
-			],
-			"name": "show-character"
-		},
-		{
-			"args": [
 				"key",
 				" random-pitch"
 			],
@@ -121,6 +114,27 @@
 				"text"
 			],
 			"name": "fullscreen-text"
+		},
+		{
+			"args": [
+				"fade_in",
+				"sustain",
+				"fade_out",
+				"new_background",
+				"new_bgm",
+				" hide_characters"
+			],
+			"name": "black-fade"
+		},
+		{
+			"args": [
+				"screen"
+			],
+			"name": "open-pc"
+		},
+		{
+			"args": [],
+			"name": "close-pc"
 		}
 	],
 	"page_data": {
@@ -851,11 +865,53 @@
 						"operand_key": "AND"
 					},
 					"content": {
+						"active_actors": [
+							"narrator",
+							"capra",
+							"rider",
+							"icy-aloe",
+							"starry",
+							"angel",
+							"crosscull",
+							"mom",
+							"dad",
+							"metaspirit",
+							"therapist",
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms"
+						],
+						"active_actors_title": "characters",
+						"content": "[]>capra{capra-emotion|neutral}:Oh how I love my life.\n[]>narrator:As you sit there, the silence of the closed video call enveloping your mind, the little mental focus you used for that conversation with your therapist starts to dissipate.\n[]>capra:I'm gonna go make instant noodles.\n[]>narrator:10 minutes later, you do.\n[]>narrator:You spend the rest of the day doing not much of anything. Any new job offers that might have found their way into your life are snuffed out by the fact that you actually never sent out any applications. <lc>As the evening drags on more and more, and after you've opened and closed your game collection like 20 times, you decide to do something!\n[]>narrator:You could make your brain rot more on social media. Alternatively, one KommKomm server in the endless array of joined-but-inactive-on servers seems to have some activity right now. An active voice call. You could join them, but you also know that you'd probably be an outsider with no friends.\n[]>capra:Oh my god I don't want this to get awkward.\n[]>narrator:You need a decision, fast. Within a single movement, you jerk your mouse around, and click on the window of choice. It is...",
+						"selected_actor_dropdown_index": 0,
+						"use_dialog_syntax": true
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 0,
+					"meta.is_head_editable": true,
+					"meta.line_index": 0,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
 						"auto_switch": false,
 						"choices": [
 							{
 								"choice_text.disabled": "",
-								"choice_text.enabled": "SPend evening alone",
+								"choice_text.enabled": "social media",
 								"choice_text.enabled_as_default": true,
 								"conditionals": {
 									"behavior": 0,
@@ -875,7 +931,7 @@
 							},
 							{
 								"choice_text.disabled": "",
-								"choice_text.enabled": "Hang out on that server",
+								"choice_text.enabled": "that random voice call",
 								"choice_text.enabled_as_default": true,
 								"conditionals": {
 									"behavior": 0,
@@ -902,7 +958,7 @@
 					"header": [],
 					"line_type": 1,
 					"meta.is_head_editable": true,
-					"meta.line_index": 0,
+					"meta.line_index": 1,
 					"meta.visible": true
 				}
 			],
@@ -1219,6 +1275,48 @@
 						"operand_key": "AND"
 					},
 					"content": {
+						"active_actors": [
+							"narrator",
+							"capra",
+							"rider",
+							"icy-aloe",
+							"starry",
+							"angel",
+							"crosscull",
+							"mom",
+							"dad",
+							"metaspirit",
+							"therapist",
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms"
+						],
+						"active_actors_title": "characters",
+						"content": "[]>narrator:On second thought, you'd probably barge in at an inopportune time. Someone would be sharing a really engaging story, only for you to completely disrup them.\n[]>capra:Actually, let's browse some other channels. Text channels. <ap>Text channels.",
+						"selected_actor_dropdown_index": 0,
+						"use_dialog_syntax": true
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 0,
+					"meta.is_head_editable": true,
+					"meta.line_index": 0,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
 						"auto_switch": false,
 						"choices": [
 							{
@@ -1270,7 +1368,7 @@
 					"header": [],
 					"line_type": 1,
 					"meta.is_head_editable": true,
-					"meta.line_index": 0,
+					"meta.line_index": 1,
 					"meta.visible": true
 				}
 			],
@@ -1597,6 +1695,107 @@
 						"operand_key": "AND"
 					},
 					"content": {
+						"content": [
+							{
+								"name": "screen",
+								"value": "voice-call"
+							}
+						],
+						"delay.after": 0,
+						"delay.before": 0,
+						"name": "open-pc"
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 2,
+					"meta.is_head_editable": true,
+					"meta.line_index": 0,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"content": [
+							{
+								"name": "name",
+								"value": "rider"
+							},
+							{
+								"name": "visible",
+								"value": "true"
+							}
+						],
+						"delay.after": 0,
+						"delay.before": 0,
+						"name": "character-visible"
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 2,
+					"meta.is_head_editable": true,
+					"meta.line_index": 1,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"content": [
+							{
+								"name": "key",
+								"value": "join-noise"
+							},
+							{
+								"name": " random-pitch",
+								"value": "false"
+							}
+						],
+						"delay.after": 0,
+						"delay.before": 0,
+						"name": "play-sfx"
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 2,
+					"meta.is_head_editable": true,
+					"meta.line_index": 2,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
 						"active_actors": [
 							"narrator",
 							"capra",
@@ -1624,7 +1823,7 @@
 					"header": [],
 					"line_type": 0,
 					"meta.is_head_editable": true,
-					"meta.line_index": 0,
+					"meta.line_index": 3,
 					"meta.visible": true
 				},
 				{
@@ -1710,7 +1909,7 @@
 					"header": [],
 					"line_type": 1,
 					"meta.is_head_editable": true,
-					"meta.line_index": 1,
+					"meta.line_index": 4,
 					"meta.visible": true
 				},
 				{
@@ -1752,7 +1951,7 @@
 					"header": [],
 					"line_type": 0,
 					"meta.is_head_editable": true,
-					"meta.line_index": 2,
+					"meta.line_index": 5,
 					"meta.visible": true
 				},
 				{
@@ -1794,7 +1993,7 @@
 					"header": [],
 					"line_type": 0,
 					"meta.is_head_editable": true,
-					"meta.line_index": 3,
+					"meta.line_index": 6,
 					"meta.visible": true
 				},
 				{
@@ -1836,7 +2035,7 @@
 					"header": [],
 					"line_type": 0,
 					"meta.is_head_editable": true,
-					"meta.line_index": 4,
+					"meta.line_index": 7,
 					"meta.visible": true
 				},
 				{
@@ -1942,7 +2141,7 @@
 					"header": [],
 					"line_type": 1,
 					"meta.is_head_editable": true,
-					"meta.line_index": 5,
+					"meta.line_index": 8,
 					"meta.visible": true
 				},
 				{
@@ -1985,7 +2184,7 @@
 					"header": [],
 					"line_type": 0,
 					"meta.is_head_editable": true,
-					"meta.line_index": 6,
+					"meta.line_index": 9,
 					"meta.visible": true
 				},
 				{
@@ -2028,7 +2227,7 @@
 					"header": [],
 					"line_type": 0,
 					"meta.is_head_editable": true,
-					"meta.line_index": 7,
+					"meta.line_index": 10,
 					"meta.visible": true
 				},
 				{
@@ -2071,7 +2270,7 @@
 					"header": [],
 					"line_type": 0,
 					"meta.is_head_editable": true,
-					"meta.line_index": 8,
+					"meta.line_index": 11,
 					"meta.visible": true
 				},
 				{
@@ -2137,7 +2336,7 @@
 					"header": [],
 					"line_type": 1,
 					"meta.is_head_editable": true,
-					"meta.line_index": 9,
+					"meta.line_index": 12,
 					"meta.visible": true
 				},
 				{
@@ -2179,7 +2378,7 @@
 					"header": [],
 					"line_type": 0,
 					"meta.is_head_editable": true,
-					"meta.line_index": 10,
+					"meta.line_index": 13,
 					"meta.visible": true
 				}
 			],
@@ -2312,7 +2511,7 @@
 						"content": [
 							{
 								"name": "track_name",
-								"value": "concert_ambient"
+								"value": "concert-ambient"
 							},
 							{
 								"name": "fade_in_time",
@@ -2751,7 +2950,7 @@
 						"content": [
 							{
 								"name": "track_name",
-								"value": "concert_ambient"
+								"value": "concert-ambient"
 							},
 							{
 								"name": "fade_in_time",
@@ -2800,7 +2999,7 @@
 							"yearnfarms"
 						],
 						"active_actors_title": "characters",
-						"content": "[]>narrator: Angel turns to the crowd, trying to spot Crosscull. Xe's surprisingly difficult to identify, despite the tall body and metal mask. When xe comes back, you immediately feel the adrenaline spike in your veins.\n[]>capra: Sorry, I gotta go to the bathroom.\n[]>narrator: When you return, Angel greets you with a worried smile.\n[]>angel: Is everything alright?\n[]>capra: Yeah.\n[]>narrator: It's not really a response but you mentally put a checkmark on it.\n[]>angel: Awesome. Just let Crosscull or me know if you get uncomfortable during the show.\n[]>crosscull: Please do.\n[]>capra: I will.\n[]>narrator: Crosscull turns to Angel.\n[]>crosscull: That pit was quite good. I think you'll enjoy it.\n[]>angel: And no shirtless assholes so far!\n[]>crosscull: Quite true.\n[]>narrator: The conversation shifts back to the concert, and eventually, the venue.\nfade to black\n[]>angel: Another thing I also love about this place is how naturally people are about the whole vampire thing. They know we won't randomly kill them. And if you ever need some vegan blood, they have Artihem capsules at the bar too.\n[]>capra: Oh, that's nice to know. I've- uhhh- I've always just suffered with the thirst symptoms. Haha.\n[]>angel: And you're still standing!\n[]>crosscull: Unhealthy though. Let us know if you need some patching up.\n[]>capra: Thank you. I'll manage for now.",
+						"content": "[]>narrator: Angel turns to the crowd, trying to spot Crosscull. Xe's surprisingly difficult to identify, despite the tall body and metal mask. When xe comes back, you immediately feel the adrenaline spike in your veins.\n[]>capra: Sorry, I gotta go to the bathroom.\n[]>narrator: When you return, Angel greets you with a worried smile.\n[]>angel: Is everything alright?\n[]>capra: Yeah.\n[]>narrator: It's not really a response but you mentally put a checkmark on it.\n[]>angel: Awesome. Just let Crosscull or me know if you get uncomfortable during the show.\n[]>crosscull: Please do.\n[]>capra: I will.\n[]>narrator: Crosscull turns to Angel.\n[]>crosscull: That pit was quite good. I think you'll enjoy it.\n[]>angel: And no shirtless assholes so far!\n[]>crosscull: Quite true.\n[]>narrator: The conversation shifts back to the concert, and eventually, the venue.",
 						"selected_actor_dropdown_index": 0,
 						"use_dialog_syntax": true
 					},
@@ -2811,6 +3010,99 @@
 					"line_type": 0,
 					"meta.is_head_editable": true,
 					"meta.line_index": 13,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"content": [
+							{
+								"name": "fade_in",
+								"value": "5.0"
+							},
+							{
+								"name": "sustain",
+								"value": "2.0"
+							},
+							{
+								"name": "fade_out",
+								"value": "5.0"
+							},
+							{
+								"name": "new_background",
+								"value": "none"
+							},
+							{
+								"name": "new_bgm",
+								"value": "none"
+							},
+							{
+								"name": " hide_characters",
+								"value": "false"
+							}
+						],
+						"delay.after": 0,
+						"delay.before": 0,
+						"name": "black-fade"
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 2,
+					"meta.is_head_editable": true,
+					"meta.line_index": 14,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"active_actors": [
+							"narrator",
+							"capra",
+							"rider",
+							"icy-aloe",
+							"starry",
+							"angel",
+							"crosscull",
+							"mom",
+							"dad",
+							"metaspirit",
+							"therapist",
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms"
+						],
+						"active_actors_title": "characters",
+						"content": "[]>angel: Another thing I also love about this place is how naturally people are about the whole vampire thing. They know we won't randomly kill them. And if you ever need some vegan blood, they have Artihem capsules at the bar too.\n[]>capra: Oh, that's nice to know. I've- uhhh- I've always just suffered with the thirst symptoms. Haha.\n[]>angel: And you're still standing!\n[]>crosscull: Unhealthy though. Let us know if you need some patching up.\n[]>capra: Thank you. I'll manage for now.",
+						"selected_actor_dropdown_index": 0,
+						"use_dialog_syntax": true
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 0,
+					"meta.is_head_editable": true,
+					"meta.line_index": 15,
 					"meta.visible": true
 				},
 				{
@@ -2845,7 +3137,7 @@
 					"header": [],
 					"line_type": 2,
 					"meta.is_head_editable": true,
-					"meta.line_index": 14,
+					"meta.line_index": 16,
 					"meta.visible": true
 				},
 				{
@@ -2887,7 +3179,7 @@
 					"header": [],
 					"line_type": 0,
 					"meta.is_head_editable": true,
-					"meta.line_index": 15,
+					"meta.line_index": 17,
 					"meta.visible": true
 				},
 				{
@@ -2922,7 +3214,7 @@
 					"header": [],
 					"line_type": 2,
 					"meta.is_head_editable": true,
-					"meta.line_index": 16,
+					"meta.line_index": 18,
 					"meta.visible": true
 				},
 				{
@@ -2964,7 +3256,7 @@
 					"header": [],
 					"line_type": 0,
 					"meta.is_head_editable": true,
-					"meta.line_index": 17,
+					"meta.line_index": 19,
 					"meta.visible": true
 				},
 				{
@@ -2999,7 +3291,7 @@
 					"header": [],
 					"line_type": 2,
 					"meta.is_head_editable": true,
-					"meta.line_index": 18,
+					"meta.line_index": 20,
 					"meta.visible": true
 				},
 				{
@@ -3034,7 +3326,7 @@
 					"header": [],
 					"line_type": 2,
 					"meta.is_head_editable": true,
-					"meta.line_index": 19,
+					"meta.line_index": 21,
 					"meta.visible": true
 				},
 				{
@@ -3076,7 +3368,7 @@
 					"header": [],
 					"line_type": 0,
 					"meta.is_head_editable": true,
-					"meta.line_index": 20,
+					"meta.line_index": 22,
 					"meta.visible": true
 				},
 				{
@@ -3094,7 +3386,7 @@
 						"content": [
 							{
 								"name": "track_name",
-								"value": "outside_ambient"
+								"value": "outside-ambient"
 							},
 							{
 								"name": "fade_in_time",
@@ -3111,7 +3403,7 @@
 					"header": [],
 					"line_type": 2,
 					"meta.is_head_editable": true,
-					"meta.line_index": 21,
+					"meta.line_index": 23,
 					"meta.visible": true
 				},
 				{
@@ -3146,7 +3438,7 @@
 					"header": [],
 					"line_type": 2,
 					"meta.is_head_editable": true,
-					"meta.line_index": 22,
+					"meta.line_index": 24,
 					"meta.visible": true
 				},
 				{
@@ -3172,7 +3464,7 @@
 					"header": [],
 					"line_type": 2,
 					"meta.is_head_editable": true,
-					"meta.line_index": 23,
+					"meta.line_index": 25,
 					"meta.visible": true
 				},
 				{
@@ -3214,7 +3506,7 @@
 					"header": [],
 					"line_type": 0,
 					"meta.is_head_editable": true,
-					"meta.line_index": 24,
+					"meta.line_index": 26,
 					"meta.visible": true
 				}
 			],

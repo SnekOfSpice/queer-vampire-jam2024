@@ -2,10 +2,20 @@ extends InstructionHandler
 
 signal set_actor_name(actor_key, new_name)
 signal set_text_content(style)
+signal make_screen_black(hide_characters: bool, new_background: String, attack: float, release: float, sustain: float, new_bgm: String)
 
 func execute(instruction_name, args):
 	prints("executing ", instruction_name, " with ", args)
 	match instruction_name:
+		"black-fade":
+			var fade_in := float(args.get("fade_in"))
+			var fade_out := float(args.get("fade_out"))
+			var sustain := float(args.get("sustain"))
+			var new_background :String = args.get("new_background")
+			var new_bgm :String = args.get("new_bgm")
+			var hide_characters := true if args.get("hide_characters") == "true" else false
+			emit_signal("make_screen_black", hide_characters, new_background, fade_in, fade_out, sustain, new_bgm)
+			return true
 		"character-visible":
 			var vis_str = args.get("visible")
 			var vis : bool
@@ -17,6 +27,9 @@ func execute(instruction_name, args):
 				push_warning("idk get fucked")
 				return
 			GameState.game.set_character_visible(args.get("name"), vis)
+			if GameState.game.is_pc_on:
+				if GameState.game.pc_screen == "voice-call":
+					GameState.game.add_to_voice_call(args.get("name"))
 		"hide-all-characters":
 			GameState.game.set_all_characters_visible(false)
 		"play-bgm":
@@ -33,3 +46,13 @@ func execute(instruction_name, args):
 			emit_signal("set_actor_name", actor_key, new_name)
 		"set-display-style":
 			emit_signal("set_text_content", args.get("style"))
+		"close-pc":
+			GameState.game.toggle_pc(false)
+		"open-pc":
+			var screen :String = args.get("screen")
+			GameState.game.toggle_pc(true)
+			GameState.game.set_pc_screen(screen)
+
+
+func _on_black_instruction_completed() -> void:
+	emit_signal("instruction_completed")

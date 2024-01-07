@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://k107v18q8nny"]
+[gd_scene load_steps=13 format=3 uid="uid://k107v18q8nny"]
 
 [ext_resource type="Script" path="res://game/main_scene.gd" id="1_8qkgv"]
 [ext_resource type="PackedScene" uid="uid://bb8yvsx0g14vl" path="res://addons/dialog-parser/src/line_reader.tscn" id="1_wgwtm"]
 [ext_resource type="Script" path="res://game/InstructionHandlerCustom.gd" id="2_8k1vr"]
 [ext_resource type="PackedScene" uid="uid://jehkf8i5k1og" path="res://game/game.tscn" id="2_im3iw"]
 [ext_resource type="Script" path="res://game/Evaluator.gd" id="5_loefn"]
+[ext_resource type="Script" path="res://game/Black.gd" id="6_3o4gu"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ldi65"]
 content_margin_left = 14.0
@@ -12,6 +13,10 @@ content_margin_right = 24.0
 bg_color = Color(0.12549, 0.105882, 0.0627451, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r6p7q"]
+content_margin_left = 15.0
+content_margin_top = 9.0
+content_margin_right = 15.0
+content_margin_bottom = 9.0
 bg_color = Color(0.133333, 0.0627451, 0.00392157, 1)
 border_width_left = 3
 border_width_top = 3
@@ -186,5 +191,19 @@ size_flags_vertical = 4
 [node name="Evaluator" type="Node" parent="."]
 script = ExtResource("5_loefn")
 
+[node name="Black" type="CanvasLayer" parent="."]
+script = ExtResource("6_3o4gu")
+
+[node name="ColorRect" type="ColorRect" parent="Black"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.0352941, 0.0352941, 0.0392157, 1)
+
+[connection signal="make_screen_black" from="LineReader/InstructionHandlerCustom" to="Black" method="_on_instruction_handler_make_screen_black"]
 [connection signal="set_actor_name" from="LineReader/InstructionHandlerCustom" to="LineReader" method="set_actor_name"]
 [connection signal="set_text_content" from="LineReader/InstructionHandlerCustom" to="." method="set_text_content"]
+[connection signal="instruction_completed" from="Black" to="LineReader/InstructionHandlerCustom" method="_on_black_instruction_completed"]

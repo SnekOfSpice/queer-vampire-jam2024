@@ -3,9 +3,9 @@ extends Node
 func set_bgm_volume(db:float):
 	$BGM.volume_db = db
 
-func play_bgm(track_name:String, fade_in:float):
+func play_bgm(track_name:String, fade_in:=0.0):
 	match track_name:
-		"concert_ambient":
+		"concert-ambient":
 			$BGM.stream = load("res://game/audio/music/504648__tosha73__the-hubbub-of-the-crowd-before-the-concert.ogg")
 		"grime":
 			$BGM.stream = load("res://game/audio/music/Omniman-Feedback.ogg")
