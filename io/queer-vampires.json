@@ -180,6 +180,7 @@
 						"operand_key": "AND"
 					},
 					"content": {
+						"auto_switch": false,
 						"choices": [
 							{
 								"choice_text.disabled": "",
@@ -287,6 +288,7 @@
 						"operand_key": "AND"
 					},
 					"content": {
+						"auto_switch": false,
 						"choices": [
 							{
 								"choice_text.disabled": "",
@@ -649,6 +651,7 @@
 						"operand_key": "AND"
 					},
 					"content": {
+						"auto_switch": false,
 						"choices": [
 							{
 								"choice_text.disabled": "",
@@ -848,6 +851,7 @@
 						"operand_key": "AND"
 					},
 					"content": {
+						"auto_switch": false,
 						"choices": [
 							{
 								"choice_text.disabled": "",
@@ -1005,6 +1009,7 @@
 						"operand_key": "AND"
 					},
 					"content": {
+						"auto_switch": false,
 						"choices": [
 							{
 								"choice_text.disabled": "",
@@ -1214,6 +1219,7 @@
 						"operand_key": "AND"
 					},
 					"content": {
+						"auto_switch": false,
 						"choices": [
 							{
 								"choice_text.disabled": "",
@@ -1329,6 +1335,7 @@
 						"operand_key": "AND"
 					},
 					"content": {
+						"auto_switch": false,
 						"choices": [
 							{
 								"choice_text.disabled": "",
@@ -1486,6 +1493,7 @@
 						"operand_key": "AND"
 					},
 					"content": {
+						"auto_switch": false,
 						"choices": [
 							{
 								"choice_text.disabled": "",
@@ -1631,6 +1639,7 @@
 						"operand_key": "AND"
 					},
 					"content": {
+						"auto_switch": false,
 						"choices": [
 							{
 								"choice_text.disabled": "",
@@ -1842,6 +1851,7 @@
 						"operand_key": "AND"
 					},
 					"content": {
+						"auto_switch": false,
 						"choices": [
 							{
 								"choice_text.disabled": "",
@@ -2076,6 +2086,7 @@
 						"operand_key": "AND"
 					},
 					"content": {
+						"auto_switch": false,
 						"choices": [
 							{
 								"choice_text.disabled": "",
@@ -2203,7 +2214,9 @@
 							"dad",
 							"metaspirit",
 							"therapist",
-							""
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms"
 						],
 						"active_actors_title": "characters",
 						"content": "[]>narrator{capra-emotion|drunk}:Later that evening, you get hammered\n[]>capra:ayyy lmao.\n[]>narrator:It is now christmas.",
@@ -2251,7 +2264,9 @@
 							"dad",
 							"metaspirit",
 							"therapist",
-							""
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms"
 						],
 						"active_actors_title": "characters",
 						"content": "[]>narrator:The conversation shifts to the concert.\n[]>capra{capra-emotion|content}:Yea, I'd love to come with you guys.\n[]>rider:Great!\n[]>capra:Umm... I usually like to listen to bands before I attend their concert, would you have something to recommend, Rider?\n[]>rider:Haha not really. I don't know the bands, but the location is cool and it's always good fun.\n[]>icy-aloe:Precisely.\n[]>capra{capra-emotion|neutral}:wait... so... <ap> sooo... do any of you know any of the bands?\n[]>rider:Nope.\n[]>crosscull:Negative.\n[]>angel:It's just gonna be a fun group activity!",
@@ -2376,7 +2391,9 @@
 							"dad",
 							"metaspirit",
 							"therapist",
-							""
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms"
 						],
 						"active_actors_title": "characters",
 						"content": "[]>capra{capra-emotion|neutral,angel-emotion|neutral}:Uhh... hi.",
@@ -2486,7 +2503,9 @@
 							"dad",
 							"metaspirit",
 							"therapist",
-							""
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms"
 						],
 						"active_actors_title": "characters",
 						"content": "[]>narrator:They turn to face you. A tensing shiver runs across your shoulders.\n[]>angel:Hi! I don't think we met before?\n[]>capra:Uhh... no. I'm- I'm from the hot sauce enjoyers server, Rider posted the link to this.\n[]>angel:Oohhh yea, the KommKomm server.\n[]>capra: ...yea. Rider posted the link and it was an open invitation so...\n[]>angel: Awww well hello, I'm happy to have you then. I'm angel, what's your name?\n[]>capra: ... <lc> ...Capra.\n[]>angel{angel-emotion|happy}:Nice to meet you Capra!\n[]>crosscull: Hello. I'm Crosscull. Xe/xer.\n[]>capra: Likewise. <mp> The meeting part, my pronouns are a bit fucked. But uhh I think she/her for me for now.\n[]>angel: Ah yes, I recall you talking about that in the vent channel. So your gender is still doing its thing?\n[]>capra: Heh. I don't know. I dunno. Honestly.\n[]>angel{angel-emotion|neutral}: That's totally fine. Don't need to turn this into group therapy immediately haha.\n[]>crosscull: [affirmative noise]\n[]>angel: So how much are you looking forward to this? Have you been to many concerts recently, or in life in general?\n[]>capra: To be honesty, not really. No, I don't even go outside much. But I'm hoping this to turn well.\n[]>crosscull: Is this music to your tastes?\n[]>capra: I don't know. I don't listen to much heavy stuff like this.\n[]>angel: Haha, well, Grime and Nailbiter both go hard as fuck. But we also only know of them since a show a few months back. I don't think we organized that over KommKomm though.\n[]>crosscull: To mention, we have different favorites.\n[]>angel: Very true. I'm more into the harsh riffs of Nailbiter. Crosscull is more into the bassy sludge of Grime.\n[]>crosscull: Yes. It comes with my background in the darkwave and idm scene.\n[]>capra: Haha, you know your stuff around this stuff?\n[]>angel: You could say that. It mostly comes with exposure though. There's no formal academies on dark and heavy music.\n[]>narrator: The distorsion of the sound check crushes the air around you.\n[]>angel: Speaking of which, did you bring hearing protection?\n[]>capra: I didn't know I'd need some.\n[]>angel: Oh yes, hardcore shows can get super loud. I have some single-use plugs on me, you can use those if you want.\n[]>capra: Eh, it's fine.\n[]>angel: Okay, just let me know if you think you need them after all.",
@@ -2561,7 +2580,9 @@
 							"dad",
 							"metaspirit",
 							"therapist",
-							""
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms"
 						],
 						"active_actors_title": "characters",
 						"content": "[]>angel{angel-emotion|happy}:This is exciting.\n[]>narrator:Crosscull and Angel turn towards the stage. Grime has come up and immediately the lights dim and you see nothing but the stage illuminated. Uncertainty makes your heart race. Angel and Crosscull exchange glances of anticipation at the show.",
@@ -2662,7 +2683,9 @@
 							"dad",
 							"metaspirit",
 							"therapist",
-							""
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms"
 						],
 						"active_actors_title": "characters",
 						"content": "[]>narrator: The music is- thumpy. Sludgy, Angel would probably call it. You feel the bass in your bones, and even though you assume there are words are coming from the vocalist's mouth, you don't understand a single one. Are you even supposed to? <ap> No one else seems to mind. <lc>After a few songs, Crosscull vanishes into the crowd. Xer tall stature occasionally emerges from the edges of the mosh pit. <mp>You barely move an inch.<lc>The bright lights and harsh noise keep your brain occupied.<lc>Angel seems to be enjoying herself, moving along with the music in small body movements. She occasionally sends you a glance. You mostly shy away from those. <lc> After about an hour, the lights come back on.",
@@ -2772,7 +2795,9 @@
 							"dad",
 							"metaspirit",
 							"therapist",
-							""
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms"
 						],
 						"active_actors_title": "characters",
 						"content": "[]>narrator: Angel turns to the crowd, trying to spot Crosscull. Xe's surprisingly difficult to identify, despite the tall body and metal mask. When xe comes back, you immediately feel the adrenaline spike in your veins.\n[]>capra: Sorry, I gotta go to the bathroom.\n[]>narrator: When you return, Angel greets you with a worried smile.\n[]>angel: Is everything alright?\n[]>capra: Yeah.\n[]>narrator: It's not really a response but you mentally put a checkmark on it.\n[]>angel: Awesome. Just let Crosscull or me know if you get uncomfortable during the show.\n[]>crosscull: Please do.\n[]>capra: I will.\n[]>narrator: Crosscull turns to Angel.\n[]>crosscull: That pit was quite good. I think you'll enjoy it.\n[]>angel: And no shirtless assholes so far!\n[]>crosscull: Quite true.\n[]>narrator: The conversation shifts back to the concert, and eventually, the venue.\nfade to black\n[]>angel: Another thing I also love about this place is how naturally people are about the whole vampire thing. They know we won't randomly kill them. And if you ever need some vegan blood, they have Artihem capsules at the bar too.\n[]>capra: Oh, that's nice to know. I've- uhhh- I've always just suffered with the thirst symptoms. Haha.\n[]>angel: And you're still standing!\n[]>crosscull: Unhealthy though. Let us know if you need some patching up.\n[]>capra: Thank you. I'll manage for now.",
@@ -2847,7 +2872,9 @@
 							"dad",
 							"metaspirit",
 							"therapist",
-							""
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms"
 						],
 						"active_actors_title": "characters",
 						"content": "[]>angel: Alright, Nailbiter is coming up, I'm gonna get in that pit.\n[]>narrator: They quickly hug each other.\n[]>crosscull: I'll rest for now. Take care.\n[]>narrator: Angel offers you the same gesture. You weakly accept. Your skin feels like it's getting flayed.\n[]>capra: Have fun.",
@@ -2922,7 +2949,9 @@
 							"dad",
 							"metaspirit",
 							"therapist",
-							""
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms"
 						],
 						"active_actors_title": "characters",
 						"content": "[]>narrator:This time, the music is even harsher, shrill and distorted quitar noises piercing your ear drums, and the mosh pit growing even larger. Maybe to two or three times its size during Grime. You take a step back. Crosscull steps back with you, occasionally stepping in front of you to push a rogue pit participant back to where they belong. <lc> A few times, you fear for your life as a handful of crowdsurfers pass next to you. <mp>You always step out of the way. <lc>Eventually, you find yourself at the very edge of the crowd, barely seeing the band anymore with this sharp of an angle to the stage, but you don't mind. You never felt that music anyways.",
@@ -3032,7 +3061,9 @@
 							"dad",
 							"metaspirit",
 							"therapist",
-							""
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms"
 						],
 						"active_actors_title": "characters",
 						"content": "[]>angel{angel-emotion|happy}: That was AWESOME!\n[]>crosscull: Absolutely.\n[]>capra: Looks like you had fun.\n[]>angel: Very much. Nailbiter are so fucking good. <lc> I hope you were also fine with the noise and everything?\n[]>capra: Yes, no worries.\n[]>angel: Okay good, because you did go quite the bit back. Pit went insane. Even pulled off a wall of death.\n[]>narrator:: Angel takes a few breaths.\n[]>angel: Wanna get something to drink?\n[]>capra: uhh... yea. Sure.\n[]>angel: Cool. Want anything?\n[]>capra: umm. Water is fine, if you want.\n[]>angel: Gotcha.\n[]>narrator:: You step over to the bar, Angel orders three bottles of water, and you each step outside with the rest of the slowly-dispersing crowd, beverages in hand.\n[]>angel: ahhh... haha. By the way, do you have anything planned on christmas?\n[]>capra: <func:christmas_plans>\n[]>angel: Ah okay. Because CC and I are gonna go to one of the local queer clubs that evening and we wanted to ask if you wanted to tag along.\n[]>capra: I'll think on it.\n[]>angel: Great.\n[]>crosscull: mh-hm.\n[]>narrator:: you continue with a bit of idle chit chat about that bar, this concert venue, all the things Angel and Crosscull appearently get up to regularly. <lc> A few solid minutes pass like this.\n[]>capra: It's getting kinda cold to be honest.\n[]>crosscull: It's getting late too.\n[]>angel: it's getting quite late indeed. It's been an absolute pleasure hanging out with you, Capra.\n[]>capra: h- huh? Thank you, yes, same.\n[]>angel: Will you be fine going home on your own? Where do you even live?\n[]>capra: Uhhmm, east. In Galwice.\n[]>crosscull: Then I can accompany you. I also live in that direction.\n[]>angel: Lovely! Is that fine with you?\n[]>capra: Yes, of course.\n[]>angel: Then that's settled. Great! Have a safe ride home you two.\n[]>crosscull: Likewise. We will be in touch.\n[]>angel: That we will! Bye!\n[]>capra: Bye.",
@@ -3168,7 +3199,9 @@
 							"dad",
 							"metaspirit",
 							"therapist",
-							""
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms"
 						],
 						"active_actors_title": "characters",
 						"content": "[]>narrator:The ride home is uneventful. With Angel gone, the conversation is much less lively, but Crosscull doesn't seem to mind. Xe almost enjoys that silence, it seems. Or maybe xe just hates you. Regardless, Crosscull gets out a few stops before you, you say your goodbyes, and over the next few days, there's not much activity on the KommKomm server.",
@@ -3216,7 +3249,9 @@
 							"dad",
 							"metaspirit",
 							"therapist",
-							""
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms"
 						],
 						"active_actors_title": "characters",
 						"content": "[]>narrator:Starry, Icy, and Rider are all dead and passed out lmfao",
@@ -3668,6 +3703,7 @@
 						"operand_key": "AND"
 					},
 					"content": {
+						"auto_switch": true,
 						"choices": [
 							{
 								"choice_text.disabled": "",
@@ -3687,7 +3723,7 @@
 								"facts": {
 
 								},
-								"target_page": 0
+								"target_page": 20
 							},
 							{
 								"choice_text.disabled": "",
@@ -3845,6 +3881,7 @@
 						"operand_key": "AND"
 					},
 					"content": {
+						"auto_switch": false,
 						"choices": [
 							{
 								"choice_text.disabled": "",
@@ -3985,7 +4022,7 @@
 			],
 			"next": 21,
 			"number": 20,
-			"page_key": "",
+			"page_key": "going home after christmas",
 			"terminate": false
 		},
 		"21": {

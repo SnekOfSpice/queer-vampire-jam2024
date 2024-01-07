@@ -331,9 +331,11 @@ func read_new_line(new_line: Dictionary):
 	handle_header(line_data.get("header"))
 	
 	line_type = int(line_data.get("line_type"))
+	var raw_content = line_data.get("content")
 	var content = line_data.get("content").get("content")
+	var choices
 	if line_type == Parser.LineType.Choice:
-		content = line_data.get("content").get("choices")
+		choices = line_data.get("content").get("choices")
 	var content_name = line_data.get("content").get("name") # wtf is this
 	
 	text_container.visible = line_type == Parser.LineType.Text or (line_type == Parser.LineType.Choice and show_text_during_choices)
@@ -362,7 +364,8 @@ func read_new_line(new_line: Dictionary):
 			set_dialog_line_index(0)
 			start_showing_text()
 		Parser.LineType.Choice:
-			build_choices(content)
+			var auto_switch : bool = raw_content.get("auto_switch")
+			build_choices(choices, auto_switch)
 		Parser.LineType.Instruction:
 			if not instruction_handler:
 				push_error("No InsutrctionHandler as child of LineReader.")
@@ -645,7 +648,7 @@ func find_next_pause():
 func set_actor_name(actor_key:String, new_name:String):
 	name_map[actor_key] = new_name
 
-func build_choices(choices):
+func build_choices(choices, auto_switch:bool):
 	for c in choice_option_container.get_children():
 		c.queue_free()
 	
@@ -654,6 +657,11 @@ func build_choices(choices):
 		var conditional_eval = evaluate_conditionals(option.get("conditionals"), option.get("choice_text.enabled_as_default"))
 		var cond_true = conditional_eval[0]
 		var cond_behavior = conditional_eval[1]
+		
+		if cond_true and auto_switch:
+			# untested for now
+			choice_pressed(true, option.get("target_page"))
+			break
 		
 		var enable_option := true
 		var option_text := ""
