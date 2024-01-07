@@ -19,6 +19,7 @@ func set_pc_screen(screen:String):
 			find_child("VoiceCall").visible = true
 			for c in find_child("VCParticipantContainer").get_children():
 				c.queue_free()
+			add_to_voice_call("capra")
 
 func add_to_voice_call(character_name:String):
 	for c in find_child("VCParticipantContainer").get_children():

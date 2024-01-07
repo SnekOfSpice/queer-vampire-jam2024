@@ -26,10 +26,11 @@ func execute(instruction_name, args):
 			else:
 				push_warning("idk get fucked")
 				return
-			GameState.game.set_character_visible(args.get("name"), vis)
 			if GameState.game.is_pc_on:
 				if GameState.game.pc_screen == "voice-call":
 					GameState.game.add_to_voice_call(args.get("name"))
+			else:
+				GameState.game.set_character_visible(args.get("name"), vis)
 		"hide-all-characters":
 			GameState.game.set_all_characters_visible(false)
 		"play-bgm":
