@@ -250,6 +250,17 @@ func handle_event(event_name: String, event_args: Dictionary):
 		"word_read":
 			pass
 
+func get_preferences() -> Dictionary:
+	var prefs = {}
+	
+	prefs["text_speed"] = text_speed
+	prefs["auto_continue"] = auto_continue
+	
+	return prefs
+
+func apply_preferences(prefs:Dictionary):
+	text_speed = prefs.get("text_speed", 60.0)
+	auto_continue = prefs.get("auto_continue", false)
 
 func _unhandled_input(event: InputEvent) -> void:
 	if Engine.is_editor_hint():

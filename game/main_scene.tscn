@@ -1,9 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://k107v18q8nny"]
+[gd_scene load_steps=15 format=3 uid="uid://k107v18q8nny"]
 
 [ext_resource type="Script" path="res://game/main_scene.gd" id="1_8qkgv"]
 [ext_resource type="PackedScene" uid="uid://bb8yvsx0g14vl" path="res://addons/dialog-parser/src/line_reader.tscn" id="1_wgwtm"]
 [ext_resource type="Script" path="res://game/InstructionHandlerCustom.gd" id="2_8k1vr"]
 [ext_resource type="PackedScene" uid="uid://jehkf8i5k1og" path="res://game/game.tscn" id="2_im3iw"]
+[ext_resource type="PackedScene" uid="uid://d2y2irch25bkd" path="res://systems/options/options_menu.tscn" id="3_77ee1"]
+[ext_resource type="PackedScene" uid="uid://2adev3wrrsw5" path="res://systems/main_menu.tscn" id="4_ippob"]
 [ext_resource type="Script" path="res://game/Evaluator.gd" id="5_loefn"]
 [ext_resource type="Script" path="res://game/Black.gd" id="6_3o4gu"]
 
@@ -56,7 +58,7 @@ grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_8qkgv")
 
-[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+[node name="GameViewportContainer" type="SubViewportContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -67,12 +69,42 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+[node name="SubViewport" type="SubViewport" parent="GameViewportContainer"]
 handle_input_locally = false
 size = Vector2i(1920, 1080)
 render_target_update_mode = 4
 
-[node name="Game" parent="SubViewportContainer/SubViewport" instance=ExtResource("2_im3iw")]
+[node name="Game" parent="GameViewportContainer/SubViewport" instance=ExtResource("2_im3iw")]
+
+[node name="OptionsViewportContainer" type="SubViewportContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubViewport" type="SubViewport" parent="OptionsViewportContainer"]
+handle_input_locally = false
+size = Vector2i(1920, 1080)
+render_target_update_mode = 4
+
+[node name="OptionsMenu" parent="OptionsViewportContainer/SubViewport" instance=ExtResource("3_77ee1")]
+
+[node name="MainMenuViewportContainer" type="SubViewportContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubViewport" type="SubViewport" parent="MainMenuViewportContainer"]
+handle_input_locally = false
+size = Vector2i(1920, 1080)
+render_target_update_mode = 4
+
+[node name="MainMenu" parent="MainMenuViewportContainer/SubViewport" instance=ExtResource("4_ippob")]
 
 [node name="LineReader" parent="." node_paths=PackedStringArray("choice_container", "choice_option_container", "instruction_handler", "text_content", "text_container", "name_label", "name_container", "inline_evaluator") instance=ExtResource("1_wgwtm")]
 show_text_during_choices = true
@@ -82,21 +114,21 @@ name_for_blank_name = "narrator"
 name_map = {
 "capra": "Capra"
 }
-choice_container = NodePath("../CanvasLayer/Control/ChoiceContainer")
-choice_option_container = NodePath("../CanvasLayer/Control/ChoiceContainer/ChoiceItemContainer")
+choice_container = NodePath("../Dialog/Control/ChoiceContainer")
+choice_option_container = NodePath("../Dialog/Control/ChoiceContainer/ChoiceItemContainer")
 instruction_handler = NodePath("InstructionHandlerCustom")
-text_content = NodePath("../CanvasLayer/Control/TextContainer/MarginContainer/VBoxContainer/PanelContainer/BottomText")
-text_container = NodePath("../CanvasLayer/Control/TextContainer")
-name_label = NodePath("../CanvasLayer/Control/TextContainer/MarginContainer/VBoxContainer/Label")
-name_container = NodePath("../CanvasLayer/Control/TextContainer/MarginContainer/VBoxContainer/Label")
+text_content = NodePath("../Dialog/Control/TextContainer/MarginContainer/VBoxContainer/PanelContainer/BottomText")
+text_container = NodePath("../Dialog/Control/TextContainer")
+name_label = NodePath("../Dialog/Control/TextContainer/MarginContainer/VBoxContainer/Label")
+name_container = NodePath("../Dialog/Control/TextContainer/MarginContainer/VBoxContainer/Label")
 inline_evaluator = NodePath("../Evaluator")
 
 [node name="InstructionHandlerCustom" type="Node" parent="LineReader"]
 script = ExtResource("2_8k1vr")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="Dialog" type="CanvasLayer" parent="."]
 
-[node name="Control" type="Control" parent="CanvasLayer"]
+[node name="Control" type="Control" parent="Dialog"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -106,7 +138,7 @@ grow_vertical = 2
 mouse_filter = 2
 theme = SubResource("Theme_k7ovv")
 
-[node name="TextContainer" type="CenterContainer" parent="CanvasLayer/Control"]
+[node name="TextContainer" type="CenterContainer" parent="Dialog/Control"]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -117,27 +149,27 @@ grow_horizontal = 2
 grow_vertical = 0
 mouse_filter = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Control/TextContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="Dialog/Control/TextContainer"]
 layout_mode = 2
 mouse_filter = 2
 theme_override_constants/margin_bottom = 25
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/TextContainer/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Dialog/Control/TextContainer/MarginContainer"]
 layout_mode = 2
 mouse_filter = 2
 alignment = 2
 
-[node name="Label" type="Label" parent="CanvasLayer/Control/TextContainer/MarginContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="Dialog/Control/TextContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
 text = "name here"
 
-[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/Control/TextContainer/MarginContainer/VBoxContainer"]
+[node name="PanelContainer" type="PanelContainer" parent="Dialog/Control/TextContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 8
 mouse_filter = 2
 
-[node name="BottomText" type="RichTextLabel" parent="CanvasLayer/Control/TextContainer/MarginContainer/VBoxContainer/PanelContainer"]
+[node name="BottomText" type="RichTextLabel" parent="Dialog/Control/TextContainer/MarginContainer/VBoxContainer/PanelContainer"]
 custom_minimum_size = Vector2(900, 130)
 layout_mode = 2
 text = "enter bottom text here"
@@ -146,7 +178,7 @@ autowrap_mode = 2
 visible_characters = 0
 visible_ratio = 0.0
 
-[node name="FullTextContainer" type="PanelContainer" parent="CanvasLayer/Control"]
+[node name="FullTextContainer" type="PanelContainer" parent="Dialog/Control"]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -156,16 +188,16 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/FullTextContainer"]
+[node name="TextureRect" type="TextureRect" parent="Dialog/Control/FullTextContainer"]
 layout_mode = 2
 texture = SubResource("GradientTexture2D_5dn0v")
 
-[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/Control/FullTextContainer"]
+[node name="CenterContainer" type="CenterContainer" parent="Dialog/Control/FullTextContainer"]
 custom_minimum_size = Vector2(900, 600)
 layout_mode = 2
 mouse_filter = 2
 
-[node name="FullText" type="RichTextLabel" parent="CanvasLayer/Control/FullTextContainer/CenterContainer"]
+[node name="FullText" type="RichTextLabel" parent="Dialog/Control/FullTextContainer/CenterContainer"]
 custom_minimum_size = Vector2(900, 600)
 layout_mode = 2
 mouse_filter = 2
@@ -174,7 +206,7 @@ bbcode_enabled = true
 text = "jghjkgkhjkjhk ghjk"
 fit_content = true
 
-[node name="ChoiceContainer" type="PanelContainer" parent="CanvasLayer/Control"]
+[node name="ChoiceContainer" type="PanelContainer" parent="Dialog/Control"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -183,7 +215,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_mm5ej")
 
-[node name="ChoiceItemContainer" type="VBoxContainer" parent="CanvasLayer/Control/ChoiceContainer"]
+[node name="ChoiceItemContainer" type="VBoxContainer" parent="Dialog/Control/ChoiceContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -192,6 +224,7 @@ size_flags_vertical = 4
 script = ExtResource("5_loefn")
 
 [node name="Black" type="CanvasLayer" parent="."]
+visible = false
 script = ExtResource("6_3o4gu")
 
 [node name="ColorRect" type="ColorRect" parent="Black"]
