@@ -8,7 +8,8 @@ class_name LineReader
 @export_range(1.0, 101.0, 1.0) var text_speed := 60.0
 @export var auto_pause_duration := 0.2
 @export var auto_continue := false
-@export_range(0.1, 60.0, 0.1) var auto_continue_delay := 4.0
+@export_range(0.1, 60.0, 0.1) var auto_continue_delay := 0.2
+var auto_continue_duration:= auto_continue_delay
 
 @export_subgroup("Other")
 @export var show_text_during_choices := false
@@ -18,7 +19,6 @@ class_name LineReader
 @export_range(0.0, 1.0) var advance_available_lerp_weight := 0.1
 @export_range(0.0, 10.0) var advance_available_delay := 0.5
 var remaining_advance_delay := advance_available_delay
-#var remaining_auto_continue_duration := auto_continue_delay
 
 @export_group("Name Setup")
 ## The name of the dropdown property used for keying names. Usually something like "character"
@@ -227,8 +227,6 @@ func _ready() -> void:
 	if Engine.is_editor_hint():
 		return
 	
-	auto_continue = false # broken atm
-	
 	Parser.connect("read_new_line", read_new_line)
 	Parser.connect("terminate_page", close)
 	
@@ -243,8 +241,6 @@ func _ready() -> void:
 	
 	instruction_handler.connect("set_input_lock", set_is_input_locked)
 	instruction_handler.connect("instruction_wrapped_completed", instruction_completed)
-	
-	connect("line_finished", start_auto_continue_timer)
 	
 	if not show_advance_available and next_prompt_container:
 		next_prompt_container.modulate.a = 0
@@ -274,7 +270,7 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func advance():
 	if auto_continue:
-		$AutoContinueTimer.stop()
+		auto_continue_duration = auto_continue_delay
 	if showing_text:
 		if text_content.visible_ratio >= 1.0:
 			if chunk_index >= line_chunks.size() - 1:
@@ -331,6 +327,7 @@ func read_new_line(new_line: Dictionary):
 	handle_header(line_data.get("header"))
 	
 	line_type = int(line_data.get("line_type"))
+	prints("change line type to ", line_type)
 	var raw_content = line_data.get("content")
 	var content = line_data.get("content").get("content")
 	var choices
@@ -409,6 +406,7 @@ func _process(delta: float) -> void:
 	if Parser.paused:
 		return
 	
+	
 	if next_pause_position_index < pause_positions.size() and next_pause_position_index != -1:
 		find_next_pause()
 	if text_content.visible_characters < get_end_of_chunk_position():
@@ -462,20 +460,18 @@ func _process(delta: float) -> void:
 #			start_auto_continue_timer()
 #			print("B")
 	last_visible_ratio = text_content.visible_ratio
-#
-#	if auto_continue and text_content.visible_ratio >= 1.0:
-#		remaining_auto_continue_duration -= delta
-#		if remaining_auto_continue_duration <= 0.0:
-#			emit_signal("line_finished", line_index)
-#			remaining_auto_continue_duration = auto_continue_delay
-
-func start_auto_continue_timer(_cringe:= 0):
-	if not auto_continue:
-		return
-	if line_type == Parser.LineType.Text:
-		$AutoContinueTimer.start(auto_continue_delay)
-		return
-	advance()
+	
+	if auto_continue:
+		prints("line type is ", line_type)
+		if not line_type == Parser.LineType.Text:
+			return
+		if pause_types[next_pause_position_index] == PauseTypes.Auto:
+			return
+		if text_content.visible_characters >= pause_positions[next_pause_position_index] - 4 * next_pause_position_index or text_content.visible_characters == -1:
+			auto_continue_duration -= delta
+			if auto_continue_duration <= 0.0:
+				advance()
+		printt(pause_positions, next_pause_position_index, text_content.visible_characters, auto_continue_duration)
 
 func remove_spaces_and_send_word_read_event(word: String):
 	word = word.replace(" ", "")
@@ -806,7 +802,3 @@ func update_name_label(actor_name: String):
 
 func _on_finished_button_pressed() -> void:
 	emit_signal("line_finished", line_index)
-
-
-func _on_auto_continue_timer_timeout() -> void:
-	advance()
