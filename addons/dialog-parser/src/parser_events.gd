@@ -1,6 +1,5 @@
 extends Node
 
-
 ## List of all events:
 
 # "choice_pressed"
@@ -67,9 +66,10 @@ extends Node
 #	args:
 #		"word": String
 
-
 var event_listeners := {}
 
+# all listeners should implement
+# func handle_event(event_name: String, event_args: Dictionary):
 func listen(listener: Node, event_name: String):
 	var listeners: Array = event_listeners.get(event_name, [])
 	if not listeners.has(listener):

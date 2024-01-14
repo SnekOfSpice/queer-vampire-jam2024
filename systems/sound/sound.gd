@@ -11,6 +11,11 @@ func play_bgm(track_name:String, fade_in:=0.0):
 			$BGM.stream = load("res://game/audio/music/Omniman-Feedback.ogg")
 		"nailbiter":
 			$BGM.stream = load("res://game/audio/music/Omniman-The-Reek-of-Madness.ogg")
+		"capra-bedroom":
+			$BGM.stream = load("res://game/audio/music/718333__josefpres__piano-loops-083-efect-2-octave-long-loop-120-bpm.ogg")
+		"idk unused stuff":
+			pass
+			#"res://game/audio/music/611305__szegvari__new-york-cyberpunk-synth-analogue-drums-bass-dance-retro-atmo-ambience-pad-drone-cinematic-action-music-surround.ogg"
 		_:
 			push_warning(str("Track ", track_name, " is not defined."))
 			return

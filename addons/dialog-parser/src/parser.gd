@@ -80,12 +80,12 @@ func _ready() -> void:
 	ParserEvents.listen(self, "choice_pressed")
 
 ## Call this one for a blank, new game.
-func reset_and_start():
+func reset_and_start(start_page_index:=0):
 	line_reader.terminated = false
 	line_reader.visible = true
 	paused = false
 	reset_facts()
-	read_page(5)
+	read_page(start_page_index)
 	history = []
 
 func fact(fact_name: String):
@@ -124,6 +124,9 @@ func build_history_string() -> String:
 	result = result.trim_suffix("\n\n")
 	
 	return result
+
+func get_fact(fact_name:String) -> bool:
+	return facts.get(fact_name, false)
 
 func drop_down_values_to_string_array(values:=[0,0]) -> Array:
 	var result = ["", ""]

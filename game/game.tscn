@@ -26,14 +26,14 @@ character_name = "angel"
 [node name="CharacterPositions" type="Node2D" parent="."]
 
 [node name="Left" type="Node2D" parent="CharacterPositions"]
-position = Vector2(124, 543)
+position = Vector2(172, 472)
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterPositions/Left"]
 scale = Vector2(0.145702, 0.145702)
 texture = ExtResource("3_msbdb")
 
 [node name="Right" type="Node2D" parent="CharacterPositions"]
-position = Vector2(1115, 548)
+position = Vector2(1067, 477)
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterPositions/Right"]
 scale = Vector2(0.145702, 0.145702)

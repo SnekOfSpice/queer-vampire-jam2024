@@ -1,13 +1,22 @@
 extends Control
 
 @export var dev_mode := true
+@export var start_page_index := 0
 var screen := Const.GAME_SCREEN_MAIN_MENU
 
 func _ready() -> void:
 	if dev_mode:
 		set_screen(Const.GAME_SCREEN_GAME)
-		Parser.reset_and_start()
+		Parser.reset_and_start(start_page_index)
+		Parser.line_reader.auto_continue = true
+		Parser.line_reader.auto_continue_delay = 0.0
 	find_child("FullTextContainer").visible = false
+	find_child("Cheats").visible = false
+	find_child("Cheats").init()
+
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("f1") and dev_mode:
+		find_child("Cheats").visible = not find_child("Cheats").visible
 
 func set_screen(screen:String):
 	self.screen = screen

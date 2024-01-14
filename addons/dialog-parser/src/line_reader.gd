@@ -338,7 +338,6 @@ func read_new_line(new_line: Dictionary):
 	handle_header(line_data.get("header"))
 	
 	line_type = int(line_data.get("line_type"))
-	prints("change line type to ", line_type)
 	var raw_content = line_data.get("content")
 	var content = line_data.get("content").get("content")
 	var choices
@@ -461,19 +460,9 @@ func _process(delta: float) -> void:
 				started_word_buffer = ""
 	characters_visible_so_far = new_characters_visible_so_far
 	
-	
-#	if last_visible_ratio < 1.0 and text_content.visible_ratio >= 1.0:
-#		if auto_continue:
-#			start_auto_continue_timer()
-#			print("A")
-#	if text_content.visible_characters >= pause_positions[next_pause_position_index]:
-#		if auto_continue and $AutoContinueTimer.time_left == 0:
-#			start_auto_continue_timer()
-#			print("B")
 	last_visible_ratio = text_content.visible_ratio
 	
 	if auto_continue:
-		prints("line type is ", line_type)
 		if not line_type == Parser.LineType.Text:
 			return
 		if pause_types[next_pause_position_index] == PauseTypes.Auto:
@@ -482,7 +471,6 @@ func _process(delta: float) -> void:
 			auto_continue_duration -= delta
 			if auto_continue_duration <= 0.0:
 				advance()
-		printt(pause_positions, next_pause_position_index, text_content.visible_characters, auto_continue_duration)
 
 func remove_spaces_and_send_word_read_event(word: String):
 	word = word.replace(" ", "")

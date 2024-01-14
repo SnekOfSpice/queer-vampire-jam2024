@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://k107v18q8nny"]
+[gd_scene load_steps=14 format=3 uid="uid://k107v18q8nny"]
 
 [ext_resource type="Script" path="res://game/main_scene.gd" id="1_8qkgv"]
 [ext_resource type="PackedScene" uid="uid://bb8yvsx0g14vl" path="res://addons/dialog-parser/src/line_reader.tscn" id="1_wgwtm"]
@@ -8,32 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://2adev3wrrsw5" path="res://systems/main_menu.tscn" id="4_ippob"]
 [ext_resource type="Script" path="res://game/Evaluator.gd" id="5_loefn"]
 [ext_resource type="Script" path="res://game/Black.gd" id="6_3o4gu"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ldi65"]
-content_margin_left = 14.0
-content_margin_right = 24.0
-bg_color = Color(0.12549, 0.105882, 0.0627451, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r6p7q"]
-content_margin_left = 15.0
-content_margin_top = 9.0
-content_margin_right = 15.0
-content_margin_bottom = 9.0
-bg_color = Color(0.133333, 0.0627451, 0.00392157, 1)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-border_color = Color(0.537255, 0.45098, 0.278431, 1)
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
-corner_detail = 4
-
-[sub_resource type="Theme" id="Theme_k7ovv"]
-Label/styles/normal = SubResource("StyleBoxFlat_ldi65")
-PanelContainer/styles/panel = SubResource("StyleBoxFlat_r6p7q")
+[ext_resource type="Theme" uid="uid://dpenu1nwoa7ku" path="res://game/style/theme.tres" id="7_y7tat"]
+[ext_resource type="PackedScene" uid="uid://bjw5wm6l5gqkx" path="res://game/cheats.tscn" id="9_troos"]
 
 [sub_resource type="Gradient" id="Gradient_cw7l5"]
 
@@ -42,9 +18,9 @@ gradient = SubResource("Gradient_cw7l5")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mm5ej"]
 bg_color = Color(0.133333, 0.133333, 0.133333, 0.290196)
-border_width_left = 10
-border_width_top = 20
-border_width_right = 10
+border_width_left = 30
+border_width_top = 60
+border_width_right = 30
 border_color = Color(0, 0, 0, 1)
 border_blend = true
 
@@ -136,7 +112,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-theme = SubResource("Theme_k7ovv")
+theme = ExtResource("7_y7tat")
 
 [node name="TextContainer" type="CenterContainer" parent="Dialog/Control"]
 layout_mode = 1
@@ -162,6 +138,7 @@ alignment = 2
 [node name="Label" type="Label" parent="Dialog/Control/TextContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 24
 text = "name here"
 
 [node name="PanelContainer" type="PanelContainer" parent="Dialog/Control/TextContainer/MarginContainer/VBoxContainer"]
@@ -172,7 +149,9 @@ mouse_filter = 2
 [node name="BottomText" type="RichTextLabel" parent="Dialog/Control/TextContainer/MarginContainer/VBoxContainer/PanelContainer"]
 custom_minimum_size = Vector2(900, 130)
 layout_mode = 2
-text = "enter bottom text here"
+theme_override_constants/line_separation = -6
+theme_override_font_sizes/normal_font_size = 20
+text = "enter bottom text hered"
 fit_content = true
 autowrap_mode = 2
 visible_characters = 0
@@ -219,6 +198,13 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_mm5ej")
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+
+[node name="Button" type="Button" parent="Dialog/Control/ChoiceContainer/ChoiceItemContainer"]
+layout_mode = 2
+focus_mode = 0
+text = "hello there"
+
+[node name="Cheats" parent="Dialog" instance=ExtResource("9_troos")]
 
 [node name="Evaluator" type="Node" parent="."]
 script = ExtResource("5_loefn")
