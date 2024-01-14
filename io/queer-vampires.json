@@ -51,6 +51,8 @@
 		"rider-emotion": [
 			"neutral",
 			"irritated",
+			"excited",
+			"",
 			""
 		]
 	},
@@ -68,8 +70,10 @@
 		"jump in blunder 2": false,
 		"knows icy-aloe": false,
 		"likes pineapple on pizza": false,
+		"met metaspirit": false,
 		"mingled with band": false,
 		"mingled with swag": false,
+		"motivated to be included": false,
 		"plan to go to parents": false,
 		"plan to not go": false,
 		"read notification": false,
@@ -1685,7 +1689,7 @@
 							""
 						],
 						"active_actors_title": "characters",
-						"content": "[]>narrator:The floor is more comfortable when drunk.\n[]>capra{capra-emotion|drunk}:My floor...\n[]>narrator:When you close your eyes, you envison your temple. If this were the ancient times, you'd be worshipped and drunk off the daily wine. You're sure of it. <lc>A calm, marble meadow, pristine halls. An everflowing chalice of vino.\n[]>metaspirit:And fate, there to make pacts with you.\n[]>capra{capra-emotion|spiraling}:.<ap>.<ap>.<ap>.<ap>.<ap>.<ap>.<ap>.<ap>.<ap>.",
+						"content": "[]>narrator:The floor is more comfortable when drunk.\n[]>capra{capra-emotion|drunk}:My floor...\n[]>narrator:When you close your eyes, you envison your temple. If this were the ancient times, you'd be worshipped and drunk off the daily wine. You're sure of it. <lc>A calm, marble meadow, pristine halls. An everflowing chalice of vino.\n[]>metaspirit:And fate, there to make pacts with you.\n[]>narrator:Its voice is a hollow echo. It feels like tinnitus, audible, but nowhere around you.\n[]>capra{capra-emotion|spiraling}:.<ap>.<ap>.<ap>.<ap>.<ap>.<ap>.<ap>.<ap>.<ap>.",
 						"selected_actor_dropdown_index": 0,
 						"use_dialog_syntax": true
 					},
@@ -1924,7 +1928,7 @@
 					"meta.visible": true
 				}
 			],
-			"next": 9,
+			"next": 6,
 			"number": 5,
 			"page_key": "first encounter with metaspirit",
 			"terminate": false
@@ -1967,7 +1971,7 @@
 						"use_dialog_syntax": true
 					},
 					"facts": {
-
+						"met metaspirit": true
 					},
 					"header": [],
 					"line_type": 0,
@@ -2158,7 +2162,7 @@
 								"facts": {
 
 								},
-								"target_page": 11
+								"target_page": 12
 							}
 						],
 						"meta.do_jump_page": true
@@ -2291,7 +2295,7 @@
 					"meta.visible": true
 				}
 			],
-			"next": 11,
+			"next": 12,
 			"number": 8,
 			"page_key": "read theory",
 			"terminate": false
@@ -2329,7 +2333,7 @@
 							""
 						],
 						"active_actors_title": "characters",
-						"content": "[]>capra:\"As per whatever the fuck, this is wrong.\"\n[]>icy-aloe:Oh wow, really?? lets discuss",
+						"content": "[]>narrator:You scroll through the many resources people keep sharing there. For most files, you don't even know all of the words in their titles. <lc>\"Critiques of Material Dialectics\" <lc>\"Late-stage ultraliberalism in the context of post-colonial uprisings\"<lc>\"On War against Petit Bourgeois.\"<lc>You find a video that seems approchable. <mp>\"Don't talk to the police.\" <lc>You have no idea why that would be a bad idea. You've never talked to them anyways.\n[]>narrator:Minutes pass, you can barely focus on the video, and you're also bored to death.",
 						"selected_actor_dropdown_index": 0,
 						"use_dialog_syntax": true
 					},
@@ -2340,6 +2344,41 @@
 					"line_type": 0,
 					"meta.is_head_editable": true,
 					"meta.line_index": 0,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"content": [
+							{
+								"name": "key",
+								"value": "notification"
+							},
+							{
+								"name": " random-pitch",
+								"value": "false"
+							}
+						],
+						"delay.after": 0,
+						"delay.before": 0,
+						"name": "play-sfx"
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 2,
+					"meta.is_head_editable": true,
+					"meta.line_index": 1,
 					"meta.visible": true
 				},
 				{
@@ -2373,7 +2412,7 @@
 							""
 						],
 						"active_actors_title": "characters",
-						"content": "[]>narrator:A few days later, you visit during band practice",
+						"content": "[]>capra:Hm?\n[]>narrator:A notification. You never get those.\n[]>narrator:It's in the same text channel you got the video link from. <lc>\"@nerds if any of you are reading stuff this evening, join me because I am severely bored\"\n[]>capra:As am I.\n[]>narrator:As are you.<lc>It continues.<lc>\"in return you will receive knowledge\"\n[]>capra:At this point I could rip my brain out. <ap>I might. <lc>But first, I can have this cretin infodump on me.",
 						"selected_actor_dropdown_index": 0,
 						"use_dialog_syntax": true
 					},
@@ -2383,7 +2422,7 @@
 					"header": [],
 					"line_type": 0,
 					"meta.is_head_editable": true,
-					"meta.line_index": 1,
+					"meta.line_index": 2,
 					"meta.visible": true
 				},
 				{
@@ -2402,7 +2441,7 @@
 						"choices": [
 							{
 								"choice_text.disabled": "",
-								"choice_text.enabled": "enter door",
+								"choice_text.enabled": "What's the worst that could happen?",
 								"choice_text.enabled_as_default": true,
 								"conditionals": {
 									"behavior": 0,
@@ -2414,11 +2453,11 @@
 									"operand_args": [],
 									"operand_key": "AND"
 								},
-								"do_jump_page": true,
+								"do_jump_page": false,
 								"facts": {
 
 								},
-								"target_page": 10
+								"target_page": 0
 							}
 						],
 						"meta.do_jump_page": true
@@ -2429,11 +2468,226 @@
 					"header": [],
 					"line_type": 1,
 					"meta.is_head_editable": true,
-					"meta.line_index": 2,
+					"meta.line_index": 3,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"content": [
+							{
+								"name": "screen",
+								"value": "voice-call"
+							}
+						],
+						"delay.after": 0,
+						"delay.before": 0,
+						"name": "open-pc"
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 2,
+					"meta.is_head_editable": true,
+					"meta.line_index": 4,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"content": [
+							{
+								"name": "name",
+								"value": "icy-aloe"
+							},
+							{
+								"name": "visible",
+								"value": "true"
+							}
+						],
+						"delay.after": 0,
+						"delay.before": 0,
+						"name": "character-visible"
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 2,
+					"meta.is_head_editable": true,
+					"meta.line_index": 5,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"content": [
+							{
+								"name": "key",
+								"value": "join-vc"
+							},
+							{
+								"name": " random-pitch",
+								"value": "false"
+							}
+						],
+						"delay.after": 0,
+						"delay.before": 0,
+						"name": "play-sfx"
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 2,
+					"meta.is_head_editable": true,
+					"meta.line_index": 6,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"active_actors": [
+							"narrator",
+							"capra",
+							"rider",
+							"icy-aloe",
+							"starry",
+							"angel",
+							"crosscull",
+							"mom",
+							"dad",
+							"metaspirit",
+							"therapist",
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms",
+							"bouncer",
+							""
+						],
+						"active_actors_title": "characters",
+						"content": "[]>icy-aloe:Hi.\n[]>capra:.",
+						"selected_actor_dropdown_index": 0,
+						"use_dialog_syntax": true
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 0,
+					"meta.is_head_editable": true,
+					"meta.line_index": 7,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"content": [],
+						"delay.after": 0,
+						"delay.before": 0,
+						"name": "close-pc"
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 2,
+					"meta.is_head_editable": true,
+					"meta.line_index": 8,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"active_actors": [
+							"narrator",
+							"capra",
+							"rider",
+							"icy-aloe",
+							"starry",
+							"angel",
+							"crosscull",
+							"mom",
+							"dad",
+							"metaspirit",
+							"therapist",
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms",
+							"bouncer",
+							""
+						],
+						"active_actors_title": "characters",
+						"content": "[]>narrator:A few days later, you head to the concert venue.",
+						"selected_actor_dropdown_index": 0,
+						"use_dialog_syntax": true
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 0,
+					"meta.is_head_editable": true,
+					"meta.line_index": 9,
 					"meta.visible": true
 				}
 			],
-			"next": 17,
+			"next": 15,
 			"number": 9,
 			"page_key": "study group",
 			"terminate": false
@@ -2659,7 +2913,15 @@
 					"meta.is_head_editable": true,
 					"meta.line_index": 4,
 					"meta.visible": true
-				},
+				}
+			],
+			"next": 11,
+			"number": 10,
+			"page_key": "doomscroll",
+			"terminate": false
+		},
+		"11": {
+			"lines": [
 				{
 					"conditionals": {
 						"behavior": 0,
@@ -2687,11 +2949,11 @@
 							},
 							{
 								"name": "new_background",
-								"value": "none"
+								"value": "capra-bedroom"
 							},
 							{
 								"name": "new_bgm",
-								"value": "christmas"
+								"value": "capra-bedroom"
 							},
 							{
 								"name": " hide_characters",
@@ -2708,16 +2970,183 @@
 					"header": [],
 					"line_type": 2,
 					"meta.is_head_editable": true,
-					"meta.line_index": 5,
+					"meta.line_index": 0,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"active_actors": [
+							"narrator",
+							"capra",
+							"rider",
+							"icy-aloe",
+							"starry",
+							"angel",
+							"crosscull",
+							"mom",
+							"dad",
+							"metaspirit",
+							"therapist",
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms",
+							"bouncer",
+							""
+						],
+						"active_actors_title": "characters",
+						"content": "[]>metaspirit:Capra.\n[]>narrator:Your blood freezes over once again. <mp>You never expected your sleep paralysis demons to be this lucid.\n[]>capra{capra-emotion|spiraling}:Why are you in my life?\n[]>therapist:Are you planning on rotting in your bed forever?\n[]>capra{capra-emotion|hung-over}:Tact. Don't touch my heart like that. I just woke up.\n[]>metaspirit:There is naught to touch. <ap>And that's the problem.\n[]>capra:Leave me alone. Go away.\n[]>narrator:You pull your blanket over yourself. <lc>It does not vanish from your vision.\n[]>capra{capra-emotion|spiraling}:WHY DO YOU LIVE INSIDE MY EYES?\n[]>metaspirit:Because I am not bound to your physical reality.\n[]>capra{capra-emotion|anger}:Fuck off. I'll get up in a bit.",
+						"selected_actor_dropdown_index": 0,
+						"use_dialog_syntax": true
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 0,
+					"meta.is_head_editable": true,
+					"meta.line_index": 1,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"content": [
+							{
+								"name": "name",
+								"value": "metaspirit"
+							},
+							{
+								"name": "visible",
+								"value": "false"
+							}
+						],
+						"delay.after": 1,
+						"delay.before": 0,
+						"name": "character-visible"
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 2,
+					"meta.is_head_editable": true,
+					"meta.line_index": 2,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"active_actors": [
+							"narrator",
+							"capra",
+							"rider",
+							"icy-aloe",
+							"starry",
+							"angel",
+							"crosscull",
+							"mom",
+							"dad",
+							"metaspirit",
+							"therapist",
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms",
+							"bouncer",
+							""
+						],
+						"active_actors_title": "characters",
+						"content": "[]>capra{capra-emotion|neutral}: I hate how it has no sound.",
+						"selected_actor_dropdown_index": 0,
+						"use_dialog_syntax": true
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 0,
+					"meta.is_head_editable": true,
+					"meta.line_index": 3,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"active_actors": [
+							"narrator",
+							"capra",
+							"rider",
+							"icy-aloe",
+							"starry",
+							"angel",
+							"crosscull",
+							"mom",
+							"dad",
+							"metaspirit",
+							"therapist",
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms",
+							"bouncer",
+							""
+						],
+						"active_actors_title": "characters",
+						"content": "[]>metaspirit:",
+						"selected_actor_dropdown_index": 0,
+						"use_dialog_syntax": true
+					},
+					"facts": {
+						"motivated to be included": true
+					},
+					"header": [],
+					"line_type": 0,
+					"meta.is_head_editable": true,
+					"meta.line_index": 4,
 					"meta.visible": true
 				}
 			],
-			"next": 18,
-			"number": 10,
-			"page_key": "doomscroll",
+			"next": 19,
+			"number": 11,
+			"page_key": "get motivated to be included",
 			"terminate": false
 		},
-		"11": {
+		"12": {
 			"lines": [
 				{
 					"conditionals": {
@@ -3761,7 +4190,7 @@
 								"facts": {
 
 								},
-								"target_page": 12
+								"target_page": 13
 							},
 							{
 								"choice_text.disabled": "",
@@ -3840,12 +4269,12 @@
 					"meta.visible": true
 				}
 			],
-			"next": 13,
-			"number": 11,
+			"next": 14,
+			"number": 12,
 			"page_key": "vc hangout",
 			"terminate": false
 		},
-		"12": {
+		"13": {
 			"lines": [
 				{
 					"conditionals": {
@@ -3918,12 +4347,12 @@
 					"meta.visible": true
 				}
 			],
-			"next": 18,
-			"number": 12,
+			"next": 22,
+			"number": 13,
 			"page_key": "alcoholism",
 			"terminate": false
 		},
-		"13": {
+		"14": {
 			"lines": [
 				{
 					"conditionals": {
@@ -3970,12 +4399,12 @@
 					"meta.visible": true
 				}
 			],
-			"next": 14,
-			"number": 13,
+			"next": 15,
+			"number": 14,
 			"page_key": "concert planning",
 			"terminate": false
 		},
-		"14": {
+		"15": {
 			"lines": [
 				{
 					"conditionals": {
@@ -4008,7 +4437,7 @@
 							""
 						],
 						"active_actors_title": "characters",
-						"content": "[]>narrator:You arrive at the venue shortly after the doors opened for the night.\n[]>capra{capra-emotion|neutral}:I should basically be on time. I think.\n[]>rider{capra-emotion|spiraling,rider-emotion|neutral}:CAPRA!!!\n[]>narrator:You turn towards the noise. Your heart is pounding through your ribcage. <lc>Rider waves at you. He sent you a selfie beforehand so you knew who to look for. He probably just clocked you.<lc>Self-sufficiently, he steps towards you.\n[]>rider:Hehe, knew it.\n[]>capra:...<lc>Hi.\n[]>rider:Sorry, didn't mean to scare you like that. I was a neet once too, and I made a bet with the others I'd spot your ass before you get mine.\n[]>capra{capra-emotion|anger}:Hm.\n[]>rider:Shit, I'm really sorry. Wanna go to the others?\n[]>narrator:You're already regretting coming here.\n[]>capra:Sure.",
+						"content": "[]>narrator:You arrive at the venue shortly after the doors opened for the night. <lc>The tram ride there was uneventful, and a solid crowd of people is waiting outside. <ap>Most of them are smoking. <lc>You can barely remember who to look for.\n[]>capra{capra-emotion|neutral}:I should basically be on time. I think.\n[]>rider{capra-emotion|spiraling,rider-emotion|neutral}:CAPRA!!!\n[]>narrator:You turn towards the noise. Your heart is pounding through your ribcage. <lc>Rider waves at you. He sent you a selfie beforehand so you hypothetically knew who to look for. <mp>He probably just clocked you.<lc>Self-sufficiently, he steps towards you.\n[]>rider:Hehe, knew it.\n[]>capra:...<lc>Hi.\n[]>rider:Sorry, didn't mean to scare you like that. I was a neet once too, and I made a bet with the others I'd spot your ass before you get mine.\n[]>capra{capra-emotion|anger}:Hm.\n[]>rider:Shit, I'm really sorry. Wanna go to the others?\n[]>narrator:You're already regretting coming here.\n[]>capra:Sure.",
 						"selected_actor_dropdown_index": 0,
 						"use_dialog_syntax": true
 					},
@@ -4316,7 +4745,7 @@
 								"facts": {
 
 								},
-								"target_page": 16
+								"target_page": 17
 							},
 							{
 								"choice_text.disabled": "",
@@ -4336,7 +4765,7 @@
 								"facts": {
 
 								},
-								"target_page": 15
+								"target_page": 16
 							}
 						],
 						"meta.do_jump_page": true
@@ -4351,13 +4780,241 @@
 					"meta.visible": true
 				}
 			],
-			"next": 16,
-			"number": 14,
+			"next": 17,
+			"number": 15,
 			"page_key": "at concert, before mingling",
 			"terminate": false
 		},
-		"15": {
+		"16": {
 			"lines": [
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"active_actors": [
+							"narrator",
+							"capra",
+							"rider",
+							"icy-aloe",
+							"starry",
+							"angel",
+							"crosscull",
+							"mom",
+							"dad",
+							"metaspirit",
+							"therapist",
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms",
+							"bouncer",
+							""
+						],
+						"active_actors_title": "characters",
+						"content": "[]>icy-aloe:This your first concert? <ap>In a while, you mentioned?\n[]>narrator:You head up from the bar.",
+						"selected_actor_dropdown_index": 0,
+						"use_dialog_syntax": true
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 0,
+					"meta.is_head_editable": true,
+					"meta.line_index": 0,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"content": [
+							{
+								"name": "background_name",
+								"value": "concert-normal"
+							},
+							{
+								"name": "fade_in_time",
+								"value": "1.0"
+							}
+						],
+						"delay.after": 0,
+						"delay.before": 0,
+						"name": "set-background"
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 2,
+					"meta.is_head_editable": true,
+					"meta.line_index": 1,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"content": [
+							{
+								"name": "track_name",
+								"value": "concert-ambient"
+							},
+							{
+								"name": "fade_in_time",
+								"value": "1.0"
+							}
+						],
+						"delay.after": 0,
+						"delay.before": 0,
+						"name": "play-bgm"
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 2,
+					"meta.is_head_editable": true,
+					"meta.line_index": 2,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"content": [
+							{
+								"name": "key",
+								"value": "distortion"
+							},
+							{
+								"name": " random-pitch",
+								"value": "false"
+							}
+						],
+						"delay.after": 0,
+						"delay.before": 0,
+						"name": "play-sfx"
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 2,
+					"meta.is_head_editable": true,
+					"meta.line_index": 3,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"active_actors": [
+							"narrator",
+							"capra",
+							"rider",
+							"icy-aloe",
+							"starry",
+							"angel",
+							"crosscull",
+							"mom",
+							"dad",
+							"metaspirit",
+							"therapist",
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms",
+							"bouncer",
+							""
+						],
+						"active_actors_title": "characters",
+						"content": "[]>rider{rider-emotion|excited}:Sound check! Let's fucking goooo!\n[]>narrator:In unison, the three turn to the stage.",
+						"selected_actor_dropdown_index": 0,
+						"use_dialog_syntax": true
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 0,
+					"meta.is_head_editable": true,
+					"meta.line_index": 4,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"content": [
+							{
+								"name": "background_name",
+								"value": "concert-band"
+							},
+							{
+								"name": "fade_in_time",
+								"value": "3.0"
+							}
+						],
+						"delay.after": 0,
+						"delay.before": 0,
+						"name": "set-background"
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 2,
+					"meta.is_head_editable": true,
+					"meta.line_index": 5,
+					"meta.visible": true
+				},
 				{
 					"conditionals": {
 						"behavior": 0,
@@ -4399,7 +5056,7 @@
 					"header": [],
 					"line_type": 0,
 					"meta.is_head_editable": true,
-					"meta.line_index": 0,
+					"meta.line_index": 6,
 					"meta.visible": true
 				},
 				{
@@ -4434,7 +5091,7 @@
 					"header": [],
 					"line_type": 2,
 					"meta.is_head_editable": true,
-					"meta.line_index": 1,
+					"meta.line_index": 7,
 					"meta.visible": true
 				},
 				{
@@ -4468,7 +5125,7 @@
 							""
 						],
 						"active_actors_title": "characters",
-						"content": "[]>narrator:And then it's time for the main act. Icy dives back into the mosh pit area as Nailbiter make their way onto the stage.",
+						"content": "[]>starry:btw, things will get rowdy but no need to be afraid. you acn just stick with me",
 						"selected_actor_dropdown_index": 0,
 						"use_dialog_syntax": true
 					},
@@ -4478,16 +5135,691 @@
 					"header": [],
 					"line_type": 0,
 					"meta.is_head_editable": true,
-					"meta.line_index": 2,
+					"meta.line_index": 8,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"content": [],
+						"delay.after": 0,
+						"delay.before": 0,
+						"name": "hide-all-characters"
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 2,
+					"meta.is_head_editable": true,
+					"meta.line_index": 9,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"content": [
+							{
+								"name": "track_name",
+								"value": "grime"
+							},
+							{
+								"name": "fade_in_time",
+								"value": "0.0"
+							}
+						],
+						"delay.after": 0,
+						"delay.before": 0,
+						"name": "play-bgm"
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 2,
+					"meta.is_head_editable": true,
+					"meta.line_index": 10,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"active_actors": [
+							"narrator",
+							"capra",
+							"rider",
+							"icy-aloe",
+							"starry",
+							"angel",
+							"crosscull",
+							"mom",
+							"dad",
+							"metaspirit",
+							"therapist",
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms",
+							"bouncer",
+							""
+						],
+						"active_actors_title": "characters",
+						"content": "[]>narrator:Grime goes hard.",
+						"selected_actor_dropdown_index": 0,
+						"use_dialog_syntax": true
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 0,
+					"meta.is_head_editable": true,
+					"meta.line_index": 11,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"content": [
+							{
+								"name": "background_name",
+								"value": "concert-normal"
+							},
+							{
+								"name": "fade_in_time",
+								"value": "3.0"
+							}
+						],
+						"delay.after": 0,
+						"delay.before": 0,
+						"name": "set-background"
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 2,
+					"meta.is_head_editable": true,
+					"meta.line_index": 12,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"content": [
+							{
+								"name": "track_name",
+								"value": "concert-ambient"
+							},
+							{
+								"name": "fade_in_time",
+								"value": "1.0"
+							}
+						],
+						"delay.after": 0,
+						"delay.before": 0,
+						"name": "play-bgm"
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 2,
+					"meta.is_head_editable": true,
+					"meta.line_index": 13,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"active_actors": [
+							"narrator",
+							"capra",
+							"rider",
+							"icy-aloe",
+							"starry",
+							"angel",
+							"crosscull",
+							"mom",
+							"dad",
+							"metaspirit",
+							"therapist",
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms",
+							"bouncer",
+							""
+						],
+						"active_actors_title": "characters",
+						"content": "[]>narrator:Break time.",
+						"selected_actor_dropdown_index": 0,
+						"use_dialog_syntax": true
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 0,
+					"meta.is_head_editable": true,
+					"meta.line_index": 14,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"content": [
+							{
+								"name": "background_name",
+								"value": "concert-band"
+							},
+							{
+								"name": "fade_in_time",
+								"value": "3.0"
+							}
+						],
+						"delay.after": 0,
+						"delay.before": 0,
+						"name": "set-background"
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 2,
+					"meta.is_head_editable": true,
+					"meta.line_index": 15,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"active_actors": [
+							"narrator",
+							"capra",
+							"rider",
+							"icy-aloe",
+							"starry",
+							"angel",
+							"crosscull",
+							"mom",
+							"dad",
+							"metaspirit",
+							"therapist",
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms",
+							"bouncer",
+							""
+						],
+						"active_actors_title": "characters",
+						"content": "[]>narrator:And then it's time for the main act. Icy dives back into the mosh pit area as Nailbiter make their way onto the stage. <ap>Rider follows suit, and then it's just Starry and you, surrounded by the other concertgoers that are all a bit too shy to go to the front, but still want to be close enough to feel the motion of the room.\n[]>capra{capra-emotion|spiraling}:Still a bit much.\n[]>narrator:Starry probably cannot hear you. It's pretty loud. <lc>And then it gets louder.",
+						"selected_actor_dropdown_index": 0,
+						"use_dialog_syntax": true
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 0,
+					"meta.is_head_editable": true,
+					"meta.line_index": 16,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"content": [
+							{
+								"name": "track_name",
+								"value": "nailbiter"
+							},
+							{
+								"name": "fade_in_time",
+								"value": "0.0"
+							}
+						],
+						"delay.after": 0,
+						"delay.before": 0,
+						"name": "play-bgm"
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 2,
+					"meta.is_head_editable": true,
+					"meta.line_index": 17,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"active_actors": [
+							"narrator",
+							"capra",
+							"rider",
+							"icy-aloe",
+							"starry",
+							"angel",
+							"crosscull",
+							"mom",
+							"dad",
+							"metaspirit",
+							"therapist",
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms",
+							"bouncer",
+							""
+						],
+						"active_actors_title": "characters",
+						"content": "[]>narrator:Rider and icy die lmao",
+						"selected_actor_dropdown_index": 0,
+						"use_dialog_syntax": true
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 0,
+					"meta.is_head_editable": true,
+					"meta.line_index": 18,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"content": [
+							{
+								"name": "track_name",
+								"value": "concert-ambient"
+							},
+							{
+								"name": "fade_in_time",
+								"value": "2.0"
+							}
+						],
+						"delay.after": 0,
+						"delay.before": 0,
+						"name": "play-bgm"
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 2,
+					"meta.is_head_editable": true,
+					"meta.line_index": 19,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"content": [
+							{
+								"name": "background_name",
+								"value": "concert-normal"
+							},
+							{
+								"name": "fade_in_time",
+								"value": "3.0"
+							}
+						],
+						"delay.after": 0,
+						"delay.before": 0,
+						"name": "set-background"
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 2,
+					"meta.is_head_editable": true,
+					"meta.line_index": 20,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"active_actors": [
+							"narrator",
+							"capra",
+							"rider",
+							"icy-aloe",
+							"starry",
+							"angel",
+							"crosscull",
+							"mom",
+							"dad",
+							"metaspirit",
+							"therapist",
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms",
+							"bouncer",
+							""
+						],
+						"active_actors_title": "characters",
+						"content": "[]>narrator:After-concert hangout inside the venue",
+						"selected_actor_dropdown_index": 0,
+						"use_dialog_syntax": true
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 0,
+					"meta.is_head_editable": true,
+					"meta.line_index": 21,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"active_actors": [
+							"narrator",
+							"capra",
+							"rider",
+							"icy-aloe",
+							"starry",
+							"angel",
+							"crosscull",
+							"mom",
+							"dad",
+							"metaspirit",
+							"therapist",
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms",
+							"bouncer",
+							""
+						],
+						"active_actors_title": "characters",
+						"content": "[]>starry:I think they'll kick us out in a few minutes. Angel and Crosscull are probably also waiting for us, if they haven't left yet.\n[]>icy-aloe:True.\n[]>rider:Well then let's go.\n[]>narrator:You depart. While walking through the entryway, Rider falls back to you.\n[]>rider:There's another concert like this one happening in a few days. It's right on Christmas actually, if you don't have anything better to do then.\n[]>capra{capra-emotion|spiraling}:...<ap>...<lc>Uhm...\n[]>narrator:This spontaneity is way too much for you.\n[]>capra:I'll... think on it. I'll text you.\n[]>rider:Gotcha.",
+						"selected_actor_dropdown_index": 0,
+						"use_dialog_syntax": true
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 0,
+					"meta.is_head_editable": true,
+					"meta.line_index": 22,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"content": [
+							{
+								"name": "name",
+								"value": "starry"
+							},
+							{
+								"name": "visible",
+								"value": "false"
+							}
+						],
+						"delay.after": 0,
+						"delay.before": 0,
+						"name": "character-visible"
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 2,
+					"meta.is_head_editable": true,
+					"meta.line_index": 23,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"content": [
+							{
+								"name": "name",
+								"value": "icy-aloe"
+							},
+							{
+								"name": "visible",
+								"value": "false"
+							}
+						],
+						"delay.after": 0,
+						"delay.before": 0,
+						"name": "character-visible"
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 2,
+					"meta.is_head_editable": true,
+					"meta.line_index": 24,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"active_actors": [
+							"narrator",
+							"capra",
+							"rider",
+							"icy-aloe",
+							"starry",
+							"angel",
+							"crosscull",
+							"mom",
+							"dad",
+							"metaspirit",
+							"therapist",
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms",
+							"bouncer",
+							""
+						],
+						"active_actors_title": "characters",
+						"content": "[]>narrator:And then, you're already outside.",
+						"selected_actor_dropdown_index": 0,
+						"use_dialog_syntax": true
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 0,
+					"meta.is_head_editable": true,
+					"meta.line_index": 25,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"content": [],
+						"delay.after": 0,
+						"delay.before": 0,
+						"name": ""
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 2,
+					"meta.is_head_editable": true,
+					"meta.line_index": 26,
 					"meta.visible": true
 				}
 			],
-			"next": 19,
-			"number": 15,
+			"next": 18,
+			"number": 16,
 			"page_key": "mingling with band",
 			"terminate": false
 		},
-		"16": {
+		"17": {
 			"lines": [
 				{
 					"conditionals": {
@@ -4704,7 +6036,7 @@
 							""
 						],
 						"active_actors_title": "characters",
-						"content": "[]>narrator:They turn to face you. A tensing shiver runs across your shoulders.\n[]>angel:Hi! I don't think we met before?\n[]>capra:Uhh... no. I'm- I'm from the hot sauce enjoyers server, Rider posted the link to this.\n[]>angel:Oohhh yea, the KommKomm server.\n[]>capra: ...yea. Rider posted the link and it was an open invitation so...\n[]>angel: Awww well hello, I'm happy to have you then. I'm Angel, what's your name?\n[]>capra: ... <lc> ...Capra.\n[]>angel{angel-emotion|happy}:Nice to meet you Capra!\n[]>crosscull: Hello. I'm Crosscull. Xe/xer.\n[]>capra: Likewise. <mp> The meeting part, my pronouns are a bit fucked. But uhh I think she/her for me for now.\n[]>angel: Ah yes, I recall you talking about that in the vent channel. So your gender is still doing its thing?\n[]>capra: Heh. I don't know. I dunno. Honestly.\n[]>angel{angel-emotion|neutral}: That's totally fine. Don't need to turn this into group therapy immediately haha.\n[]>crosscull: [affirmative noise]\n[]>angel: So how much are you looking forward to this? Have you been to many concerts recently, or in life in general?\n[]>capra: To be honesty, not really. No, I don't even go outside much. But I'm hoping this to turn well.\n[]>crosscull: Is this music to your tastes?\n[]>capra: I don't know. I don't listen to much heavy stuff like this.\n[]>angel: Haha, well, Grime and Nailbiter both go hard as fuck. But we also only know of them since a show a few months back. I don't think we organized that over KommKomm though.\n[]>crosscull: To mention, we have different favorites.\n[]>angel: Very true. I'm more into the harsh riffs of Nailbiter. Crosscull is more into the bassy sludge of Grime.\n[]>crosscull: Yes. It comes with my background in the darkwave and idm scene.\n[]>capra: Haha, you know your stuff around this stuff?\n[]>angel: You could say that. It mostly comes with exposure though. There's no formal academies on dark and heavy music.",
+						"content": "[]>narrator:They turn to face you. A tensing shiver runs across your shoulders.\n[]>angel:Hi! I don't think we met irl before?\n[]>capra:Uhh... no. I'm- I'm from the hot sauce enjoyers server, Rider posted the link to this.\n[]>angel:Oohhh yea, the KommKomm server.\n[]>capra: ...yea. Rider posted the link and it was an open invitation so...\n[]>angel: Awww well hello, I'm happy to have you then. I'm Angel, what's your name?\n[]>capra: ... <lc> ...Capra.\n[]>angel{angel-emotion|happy}:Nice to meet you Capra!\n[]>crosscull: Hello. I'm Crosscull. Xe/xer.\n[]>capra: Likewise. <mp> The meeting part, my pronouns are a bit fucked. But uhh I think she/her for me for now.\n[]>angel: Ah yes, I recall you talking about that in the vent channel. So your gender is still doing its thing?\n[]>capra: Heh. I don't know. I dunno. Honestly.\n[]>angel{angel-emotion|neutral}: That's totally fine. Don't need to turn this into group therapy immediately haha.\n[]>crosscull: [affirmative noise]\n[]>angel: So how much are you looking forward to this? Have you been to many concerts recently, or in life in general?\n[]>capra: To be honesty, not really. No, I don't even go outside much. But I'm hoping this to turn well.\n[]>crosscull: Is this music to your tastes?\n[]>capra: I don't know. I don't listen to much heavy stuff like this.\n[]>angel: Haha, well, Grime and Nailbiter both go hard as fuck. But we also only know of them since a show a few months back. I don't think we organized that over KommKomm though.\n[]>crosscull: To mention, we have different favorites.\n[]>angel: Very true. I'm more into the harsh riffs of Nailbiter. Crosscull is more into the bassy sludge of Grime.\n[]>crosscull: Yes. It comes with my background in the darkwave and industrial scene.\n[]>capra: Haha, you know your stuff around this stuff?\n[]>angel: You could say that. It mostly comes with exposure though. There's no formal academies on dark and heavy music.",
 						"selected_actor_dropdown_index": 0,
 						"use_dialog_syntax": true
 					},
@@ -5448,7 +6780,7 @@
 							""
 						],
 						"active_actors_title": "characters",
-						"content": "[]>angel{angel-emotion|happy}: That was AWESOME!\n[]>crosscull: Absolutely.\n[]>capra: Looks like you had fun.\n[]>angel: Very much. Nailbiter are so fucking good. <lc> I hope you were also fine with the noise and everything?\n[]>capra: Yes, no worries.\n[]>angel: Okay good, because you did go quite the bit back. Pit went insane. Even pulled off a wall of death.\n[]>narrator:: Angel takes a few breaths.\n[]>angel: Wanna get something to drink?\n[]>capra: uhh... yea. Sure.\n[]>angel: Cool. Want anything?\n[]>capra: umm. Water is fine, if you want.\n[]>angel: Gotcha.\n[]>narrator:: You step over to the bar, Angel orders three bottles of water, and you each step outside with the rest of the slowly-dispersing crowd, beverages in hand.\n[]>angel: ahhh... haha. By the way, do you have anything planned on christmas?\n[]>capra: <func:christmas_plans>\n[]>angel: Ah okay. Because CC and I are gonna go to one of the local queer clubs that evening and we wanted to ask if you wanted to tag along.\n[]>capra: I'll think on it.\n[]>angel: Great.\n[]>crosscull: mh-hm.\n[]>narrator:: you continue with a bit of idle chit chat about that bar, this concert venue, all the things Angel and Crosscull appearently get up to regularly. <lc> A few solid minutes pass like this.\n[]>capra: It's getting kinda cold to be honest.\n[]>crosscull: It's getting late too.\n[]>angel: it's getting quite late indeed. It's been an absolute pleasure hanging out with you, Capra.\n[]>capra: h- huh? Thank you, yes, same.\n[]>angel: Will you be fine going home on your own? Where do you even live?\n[]>capra: Uhhmm, east. In Galwice.\n[]>crosscull: Then I can accompany you. I also live in that direction.\n[]>angel: Lovely! Is that fine with you?\n[]>capra: Yes, of course.\n[]>angel: Then that's settled. Great! Have a safe ride home you two.\n[]>crosscull: Likewise. We will be in touch.\n[]>angel: That we will! Bye!\n[]>capra: Bye.",
+						"content": "[]>angel{angel-emotion|happy}: That was AWESOME!\n[]>crosscull: Absolutely.\n[]>capra: Looks like you had fun.\n[]>angel: Very much. Nailbiter are so fucking good. <lc> I hope you were also fine with the noise and everything?\n[]>capra: Yes, no worries.\n[]>angel: Okay good, because you did go quite the bit back. Pit went insane. Even pulled off a wall of death.\n[]>narrator: Angel takes a few breaths.\n[]>angel: ...<lc>......<lc>Wanna get something to drink?\n[]>capra: uhh... yea. Sure.\n[]>angel: Cool. Want anything?\n[]>capra: umm. Water is fine, if you want.\n[]>angel: Gotcha.\n[]>narrator:: You step over to the bar, Angel orders three bottles of water, and you each step outside with the rest of the slowly-dispersing crowd, beverages in hand.",
 						"selected_actor_dropdown_index": 0,
 						"use_dialog_syntax": true
 					},
@@ -5602,12 +6934,612 @@
 					"meta.visible": true
 				}
 			],
-			"next": 19,
-			"number": 16,
+			"next": 23,
+			"number": 17,
 			"page_key": "mingling with swag",
 			"terminate": false
 		},
-		"17": {
+		"18": {
+			"lines": [
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+							"mingled with swag": true
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"active_actors": [
+							"narrator",
+							"capra",
+							"rider",
+							"icy-aloe",
+							"starry",
+							"angel",
+							"crosscull",
+							"mom",
+							"dad",
+							"metaspirit",
+							"therapist",
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms",
+							"bouncer",
+							""
+						],
+						"active_actors_title": "characters",
+						"content": "[]>angel: ahhh... haha. By the way, do you have anything planned on christmas?\n[]>capra: <func:christmas_plans>\n[]>angel: Ah okay. Because CC and I are gonna go to one of the local queer clubs that evening and we wanted to ask if you wanted to tag along.\n[]>capra: I'll think on it.\n[]>angel: Great.\n[]>crosscull: Mh-hm.\n[]>narrator: You continue with a bit of idle chit chat about that bar, this concert venue, all the things Angel and Crosscull appearently get up to regularly. <lc> A few solid minutes pass like this. <ap>Eventually, the others also exit the venue.",
+						"selected_actor_dropdown_index": 0,
+						"use_dialog_syntax": true
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 0,
+					"meta.is_head_editable": true,
+					"meta.line_index": 0,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+							"mingled with band": true
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"active_actors": [
+							"narrator",
+							"capra",
+							"rider",
+							"icy-aloe",
+							"starry",
+							"angel",
+							"crosscull",
+							"mom",
+							"dad",
+							"metaspirit",
+							"therapist",
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms",
+							"bouncer",
+							""
+						],
+						"active_actors_title": "characters",
+						"content": "[]>narrator:Angel and Crosscull are already outside.",
+						"selected_actor_dropdown_index": 0,
+						"use_dialog_syntax": true
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 0,
+					"meta.is_head_editable": true,
+					"meta.line_index": 1,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"active_actors": [
+							"narrator",
+							"capra",
+							"rider",
+							"icy-aloe",
+							"starry",
+							"angel",
+							"crosscull",
+							"mom",
+							"dad",
+							"metaspirit",
+							"therapist",
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms",
+							"bouncer",
+							""
+						],
+						"active_actors_title": "characters",
+						"content": "[]>angel:That pit was so good.\n[]>rider:It was!\n[]>icy-aloe:I think you were there too, Angel. <ap>I scraped my knee in that Nailbiter pit.\n[]>angel:I saw! And some of those guys didn't even help you back up?\n[]>icy-aloe:Can't all be winners.\n[]>crosscull:Icy. Are you fine?\n[]>icy-aloe:Yes. <mp>It was very fun too. Anticipation is building already again anyways. Nuclear Infanticide in a week!",
+						"selected_actor_dropdown_index": 0,
+						"use_dialog_syntax": true
+					},
+					"facts": {
+						"mingled with band": true
+					},
+					"header": [],
+					"line_type": 0,
+					"meta.is_head_editable": true,
+					"meta.line_index": 2,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"active_actors": [
+							"narrator",
+							"capra",
+							"rider",
+							"icy-aloe",
+							"starry",
+							"angel",
+							"crosscull",
+							"mom",
+							"dad",
+							"metaspirit",
+							"therapist",
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms",
+							"bouncer",
+							""
+						],
+						"active_actors_title": "characters",
+						"content": "[]>capra: It's getting kinda cold to be honest.\n[]>crosscull: It's getting late too.\n[]>angel: it's getting quite late indeed. It's been an absolute pleasure hanging out with you, Capra.\n[]>capra: h- huh? Thank you, yes, same.\n[]>angel: Will you be fine going home on your own? Where do you even live?\n[]>capra: Uhhmm, east. In Galwice.\n[]>crosscull: Then I can accompany you. I also live in that direction.\n[]>angel: Lovely! Is that fine with you?\n[]>capra: Yes, of course.\n[]>angel: Then that's settled. Great! Have a safe ride home you two.\n[]>crosscull: Likewise. We will be in touch.\n[]>angel: That we will! Bye!\n[]>capra: Bye.",
+						"selected_actor_dropdown_index": 0,
+						"use_dialog_syntax": true
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 0,
+					"meta.is_head_editable": true,
+					"meta.line_index": 3,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"content": [
+							{
+								"name": "track_name",
+								"value": "outside-ambient"
+							},
+							{
+								"name": "fade_in_time",
+								"value": "2.0"
+							}
+						],
+						"delay.after": 0,
+						"delay.before": 0,
+						"name": "play-bgm"
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 2,
+					"meta.is_head_editable": true,
+					"meta.line_index": 4,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"content": [
+							{
+								"name": "background_name",
+								"value": "tram-station"
+							},
+							{
+								"name": "fade_in_time",
+								"value": "1.0"
+							}
+						],
+						"delay.after": 0,
+						"delay.before": 0,
+						"name": "set-background"
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 2,
+					"meta.is_head_editable": true,
+					"meta.line_index": 5,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"content": [],
+						"delay.after": 0,
+						"delay.before": 0,
+						"name": "hide-all-characters"
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 2,
+					"meta.is_head_editable": true,
+					"meta.line_index": 6,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"active_actors": [
+							"narrator",
+							"capra",
+							"rider",
+							"icy-aloe",
+							"starry",
+							"angel",
+							"crosscull",
+							"mom",
+							"dad",
+							"metaspirit",
+							"therapist",
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms",
+							"bouncer",
+							""
+						],
+						"active_actors_title": "characters",
+						"content": "[]>narrator:The ride home is uneventful. With Angel gone, the conversation is much less lively, but Crosscull doesn't seem to mind. Xe almost enjoys that silence, it seems. Or maybe xe just hates you. Regardless, Crosscull gets out a few stops before you, you say your goodbyes, and later that evening, there's some activity on the KommKomm server.",
+						"selected_actor_dropdown_index": 0,
+						"use_dialog_syntax": true
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 0,
+					"meta.is_head_editable": true,
+					"meta.line_index": 7,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"content": [
+							{
+								"name": "background_name",
+								"value": "capra-bedroom"
+							},
+							{
+								"name": "fade_in_time",
+								"value": "0.5"
+							}
+						],
+						"delay.after": 0,
+						"delay.before": 0,
+						"name": "set-background"
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 2,
+					"meta.is_head_editable": true,
+					"meta.line_index": 8,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"content": [
+							{
+								"name": "track_name",
+								"value": "capra-bedroom"
+							},
+							{
+								"name": "fade_in_time",
+								"value": "1.0"
+							}
+						],
+						"delay.after": 0,
+						"delay.before": 0,
+						"name": "play-bgm"
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 2,
+					"meta.is_head_editable": true,
+					"meta.line_index": 9,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"content": [
+							{
+								"name": "screen",
+								"value": "voice-call"
+							}
+						],
+						"delay.after": 0,
+						"delay.before": 0,
+						"name": "open-pc"
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 2,
+					"meta.is_head_editable": true,
+					"meta.line_index": 10,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"content": [
+							{
+								"name": "name",
+								"value": "icy-aloe"
+							},
+							{
+								"name": "visible",
+								"value": "true"
+							}
+						],
+						"delay.after": 0,
+						"delay.before": 0,
+						"name": "character-visible"
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 2,
+					"meta.is_head_editable": true,
+					"meta.line_index": 11,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"content": [
+							{
+								"name": "name",
+								"value": "rider"
+							},
+							{
+								"name": "visible",
+								"value": "true"
+							}
+						],
+						"delay.after": 0,
+						"delay.before": 0,
+						"name": "character-visible"
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 2,
+					"meta.is_head_editable": true,
+					"meta.line_index": 12,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"content": [
+							{
+								"name": "key",
+								"value": "join-noise"
+							},
+							{
+								"name": " random-pitch",
+								"value": "false"
+							}
+						],
+						"delay.after": 0,
+						"delay.before": 0,
+						"name": "play-sfx"
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 2,
+					"meta.is_head_editable": true,
+					"meta.line_index": 13,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"active_actors": [
+							"narrator",
+							"capra",
+							"rider",
+							"icy-aloe",
+							"starry",
+							"angel",
+							"crosscull",
+							"mom",
+							"dad",
+							"metaspirit",
+							"therapist",
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms",
+							"bouncer",
+							""
+						],
+						"active_actors_title": "characters",
+						"content": "[]>icy-aloe:Capra! So we meet again.\n[]>capra:Hi... hi.\n[]>rider:We were just hanging out. <mp>We mentioned that Nuclear Infanticide Concert",
+						"selected_actor_dropdown_index": 0,
+						"use_dialog_syntax": true
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 0,
+					"meta.is_head_editable": true,
+					"meta.line_index": 14,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"content": [],
+						"delay.after": 0,
+						"delay.before": 0,
+						"name": "close-pc"
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 2,
+					"meta.is_head_editable": true,
+					"meta.line_index": 15,
+					"meta.visible": true
+				}
+			],
+			"next": 12,
+			"number": 18,
+			"page_key": "after concert convo",
+			"terminate": false
+		},
+		"19": {
 			"lines": [
 				{
 					"conditionals": {
@@ -5640,12 +7572,154 @@
 							""
 						],
 						"active_actors_title": "characters",
-						"content": "[]>narrator:Starry, Icy, and Rider are all dead and passed out lmfao",
+						"content": "[]>narrator: Shortly before Christmas, Rider is hanging out in the voice chat again, streaming to no one.",
 						"selected_actor_dropdown_index": 0,
 						"use_dialog_syntax": true
 					},
 					"facts": {
-						"mingled with band": true
+
+					},
+					"header": [],
+					"line_type": 0,
+					"meta.is_head_editable": true,
+					"meta.line_index": 0,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+							"motivated to be included": true
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"active_actors": [
+							"narrator",
+							"capra",
+							"rider",
+							"icy-aloe",
+							"starry",
+							"angel",
+							"crosscull",
+							"mom",
+							"dad",
+							"metaspirit",
+							"therapist",
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms",
+							"bouncer",
+							""
+						],
+						"active_actors_title": "characters",
+						"content": "[]>narrator:You're not gonna sit on the sidelines forever.",
+						"selected_actor_dropdown_index": 0,
+						"use_dialog_syntax": true
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 0,
+					"meta.is_head_editable": true,
+					"meta.line_index": 1,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"auto_switch": true,
+						"choices": [
+							{
+								"choice_text.disabled": "",
+								"choice_text.enabled": "choice label",
+								"choice_text.enabled_as_default": true,
+								"conditionals": {
+									"behavior": 0,
+									"behavior_key": "Show",
+									"facts": {
+										"met metaspirit": true
+									},
+									"operand": 0,
+									"operand_args": [],
+									"operand_key": "AND"
+								},
+								"do_jump_page": true,
+								"facts": {
+
+								},
+								"target_page": 20
+							}
+						],
+						"meta.do_jump_page": true
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 1,
+					"meta.is_head_editable": true,
+					"meta.line_index": 2,
+					"meta.visible": true
+				}
+			],
+			"next": 22,
+			"number": 19,
+			"page_key": "vc hangout after concert",
+			"terminate": false
+		},
+		"20": {
+			"lines": [
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"active_actors": [
+							"narrator",
+							"capra",
+							"rider",
+							"icy-aloe",
+							"starry",
+							"angel",
+							"crosscull",
+							"mom",
+							"dad",
+							"metaspirit",
+							"therapist",
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms",
+							"bouncer",
+							""
+						],
+						"active_actors_title": "characters",
+						"content": "[]>metaspirit:We need to talk",
+						"selected_actor_dropdown_index": 0,
+						"use_dialog_syntax": true
+					},
+					"facts": {
+
 					},
 					"header": [],
 					"line_type": 0,
@@ -5654,13 +7728,116 @@
 					"meta.visible": true
 				}
 			],
-			"next": 11,
-			"number": 17,
-			"page_key": "band practice",
+			"next": 22,
+			"number": 20,
+			"page_key": "second metaspirit encounter",
 			"terminate": false
 		},
-		"18": {
+		"21": {
 			"lines": [
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"active_actors": [
+							"narrator",
+							"capra",
+							"rider",
+							"icy-aloe",
+							"starry",
+							"angel",
+							"crosscull",
+							"mom",
+							"dad",
+							"metaspirit",
+							"therapist",
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms",
+							"bouncer",
+							""
+						],
+						"active_actors_title": "characters",
+						"content": "[]>narrator:Anti-vampire legislature\n[]>narrator:Racism\n[]>doomfeed:Hatred",
+						"selected_actor_dropdown_index": 0,
+						"use_dialog_syntax": true
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 0,
+					"meta.is_head_editable": true,
+					"meta.line_index": 0,
+					"meta.visible": true
+				}
+			],
+			"next": 23,
+			"number": 21,
+			"page_key": "doomscroll more",
+			"terminate": false
+		},
+		"22": {
+			"lines": [
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"content": [
+							{
+								"name": "fade_in",
+								"value": "4.0"
+							},
+							{
+								"name": "sustain",
+								"value": "2.0"
+							},
+							{
+								"name": "fade_out",
+								"value": "4.0"
+							},
+							{
+								"name": "new_background",
+								"value": "capra-bedroom"
+							},
+							{
+								"name": "new_bgm",
+								"value": "christmas"
+							},
+							{
+								"name": " hide_characters",
+								"value": "true"
+							}
+						],
+						"delay.after": 0,
+						"delay.before": 0,
+						"name": "black-fade"
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 2,
+					"meta.is_head_editable": true,
+					"meta.line_index": 0,
+					"meta.visible": true
+				},
 				{
 					"conditionals": {
 						"behavior": 0,
@@ -5702,7 +7879,7 @@
 					"header": [],
 					"line_type": 0,
 					"meta.is_head_editable": true,
-					"meta.line_index": 0,
+					"meta.line_index": 1,
 					"meta.visible": true
 				},
 				{
@@ -5746,7 +7923,7 @@
 					"header": [],
 					"line_type": 0,
 					"meta.is_head_editable": true,
-					"meta.line_index": 1,
+					"meta.line_index": 2,
 					"meta.visible": true
 				},
 				{
@@ -5790,7 +7967,7 @@
 					"header": [],
 					"line_type": 0,
 					"meta.is_head_editable": true,
-					"meta.line_index": 2,
+					"meta.line_index": 3,
 					"meta.visible": true
 				},
 				{
@@ -5834,7 +8011,7 @@
 					"header": [],
 					"line_type": 0,
 					"meta.is_head_editable": true,
-					"meta.line_index": 3,
+					"meta.line_index": 4,
 					"meta.visible": true
 				},
 				{
@@ -5878,7 +8055,7 @@
 					"header": [],
 					"line_type": 0,
 					"meta.is_head_editable": true,
-					"meta.line_index": 4,
+					"meta.line_index": 5,
 					"meta.visible": true
 				},
 				{
@@ -5922,7 +8099,7 @@
 					"header": [],
 					"line_type": 0,
 					"meta.is_head_editable": true,
-					"meta.line_index": 5,
+					"meta.line_index": 6,
 					"meta.visible": true
 				},
 				{
@@ -5957,7 +8134,7 @@
 								"facts": {
 
 								},
-								"target_page": 19
+								"target_page": 23
 							},
 							{
 								"choice_text.disabled": "",
@@ -5977,7 +8154,7 @@
 								"facts": {
 
 								},
-								"target_page": 20
+								"target_page": 24
 							},
 							{
 								"choice_text.disabled": "",
@@ -5997,7 +8174,7 @@
 								"facts": {
 
 								},
-								"target_page": 24
+								"target_page": 28
 							},
 							{
 								"choice_text.disabled": "",
@@ -6017,7 +8194,7 @@
 								"facts": {
 
 								},
-								"target_page": 27
+								"target_page": 31
 							}
 						],
 						"meta.do_jump_page": true
@@ -6028,16 +8205,16 @@
 					"header": [],
 					"line_type": 1,
 					"meta.is_head_editable": true,
-					"meta.line_index": 6,
+					"meta.line_index": 7,
 					"meta.visible": true
 				}
 			],
-			"next": 20,
-			"number": 18,
+			"next": 24,
+			"number": 22,
 			"page_key": "christmas evening",
 			"terminate": false
 		},
-		"19": {
+		"23": {
 			"lines": [
 				{
 					"conditionals": {
@@ -6216,12 +8393,12 @@
 					"meta.visible": true
 				}
 			],
-			"next": 18,
-			"number": 19,
+			"next": 22,
+			"number": 23,
 			"page_key": "alone on christmas",
 			"terminate": false
 		},
-		"20": {
+		"24": {
 			"lines": [
 				{
 					"conditionals": {
@@ -6303,12 +8480,12 @@
 					"meta.visible": true
 				}
 			],
-			"next": 21,
-			"number": 20,
+			"next": 25,
+			"number": 24,
 			"page_key": "Visiting Parents",
 			"terminate": false
 		},
-		"21": {
+		"25": {
 			"lines": [
 				{
 					"conditionals": {
@@ -6461,12 +8638,12 @@
 					"meta.visible": true
 				}
 			],
-			"next": 22,
-			"number": 21,
+			"next": 26,
+			"number": 25,
 			"page_key": "confront parents",
 			"terminate": false
 		},
-		"22": {
+		"26": {
 			"lines": [
 				{
 					"conditionals": {
@@ -6669,7 +8846,7 @@
 								"facts": {
 
 								},
-								"target_page": 23
+								"target_page": 27
 							},
 							{
 								"choice_text.disabled": "",
@@ -6724,12 +8901,12 @@
 					"meta.visible": true
 				}
 			],
-			"next": 23,
-			"number": 22,
+			"next": 27,
+			"number": 26,
 			"page_key": "Leaving parents place",
 			"terminate": false
 		},
-		"23": {
+		"27": {
 			"lines": [
 				{
 					"conditionals": {
@@ -6851,7 +9028,7 @@
 								"facts": {
 
 								},
-								"target_page": 28
+								"target_page": 32
 							},
 							{
 								"choice_text.disabled": "",
@@ -6974,12 +9151,12 @@
 					"meta.visible": true
 				}
 			],
-			"next": 24,
-			"number": 23,
+			"next": 28,
+			"number": 27,
 			"page_key": "going home after christmas",
 			"terminate": false
 		},
-		"24": {
+		"28": {
 			"lines": [
 				{
 					"conditionals": {
@@ -7488,12 +9665,12 @@
 					"meta.visible": true
 				}
 			],
-			"next": 25,
-			"number": 24,
+			"next": 29,
+			"number": 28,
 			"page_key": "confrontation with bouncer",
 			"terminate": false
 		},
-		"25": {
+		"29": {
 			"lines": [
 				{
 					"conditionals": {
@@ -7540,12 +9717,12 @@
 					"meta.visible": true
 				}
 			],
-			"next": 26,
-			"number": 25,
+			"next": 30,
+			"number": 29,
 			"page_key": "way home to rider",
 			"terminate": false
 		},
-		"26": {
+		"30": {
 			"lines": [
 				{
 					"conditionals": {
@@ -7592,12 +9769,12 @@
 					"meta.visible": true
 				}
 			],
-			"next": 28,
-			"number": 26,
+			"next": 32,
+			"number": 30,
 			"page_key": "band weed afterparty / concert alternative",
 			"terminate": false
 		},
-		"27": {
+		"31": {
 			"lines": [
 				{
 					"conditionals": {
@@ -7688,19 +9865,19 @@
 					"meta.visible": true
 				}
 			],
-			"next": 28,
-			"number": 27,
+			"next": 32,
+			"number": 31,
 			"page_key": "swag party",
 			"terminate": false
 		},
-		"28": {
+		"32": {
 			"lines": [],
 			"next": 0,
-			"number": 28,
+			"number": 32,
 			"page_key": "killing parents",
 			"terminate": false
 		},
-		"29": {
+		"33": {
 			"lines": [
 				{
 					"conditionals": {
@@ -7748,7 +9925,7 @@
 				}
 			],
 			"next": 0,
-			"number": 29,
+			"number": 33,
 			"page_key": "END community",
 			"terminate": true
 		}

@@ -88,8 +88,11 @@ func reset_and_start(start_page_index:=0):
 	read_page(start_page_index)
 	history = []
 
-func fact(fact_name: String):
+func get_fact(fact_name: String) -> bool:
 	return facts.get(fact_name, false)
+
+func get_page_key(page_index:int):
+	return page_data.get(page_index, {}).get("page_key", "")
 
 func handle_event(event_name: String, event_args: Dictionary):
 	match event_name:
@@ -124,9 +127,6 @@ func build_history_string() -> String:
 	result = result.trim_suffix("\n\n")
 	
 	return result
-
-func get_fact(fact_name:String) -> bool:
-	return facts.get(fact_name, false)
 
 func drop_down_values_to_string_array(values:=[0,0]) -> Array:
 	var result = ["", ""]

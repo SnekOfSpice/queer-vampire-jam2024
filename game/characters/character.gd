@@ -9,8 +9,9 @@ func _ready() -> void:
 	add_to_group("character")
 	connect("visibility_changed", on_visibility_changed)
 	visible = false
-	$Sprite.scale.x *= 0.5
-	$Sprite.scale.y *= 0.5
+	if character_name == "capra":
+		$Sprite.scale.x *= 0.5
+		$Sprite.scale.y *= 0.5
 
 func on_visibility_changed():
 	if GameState.game:

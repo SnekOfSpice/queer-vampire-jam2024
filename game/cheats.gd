@@ -3,7 +3,9 @@ extends Control
 
 func init():
 	ParserEvents.listen(self, "fact_changed")
+	ParserEvents.listen(self, "read_new_page")
 	find_child("PageSpinBox").max_value = Parser.page_data.size() - 1
+	find_child("PageKeyLabel").text = Parser.get_page_key(0)
 	find_child("AutoContinueCheckButton").button_pressed = Parser.line_reader.auto_continue
 	build_fact_list()
 
@@ -11,6 +13,8 @@ func handle_event(event_name: String, event_args: Dictionary):
 	match event_name:
 		"fact_changed":
 			build_fact_list()
+		"read_new_page":
+			find_child("CurrentPageLabel").text = str("Current Page: ", event_args.get("number"), " - ", Parser.get_page_key(event_args.get("number")))
 
 func build_fact_list():
 	find_child("FactsList").clear()
@@ -39,3 +43,7 @@ func _on_load_page_button_pressed() -> void:
 
 func _on_auto_continue_check_button_pressed() -> void:
 	Parser.line_reader.auto_continue = find_child("AutoContinueCheckButton").button_pressed
+
+
+func _on_page_spin_box_value_changed(value: float) -> void:
+	find_child("PageKeyLabel").text = Parser.get_page_key(int(value))

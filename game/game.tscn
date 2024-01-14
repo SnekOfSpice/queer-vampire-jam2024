@@ -23,6 +23,24 @@ position_preference = "right"
 [node name="Angel" parent="Characters" instance=ExtResource("2_5j4u0")]
 character_name = "angel"
 
+[node name="Metaspirit" parent="Characters" instance=ExtResource("2_5j4u0")]
+character_name = "metaspirit"
+position_preference = "right"
+
+[node name="Therapist" parent="Characters" instance=ExtResource("2_5j4u0")]
+character_name = "therapist"
+position_preference = "right"
+
+[node name="Rider" parent="Characters" instance=ExtResource("2_5j4u0")]
+character_name = "rider"
+position_preference = "right"
+
+[node name="Starry" parent="Characters" instance=ExtResource("2_5j4u0")]
+character_name = "starry"
+
+[node name="Icy-Aloe" parent="Characters" instance=ExtResource("2_5j4u0")]
+character_name = "icy-aloe"
+
 [node name="CharacterPositions" type="Node2D" parent="."]
 
 [node name="Left" type="Node2D" parent="CharacterPositions"]

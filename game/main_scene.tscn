@@ -33,6 +33,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_8qkgv")
+start_page_index = 5
 
 [node name="GameViewportContainer" type="SubViewportContainer" parent="."]
 layout_mode = 1
@@ -88,7 +89,16 @@ show_advance_available = false
 property_for_name = "character"
 name_for_blank_name = "narrator"
 name_map = {
-"capra": "Capra"
+"angel": "Angel",
+"capra": "Capra",
+"crosscull": "Crosscull",
+"dad": "Dad",
+"doomfeed": "Doomfeed",
+"icy-aloe": "Icy Aloe",
+"mom": "Mom",
+"rider": "Rider",
+"starry": "Starry",
+"yearnfarms": "Yearnfarms"
 }
 choice_container = NodePath("../Dialog/Control/ChoiceContainer")
 choice_option_container = NodePath("../Dialog/Control/ChoiceContainer/ChoiceItemContainer")
