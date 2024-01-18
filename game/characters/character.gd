@@ -2,6 +2,7 @@ extends Node2D
 
 @export var character_name:String
 @export var position_preference:String
+@export var height:int
 
 func _ready() -> void:
 	ParserEvents.listen(self, "dialog_line_args_passed")
@@ -9,9 +10,8 @@ func _ready() -> void:
 	add_to_group("character")
 	connect("visibility_changed", on_visibility_changed)
 	visible = false
-	if character_name == "capra":
-		$Sprite.scale.x *= 0.5
-		$Sprite.scale.y *= 0.5
+	$Sprite.scale.x *= 0.5
+	$Sprite.scale.y *= 0.5
 
 func on_visibility_changed():
 	if GameState.game:

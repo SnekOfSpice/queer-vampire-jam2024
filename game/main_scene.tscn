@@ -33,7 +33,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_8qkgv")
-start_page_index = 5
+start_page_index = 1
 
 [node name="GameViewportContainer" type="SubViewportContainer" parent="."]
 layout_mode = 1

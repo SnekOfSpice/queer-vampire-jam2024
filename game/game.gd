@@ -82,3 +82,4 @@ func arrange_characters():
 			c.position = mid + Vector2(140, 0) * (neutral_count * 1 if neutral_count % 2 == 0 else -1)
 			c.z_index = 10 - neutral_count
 			neutral_count += 1
+		c.position.y -= c.height

@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://jehkf8i5k1og"]
+[gd_scene load_steps=4 format=3 uid="uid://jehkf8i5k1og"]
 
 [ext_resource type="Script" path="res://game/game.gd" id="1_lbr4s"]
 [ext_resource type="PackedScene" uid="uid://rk1rrv2vgbf" path="res://game/characters/character.tscn" id="2_5j4u0"]
-[ext_resource type="Texture2D" uid="uid://7d56qjt03f7l" path="res://game/characters/sprites/angel/happy.png" id="3_msbdb"]
 [ext_resource type="Texture2D" uid="uid://cyn1lpmjnvmrx" path="res://game/screens/pc.png" id="4_0chal"]
 
 [node name="Game" type="Node2D"]
@@ -19,9 +18,11 @@ position_preference = "left"
 [node name="Crosscull" parent="Characters" instance=ExtResource("2_5j4u0")]
 character_name = "crosscull"
 position_preference = "right"
+height = 20
 
 [node name="Angel" parent="Characters" instance=ExtResource("2_5j4u0")]
 character_name = "angel"
+height = -2
 
 [node name="Metaspirit" parent="Characters" instance=ExtResource("2_5j4u0")]
 character_name = "metaspirit"
@@ -46,16 +47,8 @@ character_name = "icy-aloe"
 [node name="Left" type="Node2D" parent="CharacterPositions"]
 position = Vector2(172, 472)
 
-[node name="Sprite2D" type="Sprite2D" parent="CharacterPositions/Left"]
-scale = Vector2(0.145702, 0.145702)
-texture = ExtResource("3_msbdb")
-
 [node name="Right" type="Node2D" parent="CharacterPositions"]
 position = Vector2(1067, 477)
-
-[node name="Sprite2D" type="Sprite2D" parent="CharacterPositions/Right"]
-scale = Vector2(0.145702, 0.145702)
-texture = ExtResource("3_msbdb")
 
 [node name="PC" type="Node2D" parent="."]
 
