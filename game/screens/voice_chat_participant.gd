@@ -8,6 +8,7 @@ var user_names := {
 	"angel": "real",
 	"rider": "notrider",
 	"starry": "starry | they",
+	"icy-aloe": "ICY"
 }
 
 func set_character_name(value:String):

@@ -38,7 +38,8 @@ func _on_change_fact_button_pressed() -> void:
 
 
 func _on_load_page_button_pressed() -> void:
-	Parser.read_page(find_child("PageSpinBox").value)
+	GameState.game.set_all_characters_visible(false)
+	Parser.read_page(find_child("PageSpinBox").value, find_child("LineSpinBox").value)
 
 
 func _on_auto_continue_check_button_pressed() -> void:
@@ -47,3 +48,5 @@ func _on_auto_continue_check_button_pressed() -> void:
 
 func _on_page_spin_box_value_changed(value: float) -> void:
 	find_child("PageKeyLabel").text = Parser.get_page_key(int(value))
+	find_child("LineSpinBox").value = 0
+	find_child("LineSpinBox").max_value = Parser.page_data.get(str(find_child("PageSpinBox").value)).get("lines").size()
