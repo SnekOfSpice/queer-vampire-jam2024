@@ -49,4 +49,6 @@ func _on_auto_continue_check_button_pressed() -> void:
 func _on_page_spin_box_value_changed(value: float) -> void:
 	find_child("PageKeyLabel").text = Parser.get_page_key(int(value))
 	find_child("LineSpinBox").value = 0
-	find_child("LineSpinBox").max_value = Parser.page_data.get(str(find_child("PageSpinBox").value)).get("lines").size()
+	var data = Parser.page_data
+	var page = data.get(int(find_child("PageSpinBox").value))
+	find_child("LineSpinBox").max_value = page.get("lines").size()

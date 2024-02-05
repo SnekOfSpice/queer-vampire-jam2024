@@ -7,6 +7,8 @@ signal make_screen_black(hide_characters: bool, new_background: String, attack: 
 func execute(instruction_name, args):
 	prints("executing ", instruction_name, " with ", args)
 	match instruction_name:
+		"play-sfx":
+			Sound.play(args.get("key", ""))
 		"black-fade":
 			var fade_in := float(args.get("fade_in"))
 			var fade_out := float(args.get("fade_out"))
@@ -48,10 +50,11 @@ func execute(instruction_name, args):
 		"set-display-style":
 			emit_signal("set_text_content", args.get("style"))
 		"close-pc":
-			GameState.game.toggle_pc(false)
+			GameState.game.set_is_pc_on(false)
+			Sound.play("leave-noise")
 		"open-pc":
 			var screen :String = args.get("screen")
-			GameState.game.toggle_pc(true)
+			GameState.game.set_is_pc_on(true)
 			GameState.game.set_pc_screen(screen)
 
 

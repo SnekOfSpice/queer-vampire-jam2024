@@ -280,7 +280,7 @@ func deserialize(data: Dictionary):
 		line_reader.deserialize(line_reader_data)
 
 
-func save_parser_state_to_file(file_path: String, additional_data: Dictionary):
+func save_parser_state_to_file(file_path: String, additional_data:={}):
 	var file = FileAccess.open(file_path, FileAccess.WRITE)
 	var data_to_save := {}
 	data_to_save["Parser"] = serialize()
@@ -289,7 +289,7 @@ func save_parser_state_to_file(file_path: String, additional_data: Dictionary):
 	file.close()
 
 ## returns any additional custom arguments that were passed during saving.
-func load_parser_state_from_file(file_path: String) -> Dictionary:
+func load_parser_state_from_file(file_path: String, pause_after_load:=false) -> Dictionary:
 	var file = FileAccess.open(file_path, FileAccess.READ)
 	if not file:
 		push_warning(str("No file at ", file_path))
@@ -302,6 +302,6 @@ func load_parser_state_from_file(file_path: String) -> Dictionary:
 	
 	deserialize(data.get("Parser", {}))
 	
-	
+	paused = pause_after_load
 	
 	return data.get("Custom", {})

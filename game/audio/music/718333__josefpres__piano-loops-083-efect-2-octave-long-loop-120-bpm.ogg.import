@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/718333__josefpres__piano-loops-083-efect-2-oc
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0

@@ -255,12 +255,14 @@ func get_preferences() -> Dictionary:
 	
 	prefs["text_speed"] = text_speed
 	prefs["auto_continue"] = auto_continue
+	prefs["auto_continue_delay"] = auto_continue_delay
 	
 	return prefs
 
 func apply_preferences(prefs:Dictionary):
 	text_speed = prefs.get("text_speed", 60.0)
 	auto_continue = prefs.get("auto_continue", false)
+	auto_continue_delay = prefs.get("auto_continue_delay", 2.0)
 
 func _unhandled_input(event: InputEvent) -> void:
 	if Engine.is_editor_hint():
@@ -639,7 +641,10 @@ func set_text_content_text(text: String):
 func find_next_pause():
 	if pause_types.size() > 0 and next_pause_position_index < pause_types.size():
 		next_pause_type = pause_types[next_pause_position_index]
-	
+
+func get_actor_name(actor_key:String):
+	return name_map.get(actor_key, "")
+
 func set_actor_name(actor_key:String, new_name:String):
 	name_map[actor_key] = new_name
 

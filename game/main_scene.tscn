@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://k107v18q8nny"]
+[gd_scene load_steps=16 format=3 uid="uid://k107v18q8nny"]
 
 [ext_resource type="Script" path="res://game/main_scene.gd" id="1_8qkgv"]
 [ext_resource type="PackedScene" uid="uid://bb8yvsx0g14vl" path="res://addons/dialog-parser/src/line_reader.tscn" id="1_wgwtm"]
@@ -7,7 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://d2y2irch25bkd" path="res://systems/options/options_menu.tscn" id="3_77ee1"]
 [ext_resource type="PackedScene" uid="uid://2adev3wrrsw5" path="res://systems/main_menu.tscn" id="4_ippob"]
 [ext_resource type="Script" path="res://game/Evaluator.gd" id="5_loefn"]
+[ext_resource type="PackedScene" uid="uid://bf5lc777mdcur" path="res://game/screens/tw.tscn" id="5_syy4f"]
 [ext_resource type="Script" path="res://game/Black.gd" id="6_3o4gu"]
+[ext_resource type="PackedScene" uid="uid://dcp83yeoiyn0x" path="res://game/screens/credits.tscn" id="6_7tfc7"]
 [ext_resource type="Theme" uid="uid://dpenu1nwoa7ku" path="res://game/style/theme.tres" id="7_y7tat"]
 [ext_resource type="PackedScene" uid="uid://bjw5wm6l5gqkx" path="res://game/cheats.tscn" id="9_troos"]
 
@@ -33,7 +35,6 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_8qkgv")
-start_page_index = 1
 
 [node name="GameViewportContainer" type="SubViewportContainer" parent="."]
 layout_mode = 1
@@ -70,11 +71,8 @@ render_target_update_mode = 4
 
 [node name="MainMenuViewportContainer" type="SubViewportContainer" parent="."]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_right = 1920.0
+offset_bottom = 1080.0
 
 [node name="SubViewport" type="SubViewport" parent="MainMenuViewportContainer"]
 handle_input_locally = false
@@ -82,6 +80,30 @@ size = Vector2i(1920, 1080)
 render_target_update_mode = 4
 
 [node name="MainMenu" parent="MainMenuViewportContainer/SubViewport" instance=ExtResource("4_ippob")]
+
+[node name="TWViewportContainer" type="SubViewportContainer" parent="."]
+layout_mode = 1
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="SubViewport" type="SubViewport" parent="TWViewportContainer"]
+handle_input_locally = false
+size = Vector2i(1920, 1080)
+render_target_update_mode = 4
+
+[node name="TW" parent="TWViewportContainer/SubViewport" instance=ExtResource("5_syy4f")]
+
+[node name="CreditsViewportContainer" type="SubViewportContainer" parent="."]
+layout_mode = 1
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="SubViewport" type="SubViewport" parent="CreditsViewportContainer"]
+handle_input_locally = false
+size = Vector2i(1920, 1080)
+render_target_update_mode = 4
+
+[node name="Credits" parent="CreditsViewportContainer/SubViewport" instance=ExtResource("6_7tfc7")]
 
 [node name="LineReader" parent="." node_paths=PackedStringArray("choice_container", "choice_option_container", "instruction_handler", "text_content", "text_container", "name_label", "name_container", "inline_evaluator") instance=ExtResource("1_wgwtm")]
 show_text_during_choices = true
@@ -103,10 +125,10 @@ name_map = {
 choice_container = NodePath("../Dialog/Control/ChoiceContainer")
 choice_option_container = NodePath("../Dialog/Control/ChoiceContainer/ChoiceItemContainer")
 instruction_handler = NodePath("InstructionHandlerCustom")
-text_content = NodePath("../Dialog/Control/TextContainer/MarginContainer/VBoxContainer/PanelContainer/BottomText")
+text_content = NodePath("../Dialog/Control/TextContainer/HBoxContainer/MarginContainer/VBoxContainer/PanelContainer/BottomText")
 text_container = NodePath("../Dialog/Control/TextContainer")
-name_label = NodePath("../Dialog/Control/TextContainer/MarginContainer/VBoxContainer/Label")
-name_container = NodePath("../Dialog/Control/TextContainer/MarginContainer/VBoxContainer/Label")
+name_label = NodePath("../Dialog/Control/TextContainer/HBoxContainer/MarginContainer/VBoxContainer/Label")
+name_container = NodePath("../Dialog/Control/TextContainer/HBoxContainer/MarginContainer/VBoxContainer/Label")
 inline_evaluator = NodePath("../Evaluator")
 
 [node name="InstructionHandlerCustom" type="Node" parent="LineReader"]
@@ -124,6 +146,35 @@ grow_vertical = 2
 mouse_filter = 2
 theme = ExtResource("7_y7tat")
 
+[node name="MarginContainer" type="MarginContainer" parent="Dialog/Control"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -72.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 7
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Dialog/Control/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+alignment = 2
+
+[node name="MenuButton" type="Button" parent="Dialog/Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+text = "Menu"
+
+[node name="HistoryButton" type="Button" parent="Dialog/Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+text = "History"
+
 [node name="TextContainer" type="CenterContainer" parent="Dialog/Control"]
 layout_mode = 1
 anchors_preset = 12
@@ -135,28 +186,31 @@ grow_horizontal = 2
 grow_vertical = 0
 mouse_filter = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="Dialog/Control/TextContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Dialog/Control/TextContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Dialog/Control/TextContainer/HBoxContainer"]
 layout_mode = 2
 mouse_filter = 2
 theme_override_constants/margin_bottom = 25
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Dialog/Control/TextContainer/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Dialog/Control/TextContainer/HBoxContainer/MarginContainer"]
 layout_mode = 2
 mouse_filter = 2
 alignment = 2
 
-[node name="Label" type="Label" parent="Dialog/Control/TextContainer/MarginContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="Dialog/Control/TextContainer/HBoxContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
 theme_override_font_sizes/font_size = 24
 text = "name here"
 
-[node name="PanelContainer" type="PanelContainer" parent="Dialog/Control/TextContainer/MarginContainer/VBoxContainer"]
+[node name="PanelContainer" type="PanelContainer" parent="Dialog/Control/TextContainer/HBoxContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 8
 mouse_filter = 2
 
-[node name="BottomText" type="RichTextLabel" parent="Dialog/Control/TextContainer/MarginContainer/VBoxContainer/PanelContainer"]
+[node name="BottomText" type="RichTextLabel" parent="Dialog/Control/TextContainer/HBoxContainer/MarginContainer/VBoxContainer/PanelContainer"]
 custom_minimum_size = Vector2(900, 130)
 layout_mode = 2
 theme_override_constants/line_separation = -6
@@ -196,6 +250,7 @@ text = "jghjkgkhjkjhk ghjk"
 fit_content = true
 
 [node name="ChoiceContainer" type="PanelContainer" parent="Dialog/Control"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -215,6 +270,7 @@ focus_mode = 0
 text = "hello there"
 
 [node name="Cheats" parent="Dialog" instance=ExtResource("9_troos")]
+visible = false
 
 [node name="Evaluator" type="Node" parent="."]
 script = ExtResource("5_loefn")
@@ -232,6 +288,10 @@ grow_vertical = 2
 mouse_filter = 2
 color = Color(0.0352941, 0.0352941, 0.0392157, 1)
 
+[connection signal="new_game" from="MainMenuViewportContainer/SubViewport/MainMenu" to="." method="start_new_game"]
+[connection signal="open_screen" from="MainMenuViewportContainer/SubViewport/MainMenu" to="." method="set_screen"]
+[connection signal="close" from="TWViewportContainer/SubViewport/TW" to="." method="set_screen" binds= ["game-screen-main-menu"]]
+[connection signal="close" from="CreditsViewportContainer/SubViewport/Credits" to="." method="set_screen" binds= ["game-screen-main-menu"]]
 [connection signal="make_screen_black" from="LineReader/InstructionHandlerCustom" to="Black" method="_on_instruction_handler_make_screen_black"]
 [connection signal="set_actor_name" from="LineReader/InstructionHandlerCustom" to="LineReader" method="set_actor_name"]
 [connection signal="set_text_content" from="LineReader/InstructionHandlerCustom" to="." method="set_text_content"]

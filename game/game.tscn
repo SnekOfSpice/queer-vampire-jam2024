@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://jehkf8i5k1og"]
+[gd_scene load_steps=6 format=3 uid="uid://jehkf8i5k1og"]
 
 [ext_resource type="Script" path="res://game/game.gd" id="1_lbr4s"]
 [ext_resource type="PackedScene" uid="uid://rk1rrv2vgbf" path="res://game/characters/character.tscn" id="2_5j4u0"]
 [ext_resource type="Texture2D" uid="uid://cyn1lpmjnvmrx" path="res://game/screens/pc.png" id="4_0chal"]
+[ext_resource type="Texture2D" uid="uid://cxlhdvfav0qqk" path="res://game/screens/voice_chat.png" id="4_fa7sf"]
+[ext_resource type="Texture2D" uid="uid://ba8xtodpvndyd" path="res://game/screens/therapy.png" id="5_5eca3"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_lbr4s")
@@ -30,7 +32,7 @@ position_preference = "right"
 
 [node name="Therapist" parent="Characters" instance=ExtResource("2_5j4u0")]
 character_name = "therapist"
-position_preference = "right"
+position_preference = "anchor-therapist"
 
 [node name="Rider" parent="Characters" instance=ExtResource("2_5j4u0")]
 character_name = "rider"
@@ -42,6 +44,30 @@ character_name = "starry"
 [node name="Icy-Aloe" parent="Characters" instance=ExtResource("2_5j4u0")]
 character_name = "icy-aloe"
 
+[node name="PC" type="Node2D" parent="."]
+
+[node name="Sprite" type="Sprite2D" parent="PC"]
+position = Vector2(879, 368)
+scale = Vector2(0.613, 0.613)
+texture = ExtResource("4_0chal")
+
+[node name="VoiceCall" type="Sprite2D" parent="PC"]
+position = Vector2(614, 156)
+scale = Vector2(0.613372, 0.613372)
+texture = ExtResource("4_fa7sf")
+centered = false
+
+[node name="VCParticipantContainer" type="VBoxContainer" parent="PC/VoiceCall"]
+offset_left = 84.7774
+offset_top = 176.076
+offset_right = 124.777
+offset_bottom = 216.076
+
+[node name="TherapyOverlay" type="Sprite2D" parent="PC"]
+position = Vector2(870, 372)
+scale = Vector2(0.613, 0.613)
+texture = ExtResource("5_5eca3")
+
 [node name="CharacterPositions" type="Node2D" parent="."]
 
 [node name="Left" type="Node2D" parent="CharacterPositions"]
@@ -50,15 +76,7 @@ position = Vector2(172, 472)
 [node name="Right" type="Node2D" parent="CharacterPositions"]
 position = Vector2(1067, 477)
 
-[node name="PC" type="Node2D" parent="."]
+[node name="Anchors" type="Node2D" parent="CharacterPositions"]
 
-[node name="VoiceCall" type="Sprite2D" parent="PC"]
-position = Vector2(45, -76)
-texture = ExtResource("4_0chal")
-centered = false
-
-[node name="VCParticipantContainer" type="VBoxContainer" parent="PC/VoiceCall"]
-offset_left = 691.0
-offset_top = 208.0
-offset_right = 731.0
-offset_bottom = 248.0
+[node name="Therapist" type="Node2D" parent="CharacterPositions/Anchors"]
+position = Vector2(931, 453)
