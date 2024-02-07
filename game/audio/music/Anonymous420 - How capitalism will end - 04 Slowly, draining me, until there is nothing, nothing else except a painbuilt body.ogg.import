@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://tjpxqj2cddi1"
+path="res://.godot/imported/Anonymous420 - How capitalism will end - 04 Slowly, draining me, until there is nothing, nothing else except a painbuilt body.ogg-262b26c2316285699413fb49f2da076f.oggvorbisstr"
+
+[deps]
+
+source_file="res://game/audio/music/Anonymous420 - How capitalism will end - 04 Slowly, draining me, until there is nothing, nothing else except a painbuilt body.ogg"
+dest_files=["res://.godot/imported/Anonymous420 - How capitalism will end - 04 Slowly, draining me, until there is nothing, nothing else except a painbuilt body.ogg-262b26c2316285699413fb49f2da076f.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

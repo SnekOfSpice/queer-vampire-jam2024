@@ -49,7 +49,10 @@ func serialize() -> Dictionary:
 	var data := {}
 	
 	data["visible"] = visible
-	data["current_emotion"] = current_emotion
+	if current_emotion == "" or current_emotion == null:
+		data["current_emotion"] = "neutral"
+	else:
+		data["current_emotion"] = current_emotion
 	
 	return data
 

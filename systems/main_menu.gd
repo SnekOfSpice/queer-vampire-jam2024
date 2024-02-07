@@ -6,7 +6,8 @@ signal load_game()
 signal open_screen(screen:String)
 signal quit()
 
-
+func set_load_button_visible(value:bool):
+	find_child("LoadGameButton").visible = value
 
 func _on_new_game_button_pressed() -> void:
 	emit_signal("new_game")

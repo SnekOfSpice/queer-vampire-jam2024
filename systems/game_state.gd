@@ -8,9 +8,11 @@ func serialize() -> Dictionary:
 	
 	data["Game"] = game.serialize()
 	data["Sound"] = Sound.serialize()
+	data["DialogLogger"] = DialogLogger.serialize()
 	
 	return data
 
 func deserialize(data:Dictionary):
 	game.deserialize(data.get("Game", {}))
 	Sound.deserialize(data.get("Sound", {}))
+	DialogLogger.deserialize(data.get("DialogLogger", {}))

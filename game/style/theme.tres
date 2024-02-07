@@ -72,4 +72,5 @@ HSlider/styles/slider = SubResource("StyleBoxLine_ggryo")
 Label/fonts/font = ExtResource("1_cbvdj")
 Label/styles/normal = SubResource("StyleBoxFlat_ldi65")
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_r6p7q")
+RichTextLabel/constants/line_separation = -5
 RichTextLabel/fonts/normal_font = ExtResource("2_dgkie")

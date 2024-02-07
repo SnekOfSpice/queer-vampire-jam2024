@@ -23,6 +23,7 @@ Parser="*res://addons/dialog-parser/src/parser.tscn"
 GameState="*res://systems/game_state.tscn"
 Options="*res://systems/options/options.tscn"
 Sound="*res://systems/sound/sound.tscn"
+DialogLogger="*res://addons/dialog-parser/src/aux_features/dialog_logger.tscn"
 
 [display]
 

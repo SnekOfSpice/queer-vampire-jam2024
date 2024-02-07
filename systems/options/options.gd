@@ -8,10 +8,7 @@ var sfx_volume := 0.0
 
 var fullscreen := true
 
-func _ready() -> void:
-	load_options_from_file()
-
-func save_options_from_file():
+func save_options_to_file():
 	# Create new ConfigFile object.
 	var config = ConfigFile.new()
 
@@ -57,16 +54,21 @@ func save_gamestate():
 #		character_visibilities[c.character_name] = c.serialize()
 #	data_to_save["Game.character_visibilities"] = character_visibilities
 	Parser.save_parser_state_to_file(PARSER_STATE_PATH)
-	save_options_from_file()
 	var file = FileAccess.open(GAME_STATE_PATH, FileAccess.WRITE)
 	var data_to_save := GameState.serialize()
 	file.store_string(JSON.stringify(data_to_save, "\t"))
 	file.close()
-	
+	DialogLogger.save_log_history()
+
+func does_savegame_exist():
+	if not ResourceLoader.exists(PARSER_STATE_PATH):
+		return false
+	if not ResourceLoader.exists(GAME_STATE_PATH):
+		return false
+	return true
 
 func load_gamestate():
 	Parser.load_parser_state_from_file(PARSER_STATE_PATH)
-	load_options_from_file()
 	var file = FileAccess.open(GAME_STATE_PATH, FileAccess.READ)
 	if not file:
 		push_warning(str("No file at ", GAME_STATE_PATH))

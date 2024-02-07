@@ -6,8 +6,22 @@ const sfx := {
 	"dialup":"res://game/audio/sfx/545495__ienba__notification.wav",
 	"distortion-grime":"res://game/audio/sfx/336254__deleted_user_5959249__guitar-b1-chord.wav",
 	"distortion-nailbiter":"res://game/audio/sfx/533847__tosha73__distortion-guitar-power-chord-e.wav",
-	"phone-vibration":"res://game/audio/sfx/688629__corycoolguy__cell-notification-vibrate.ogg"
+	"phone-vibration":"res://game/audio/sfx/688629__corycoolguy__cell-notification-vibrate.ogg",
+	"bottle-clink":"res://game/audio/sfx/608709__somatik7__bottles-2.wav",
 }
+
+const music := {
+	"main-menu":"res://game/audio/music/Monplaisir - Sur Tout Le Trajet - 02 Fermons une plage.ogg",
+	"concert-ambient":"res://game/audio/music/504648__tosha73__the-hubbub-of-the-crowd-before-the-concert.ogg",
+	"grime":"res://game/audio/music/Omniman-Feedback.ogg",
+	"nailbiter":"res://game/audio/music/Omniman-The-Reek-of-Madness.ogg",
+	"capra-bedroom":"res://game/audio/music/718333__josefpres__piano-loops-083-efect-2-octave-long-loop-120-bpm.ogg",
+	"capra-bedroom-intro":"res://game/audio/music/Anonymous420 - How capitalism will end - 03 Commercial Break for my little sponge brain.ogg",
+	"metaspirit1":"res://game/audio/music/Anonymous420 - How capitalism will end - 04 Slowly, draining me, until there is nothing, nothing else except a painbuilt body.ogg",
+	"party":"res://game/audio/music/611305__szegvari__new-york-cyberpunk-synh-analogue-drums-bass-dance-retro-atmo-ambience-pad-drone-cinematic-action-music-surround.ogg",
+	"panic":"res://game/audio/music/Sif - Darkstalker - 02 Kiln.ogg",
+	"shanties":"res://game/audio/music/699371__immergomedia__campfire-guitar-alternate-take.ogg",}
+
 var current_track_name:String
 
 func serialize() -> Dictionary:
@@ -24,28 +38,10 @@ func set_bgm_volume(db:float):
 	$BGM.volume_db = db
 
 func play_bgm(track_name:String, fade_in:=0.0):
+	if current_track_name == track_name:
+		return
 	current_track_name = track_name
-	match track_name:
-		"concert-ambient":
-			$BGM.stream = load("res://game/audio/music/504648__tosha73__the-hubbub-of-the-crowd-before-the-concert.ogg")
-		"grime":
-			$BGM.stream = load("res://game/audio/music/Omniman-Feedback.ogg")
-		"nailbiter":
-			$BGM.stream = load("res://game/audio/music/Omniman-The-Reek-of-Madness.ogg")
-		"capra-bedroom":
-			$BGM.stream = load("res://game/audio/music/718333__josefpres__piano-loops-083-efect-2-octave-long-loop-120-bpm.ogg")
-		"party":
-			$BGM.stream = load("res://game/audio/music/611305__szegvari__new-york-cyberpunk-synth-analogue-drums-bass-dance-retro-atmo-ambience-pad-drone-cinematic-action-music-surround.ogg")
-		"panic":
-			$BGM.stream = load("res://game/audio/music/Sif - Darkstalker - 02 Kiln.ogg")
-		"shanties":
-			$BGM.stream = load("res://game/audio/music/699371__immergomedia__campfire-guitar-alternate-take.ogg")
-		"idk unused stuff":
-			pass
-			#
-		_:
-			push_warning(str("Track ", track_name, " is not defined."))
-			return
+	$BGM.stream = load(music.get(track_name))
 	if fade_in > 0.0:
 		var t = create_tween()
 		$BGM.volume_db = -80

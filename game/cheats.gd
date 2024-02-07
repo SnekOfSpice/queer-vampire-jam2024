@@ -43,6 +43,7 @@ func _on_load_page_button_pressed() -> void:
 
 
 func _on_auto_continue_check_button_pressed() -> void:
+	Parser.line_reader.auto_continue_delay = 0.0
 	Parser.line_reader.auto_continue = find_child("AutoContinueCheckButton").button_pressed
 
 

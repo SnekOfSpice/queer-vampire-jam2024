@@ -91,8 +91,23 @@ func reset_and_start(start_page_index:=0):
 func get_fact(fact_name: String) -> bool:
 	return facts.get(fact_name, false)
 
+func get_facts_of_value(b: bool) -> Array:
+	var result := []
+	for fact in facts:
+		if facts.get(fact) == b:
+			result.append(fact)
+	return result
+
 func get_page_key(page_index:int):
 	return page_data.get(page_index, {}).get("page_key", "")
+
+func append_to_history(text:String):
+	history.append(text)
+	if max_history_length > -1:
+		if history.size() > max_history_length:
+			history.reverse()
+			history.pop_back()
+			history.reverse()
 
 func handle_event(event_name: String, event_args: Dictionary):
 	match event_name:
@@ -101,20 +116,10 @@ func handle_event(event_name: String, event_args: Dictionary):
 			currently_speaking_visible = event_args.get("is_name_container_visible")
 		"text_content_text_changed":
 			var text = event_args.get("new_text")
-			history.append(str(str("[b]",currently_speaking_name, "[/b]: ") if currently_speaking_visible else "", text))
-			if max_history_length > -1:
-				if history.size() > max_history_length:
-					history.reverse()
-					history.pop_back()
-					history.reverse()
+			call_deferred("append_to_history", (str(str("[b]",currently_speaking_name, "[/b]: ") if currently_speaking_visible else "", text)))
 		"choice_pressed":
 			if append_choices_to_history:
-				history.append(str(choice_appendation_string, " ", event_args.get("choice_text")))
-				if max_history_length > -1:
-					if history.size() > max_history_length:
-						history.reverse()
-						history.pop_back()
-						history.reverse()
+				call_deferred("append_to_history", str(choice_appendation_string, " ", event_args.get("choice_text")))
 
 func build_history_string() -> String:
 	var result  := ""

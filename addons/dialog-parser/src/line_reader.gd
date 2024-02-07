@@ -122,7 +122,7 @@ signal is_input_locked_changed(new_value: bool)
 
 var line_data := {}
 var line_type := 0
-var line_index
+var line_index := 0
 var remaining_auto_pause_duration := 0.0
 
 var is_input_locked := false : set = set_is_input_locked
@@ -149,6 +149,8 @@ var started_word_buffer :=""
 var characters_visible_so_far := ""
 
 var last_visible_ratio := 0.0
+
+signal line_reader_ready
 
 func serialize() -> Dictionary:
 	var result := {}
@@ -178,8 +180,8 @@ func serialize() -> Dictionary:
 func deserialize(data: Dictionary):
 	if not data:
 		return
-	line_data = data.get("line_data")
-	line_index = int(data.get("line_index"))
+	line_data = data.get("line_data", {})
+	line_index = int(data.get("line_index", 0))
 	line_type = int(data.get("line_type", Parser.LineType.Text))
 	remaining_auto_pause_duration = data.get("remaining_auto_pause_duration")
 	is_input_locked = data.get("is_input_locked")
@@ -244,6 +246,8 @@ func _ready() -> void:
 	
 	if not show_advance_available and next_prompt_container:
 		next_prompt_container.modulate.a = 0
+	
+	emit_signal("line_reader_ready")
 	
 func handle_event(event_name: String, event_args: Dictionary):
 	match event_name:
@@ -801,8 +805,8 @@ func update_name_label(actor_name: String):
 	else:
 		name_container.modulate.a = 1.0
 	
-	ParserEvents.start("name_label_updated", {"actor_name": display_name, "is_name_container_visible": name_container.visible})
-	ParserEvents.start("new_actor_speaking", {"actor_name": actor_name, "is_name_container_visible": name_container.visible})
+	ParserEvents.start("name_label_updated", {"actor_name": display_name, "is_name_container_visible": name_container.modulate.a > 0.0})
+	ParserEvents.start("new_actor_speaking", {"actor_name": actor_name, "is_name_container_visible": name_container.modulate.a > 0.0})
 
 func _on_finished_button_pressed() -> void:
 	emit_signal("line_finished", line_index)

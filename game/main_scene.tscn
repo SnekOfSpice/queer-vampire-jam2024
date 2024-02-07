@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://k107v18q8nny"]
+[gd_scene load_steps=17 format=3 uid="uid://k107v18q8nny"]
 
 [ext_resource type="Script" path="res://game/main_scene.gd" id="1_8qkgv"]
 [ext_resource type="PackedScene" uid="uid://bb8yvsx0g14vl" path="res://addons/dialog-parser/src/line_reader.tscn" id="1_wgwtm"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://dcp83yeoiyn0x" path="res://game/screens/credits.tscn" id="6_7tfc7"]
 [ext_resource type="Theme" uid="uid://dpenu1nwoa7ku" path="res://game/style/theme.tres" id="7_y7tat"]
 [ext_resource type="PackedScene" uid="uid://bjw5wm6l5gqkx" path="res://game/cheats.tscn" id="9_troos"]
+[ext_resource type="Script" path="res://game/HistoryLabelScrollContainer.gd" id="10_vugvq"]
 
 [sub_resource type="Gradient" id="Gradient_cw7l5"]
 
@@ -100,12 +101,13 @@ offset_bottom = 1080.0
 
 [node name="SubViewport" type="SubViewport" parent="CreditsViewportContainer"]
 handle_input_locally = false
-size = Vector2i(1920, 1080)
+size = Vector2i(1280, 720)
 render_target_update_mode = 4
 
 [node name="Credits" parent="CreditsViewportContainer/SubViewport" instance=ExtResource("6_7tfc7")]
 
 [node name="LineReader" parent="." node_paths=PackedStringArray("choice_container", "choice_option_container", "instruction_handler", "text_content", "text_container", "name_label", "name_container", "inline_evaluator") instance=ExtResource("1_wgwtm")]
+auto_continue_delay = 4.4
 show_text_during_choices = true
 show_advance_available = false
 property_for_name = "character"
@@ -269,6 +271,54 @@ layout_mode = 2
 focus_mode = 0
 text = "hello there"
 
+[node name="History" type="Control" parent="Dialog"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("7_y7tat")
+
+[node name="PanelContainer" type="PanelContainer" parent="Dialog/History"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="Dialog/History/PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="HistoryLabelScrollContainer" type="ScrollContainer" parent="Dialog/History/PanelContainer/PanelContainer"]
+custom_minimum_size = Vector2(700, 500)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("10_vugvq")
+
+[node name="HistoryLabel" type="RichTextLabel" parent="Dialog/History/PanelContainer/PanelContainer/HistoryLabelScrollContainer"]
+custom_minimum_size = Vector2(700, 0)
+layout_mode = 2
+bbcode_enabled = true
+text = "dgfhgdfh
+fghfgh"
+fit_content = true
+scroll_active = false
+
+[node name="MarginContainer" type="MarginContainer" parent="Dialog/History/PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+
+[node name="CloseHistoryButton" type="Button" parent="Dialog/History/PanelContainer/MarginContainer"]
+layout_mode = 2
+text = "Close History"
+
 [node name="Cheats" parent="Dialog" instance=ExtResource("9_troos")]
 visible = false
 
@@ -288,11 +338,20 @@ grow_vertical = 2
 mouse_filter = 2
 color = Color(0.0352941, 0.0352941, 0.0392157, 1)
 
+[connection signal="close_options" from="OptionsViewportContainer/SubViewport/OptionsMenu" to="." method="toggle_option_screen"]
+[connection signal="quit" from="OptionsViewportContainer/SubViewport/OptionsMenu" to="." method="quit_game"]
+[connection signal="to_main_menu" from="OptionsViewportContainer/SubViewport/OptionsMenu" to="." method="set_screen" binds= ["game-screen-main-menu"]]
+[connection signal="load_game" from="MainMenuViewportContainer/SubViewport/MainMenu" to="." method="load_game"]
 [connection signal="new_game" from="MainMenuViewportContainer/SubViewport/MainMenu" to="." method="start_new_game"]
 [connection signal="open_screen" from="MainMenuViewportContainer/SubViewport/MainMenu" to="." method="set_screen"]
+[connection signal="quit" from="MainMenuViewportContainer/SubViewport/MainMenu" to="." method="quit_game"]
 [connection signal="close" from="TWViewportContainer/SubViewport/TW" to="." method="set_screen" binds= ["game-screen-main-menu"]]
 [connection signal="close" from="CreditsViewportContainer/SubViewport/Credits" to="." method="set_screen" binds= ["game-screen-main-menu"]]
+[connection signal="line_reader_ready" from="LineReader" to="." method="_on_line_reader_line_reader_ready"]
 [connection signal="make_screen_black" from="LineReader/InstructionHandlerCustom" to="Black" method="_on_instruction_handler_make_screen_black"]
 [connection signal="set_actor_name" from="LineReader/InstructionHandlerCustom" to="LineReader" method="set_actor_name"]
 [connection signal="set_text_content" from="LineReader/InstructionHandlerCustom" to="." method="set_text_content"]
+[connection signal="pressed" from="Dialog/Control/MarginContainer/VBoxContainer/MenuButton" to="." method="toggle_option_screen"]
+[connection signal="pressed" from="Dialog/Control/MarginContainer/VBoxContainer/HistoryButton" to="." method="set_history_visible" binds= [true]]
+[connection signal="pressed" from="Dialog/History/PanelContainer/MarginContainer/CloseHistoryButton" to="." method="set_history_visible" binds= [false]]
 [connection signal="instruction_completed" from="Black" to="LineReader/InstructionHandlerCustom" method="_on_black_instruction_completed"]

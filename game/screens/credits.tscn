@@ -66,11 +66,29 @@ layout_mode = 2
 [node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/CenterContainer"]
 custom_minimum_size = Vector2(600, 400)
 layout_mode = 2
-text = "Onyx Heart created for the Queer Vampire Jam 2024
+bbcode_enabled = true
+text = "[i]Onyx Heart created for the [url=https://itch.io/jam/queer-vampire]Queer Vampire Jam 2024[/url][/i]
 
-Writing, Programming, Background Art by Snek
-Character Artwork by Bella
+[b]Core Team[/b]
+Writing, Programming, Background Art by Snek ([url]https://snekofspice.itch.io/[/url])
+Character Artwork by deadpsyche ([url]https://deadpsyche.carrd.co/[/url])
 
-Music fgklhjfg"
+
+[b]Music[/b]
+Omniman - The Reek of Madness (Free Music Archive) (CC BY)
+Omniman - Feedback (Free Music Archive) (CC BY)
+Sif - Kiln (CC BY 3.0 Deed)
+Monplaisir - Fermons une plage
+
+
+[b]Additional Visuals[/b]
+voice chat profile pictures via opengameart.org:
+kirill777 - Necromancer
+Georges \"TRaK\" Grondin - Filth Texture Set
+bevouliin.com - Red Beetle Pixelart Sprites
+megowhat - Little Lamb
+n4 - Seamless Space / Stars
+Beast - 5 Static Enemy Sprites"
 
 [connection signal="pressed" from="MarginContainer/CloseButton" to="." method="_on_close_button_pressed"]
+[connection signal="meta_clicked" from="VBoxContainer/CenterContainer/RichTextLabel" to="." method="_on_rich_text_label_meta_clicked"]

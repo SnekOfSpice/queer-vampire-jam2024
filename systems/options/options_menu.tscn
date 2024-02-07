@@ -109,7 +109,7 @@ text = "Auto Delay"
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 focus_mode = 0
-max_value = 10.0
+max_value = 20.1
 step = 0.1
 
 [node name="AutoDelayLabel" type="Label" parent="CenterContainer/VBoxContainer/GridContainer2"]
@@ -155,14 +155,17 @@ layout_mode = 2
 
 [node name="CloseOptionsButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
+focus_mode = 0
 text = "Close Options"
 
 [node name="MainMenuButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
+focus_mode = 0
 text = "Main Menu"
 
 [node name="QuitGameButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
+focus_mode = 0
 text = "Quit Game"
 
 [connection signal="value_changed" from="CenterContainer/VBoxContainer/GridContainer/MusicVolumeSlider" to="." method="_on_music_volume_slider_value_changed"]
@@ -170,3 +173,10 @@ text = "Quit Game"
 [connection signal="value_changed" from="CenterContainer/VBoxContainer/GridContainer2/TextSpeedSlider" to="." method="_on_text_speed_slider_value_changed"]
 [connection signal="value_changed" from="CenterContainer/VBoxContainer/GridContainer2/AutoDelaySlider" to="." method="_on_auto_delay_slider_value_changed"]
 [connection signal="toggled" from="CenterContainer/VBoxContainer/GridContainer3/FullscreenButton" to="." method="_on_fullscreen_button_toggled"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/CloseOptionsButton" to="." method="_on_close_options_button_pressed"]
+[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/HBoxContainer/MainMenuButton" to="." method="show_save_label"]
+[connection signal="mouse_exited" from="MarginContainer/VBoxContainer/HBoxContainer/MainMenuButton" to="." method="hide_save_label"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/MainMenuButton" to="." method="_on_main_menu_button_pressed"]
+[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/HBoxContainer/QuitGameButton" to="." method="show_save_label"]
+[connection signal="mouse_exited" from="MarginContainer/VBoxContainer/HBoxContainer/QuitGameButton" to="." method="hide_save_label"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/QuitGameButton" to="." method="_on_quit_game_button_pressed"]
