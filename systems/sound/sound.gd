@@ -41,7 +41,7 @@ func play_bgm(track_name:String, fade_in:=0.0):
 	if current_track_name == track_name:
 		return
 	current_track_name = track_name
-	$BGM.stream = load(music.get(track_name))
+	$BGM.stream = load(music.get(track_name, ""))
 	if fade_in > 0.0:
 		var t = create_tween()
 		$BGM.volume_db = -80
