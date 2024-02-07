@@ -8,6 +8,7 @@ const LOG_DIR = "user://choice_logs/"
 func _ready() -> void:
 	ParserEvents.listen(self, "choice_pressed")
 	ParserEvents.listen(self, "choices_presented")
+	ParserEvents.listen(self, "fact_changed")
 
 func serialize() -> Dictionary:
 	var result := {}
@@ -29,7 +30,7 @@ func handle_event(event_name: String, event_args: Dictionary):
 			if event_args.get("do_jump_page", false):
 				choice += " -> "
 				choice += str(event_args.get("target_page"))
-			log_history.append(choice)
+			append_to_history(choice)
 			
 			save_log_history()
 		"choices_presented":
@@ -39,16 +40,25 @@ func handle_event(event_name: String, event_args: Dictionary):
 			for fact in facts:
 				fs += str(fact, ", ")
 			fs.trim_suffix(", ")
-			log_history.append(fs)
+			append_to_history(fs)
 			
 			var choices = event_args.get("choices", [])
 			var cs := "Presented: "
 			for choice in choices:
 				cs += str(choice.get("option_text"), ", ")
 			cs.trim_suffix(", ")
-			log_history.append(cs)
+			append_to_history(cs)
 			
 			save_log_history()
+		"fact_changed":
+			var fact = event_args.get("fact_name", "")
+			var new_val = event_args.get("new_value")
+			append_to_history(str("== Fact: ", fact, " -> ", new_val))
+			
+			save_log_history()
+
+func append_to_history(log:String):
+	log_history.append(str(log, " | ", Parser.get_line_position_string()))
 
 func load_log_history(start_date_string):
 	var file = FileAccess.open(str(LOG_DIR, "log-", start_date_string, ".txt"), FileAccess.READ)
