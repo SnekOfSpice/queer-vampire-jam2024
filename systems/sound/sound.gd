@@ -20,7 +20,11 @@ const music := {
 	"metaspirit1":"res://game/audio/music/Anonymous420 - How capitalism will end - 04 Slowly, draining me, until there is nothing, nothing else except a painbuilt body.ogg",
 	"party":"res://game/audio/music/611305__szegvari__new-york-cyberpunk-synh-analogue-drums-bass-dance-retro-atmo-ambience-pad-drone-cinematic-action-music-surround.ogg",
 	"panic":"res://game/audio/music/Sif - Darkstalker - 02 Kiln.ogg",
-	"shanties":"res://game/audio/music/699371__immergomedia__campfire-guitar-alternate-take.ogg",}
+	"shanties":"res://game/audio/music/699371__immergomedia__campfire-guitar-alternate-take.ogg",
+	"crowd":"res://game/audio/music/Nadrisk - Wounded by Light.ogg",
+	"parents":"res://game/audio/music/OTHERTHINKER - DANDELION - 05 THE FOX IN THE TOPHAT WHISPERED INTO THE EAR OF THE RABBIT -I WELCOME YOU WITH MY BARBED WIRE HABIT-.ogg",
+	"rain":"res://game/audio/music/380152__bonnyorbit__rain-and-thunder-by-a-window.ogg",
+}
 
 var current_track_name:String
 

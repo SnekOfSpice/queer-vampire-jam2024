@@ -174,6 +174,7 @@ func serialize() -> Dictionary:
 	result["terminated"] = terminated 
 	result["text_content.text"] = text_content.text
 	result["current_raw_name"] = current_raw_name
+	result["name_map"] = name_map
 	
 	return result
 
@@ -197,6 +198,8 @@ func deserialize(data: Dictionary):
 	line_chunks = data.get("line_chunks")
 	chunk_index = int(data.get("chunk_index"))
 	terminated = data.get("terminated")
+	if data.get("name_map"):
+		name_map = data.get("name_map")
 	
 	text_container.visible = line_type == Parser.LineType.Text or (line_type == Parser.LineType.Choice and show_text_during_choices)
 	showing_text = line_type == Parser.LineType.Text

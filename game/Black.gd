@@ -24,6 +24,7 @@ func fade_in(duration: float):
 
 func fade_out(duration:= release_on_full_black_reached):
 	if duration == 0.0:
+		emit_signal("instruction_completed")
 		$ColorRect.modulate.a = 0.0
 		return
 	var t = get_tree().create_tween()

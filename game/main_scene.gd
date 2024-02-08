@@ -18,12 +18,18 @@ func _ready() -> void:
 	find_child("Cheats").visible = false
 	find_child("OptionsMenu").build_from_options()
 	find_child("History").visible = false
+	ParserEvents.listen(self, "terminate_page")
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("f1") and dev_mode:
 		find_child("Cheats").visible = not find_child("Cheats").visible
 	if Input.is_action_just_pressed("ui_cancel"):
 		toggle_option_screen()
+
+func handle_event(event_name: String, event_args: Dictionary):
+	match event_name:
+		"terminate_page":
+			set_screen(Const.GAME_SCREEN_MAIN_MENU)
 
 func toggle_option_screen():
 	if screen == Const.GAME_SCREEN_OPTIONS:
