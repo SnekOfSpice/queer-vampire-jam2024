@@ -7,11 +7,8 @@ signal quit()
 func build_from_options():
 	Options.load_options_from_file()
 	find_child("FullscreenButton").button_pressed = Options.fullscreen
-	find_child("MusicVolumeSlider").value = Options.music_volume-1
 	find_child("MusicVolumeSlider").value = Options.music_volume
-	find_child("SFXVolumeSlider").value = Options.sfx_volume-1
 	find_child("SFXVolumeSlider").value = Options.sfx_volume
-	find_child("TextSpeedSlider").value = Parser.line_reader.text_speed-1
 	find_child("TextSpeedSlider").value = Parser.line_reader.text_speed
 	if not Parser.line_reader.auto_continue:
 		find_child("AutoDelaySlider").value = find_child("AutoDelaySlider").max_value

@@ -11,6 +11,30 @@ script = ExtResource("1_lbr4s")
 
 [node name="BackgroundLayer" type="Node2D" parent="."]
 
+[node name="PC" type="Node2D" parent="."]
+
+[node name="Sprite" type="Sprite2D" parent="PC"]
+position = Vector2(879, 368)
+scale = Vector2(0.613, 0.613)
+texture = ExtResource("4_0chal")
+
+[node name="VoiceCall" type="Sprite2D" parent="PC"]
+position = Vector2(614, 156)
+scale = Vector2(0.613372, 0.613372)
+texture = ExtResource("4_fa7sf")
+centered = false
+
+[node name="VCParticipantContainer" type="VBoxContainer" parent="PC/VoiceCall"]
+offset_left = 84.7774
+offset_top = 176.076
+offset_right = 124.777
+offset_bottom = 216.076
+
+[node name="TherapyOverlay" type="Sprite2D" parent="PC"]
+position = Vector2(870, 372)
+scale = Vector2(0.613, 0.613)
+texture = ExtResource("5_5eca3")
+
 [node name="Characters" type="Node2D" parent="."]
 
 [node name="Capra" parent="Characters" instance=ExtResource("2_5j4u0")]
@@ -43,30 +67,6 @@ character_name = "starry"
 
 [node name="Icy-Aloe" parent="Characters" instance=ExtResource("2_5j4u0")]
 character_name = "icy-aloe"
-
-[node name="PC" type="Node2D" parent="."]
-
-[node name="Sprite" type="Sprite2D" parent="PC"]
-position = Vector2(879, 368)
-scale = Vector2(0.613, 0.613)
-texture = ExtResource("4_0chal")
-
-[node name="VoiceCall" type="Sprite2D" parent="PC"]
-position = Vector2(614, 156)
-scale = Vector2(0.613372, 0.613372)
-texture = ExtResource("4_fa7sf")
-centered = false
-
-[node name="VCParticipantContainer" type="VBoxContainer" parent="PC/VoiceCall"]
-offset_left = 84.7774
-offset_top = 176.076
-offset_right = 124.777
-offset_bottom = 216.076
-
-[node name="TherapyOverlay" type="Sprite2D" parent="PC"]
-position = Vector2(870, 372)
-scale = Vector2(0.613, 0.613)
-texture = ExtResource("5_5eca3")
 
 [node name="CharacterPositions" type="Node2D" parent="."]
 

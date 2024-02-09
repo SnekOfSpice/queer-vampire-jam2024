@@ -61,7 +61,7 @@ func play_bgm(track_name:String, fade_in:=0.0):
 	if fade_in > 0.0:
 		var new_player = AudioStreamPlayer.new()
 		add_child(new_player)
-		new_player.stream = load(music.get(track_name, ""))
+		new_player.stream = load(music.get(track_name, track_name))
 		var t = create_tween()
 		new_player.volume_db = -80
 		t.tween_property(new_player, "volume_db", Options.music_volume, fade_in)
@@ -70,7 +70,7 @@ func play_bgm(track_name:String, fade_in:=0.0):
 		new_player.play()
 		t.tween_callback(set_bgm_player.bind(new_player))
 	else:
-		bgm_player.stream = load(music.get(track_name, ""))
+		bgm_player.stream = load(music.get(track_name, track_name))
 		bgm_player.play()
 
 func set_bgm_player(player:AudioStreamPlayer):

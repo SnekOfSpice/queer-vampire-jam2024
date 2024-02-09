@@ -119,7 +119,7 @@ func arrange_characters():
 		if c.position_preference.begins_with("anchor-"):
 			var anchor_name :String= c.position_preference.trim_prefix("anchor-")
 			var anchor_position = $CharacterPositions/Anchors.find_child(anchor_name.capitalize())
-			c.position = anchor_position
+			c.position = anchor_position.position
 		elif c.position_preference == "left":
 			c.position = $CharacterPositions/Left.position + Vector2(240, 0) * left_count
 			c.z_index = 10 - left_count

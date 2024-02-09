@@ -26,7 +26,7 @@ func handle_event(event_name:String, event_args:Dictionary):
 #	prints("event in char ", event_name, " - ", event_args)
 	match event_name:
 		"new_actor_speaking":
-			if character_name != "capra" and GameState.game.is_pc_on:
+			if (character_name != "capra" and not character_name == "therapist") and GameState.game.is_pc_on:
 				return
 			if event_args.get("actor_name") == character_name:
 				$Sprite.modulate.v = 1.0
