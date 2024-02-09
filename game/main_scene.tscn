@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://k107v18q8nny"]
+[gd_scene load_steps=16 format=3 uid="uid://k107v18q8nny"]
 
 [ext_resource type="Script" path="res://game/main_scene.gd" id="1_8qkgv"]
 [ext_resource type="PackedScene" uid="uid://bb8yvsx0g14vl" path="res://addons/dialog-parser/src/line_reader.tscn" id="1_wgwtm"]
@@ -12,12 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://dcp83yeoiyn0x" path="res://game/screens/credits.tscn" id="6_7tfc7"]
 [ext_resource type="Theme" uid="uid://dpenu1nwoa7ku" path="res://game/style/theme.tres" id="7_y7tat"]
 [ext_resource type="PackedScene" uid="uid://bjw5wm6l5gqkx" path="res://game/cheats.tscn" id="9_troos"]
+[ext_resource type="Texture2D" uid="uid://b8ov45buo53h7" path="res://game/backgrounds/club-trail.png" id="10_s44yj"]
 [ext_resource type="Script" path="res://game/HistoryLabelScrollContainer.gd" id="10_vugvq"]
-
-[sub_resource type="Gradient" id="Gradient_cw7l5"]
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_5dn0v"]
-gradient = SubResource("Gradient_cw7l5")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mm5ej"]
 bg_color = Color(0.133333, 0.133333, 0.133333, 0.290196)
@@ -226,18 +222,21 @@ visible_characters = 0
 visible_ratio = 0.0
 
 [node name="FullTextContainer" type="PanelContainer" parent="Dialog/Control"]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -15.0
+offset_top = -9.0
+offset_right = 15.0
+offset_bottom = 9.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="TextureRect" type="TextureRect" parent="Dialog/Control/FullTextContainer"]
+[node name="FullTextBackground" type="TextureRect" parent="Dialog/Control/FullTextContainer"]
 layout_mode = 2
-texture = SubResource("GradientTexture2D_5dn0v")
+texture = ExtResource("10_s44yj")
 
 [node name="CenterContainer" type="CenterContainer" parent="Dialog/Control/FullTextContainer"]
 custom_minimum_size = Vector2(900, 600)

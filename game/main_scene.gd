@@ -77,11 +77,12 @@ func set_screen(screen:String):
 		Const.GAME_SCREEN_OPTIONS:
 			find_child("OptionsMenu").build_from_options()
 
-func set_text_content(style:String):
+func set_text_content(style:String, variant:String):
 	find_child("FullTextContainer").visible = style == "fullscreen"
 	if style =="fullscreen":
 		$LineReader.text_container = find_child("FullTextContainer")
 		$LineReader.text_content = find_child("FullText")
+		find_child("FullTextBackground").texture = load(str("res://game/backgrounds/fullscreen_text/", variant, ".png"))
 	else:
 		$LineReader.text_container = find_child("TextContainer")
 		$LineReader.text_content = find_child("BottomText")

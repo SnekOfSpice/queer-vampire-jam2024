@@ -1,7 +1,7 @@
 extends InstructionHandler
 
 signal set_actor_name(actor_key, new_name)
-signal set_text_content(style)
+signal set_text_content(style, variant)
 signal make_screen_black(hide_characters: bool, new_background: String, attack: float, release: float, sustain: float, new_bgm: String)
 
 func execute(instruction_name, args):
@@ -48,7 +48,7 @@ func execute(instruction_name, args):
 			var new_name = args.get("new_name")
 			emit_signal("set_actor_name", actor_key, new_name)
 		"set-display-style":
-			emit_signal("set_text_content", args.get("style"))
+			emit_signal("set_text_content", args.get("style"), args.get("variant"))
 		"close-pc":
 			GameState.game.set_is_pc_on(false)
 			Sound.play("leave-noise")

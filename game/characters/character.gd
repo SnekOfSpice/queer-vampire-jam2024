@@ -32,8 +32,11 @@ func handle_event(event_name:String, event_args:Dictionary):
 				$Sprite.modulate.v = 1.0
 				visible = true
 				GameState.game.arrange_characters()
+#				get_parent().move_child(self, get_parent().get_child_count())
+#				z_index += 10
 			else:
 				$Sprite.modulate.v = 0.8
+#				z_index -= 10
 		"dialog_line_args_passed":
 			var args : Dictionary = event_args.get("dialog_line_arg_dict")
 			if args.keys().has(str(character_name + "-emotion")):

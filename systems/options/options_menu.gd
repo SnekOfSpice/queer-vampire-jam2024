@@ -29,10 +29,13 @@ func _on_fullscreen_button_toggled(button_pressed: bool) -> void:
 
 func _on_music_volume_slider_value_changed(value: float) -> void:
 	find_child("MusicVolumeLabel").text = str(int(value+80))
+	Options.music_volume = value
+	Sound.sync_volume()
 
 
 func _on_sfx_volume_slider_value_changed(value: float) -> void:
 	find_child("SFXVolumeLabel").text = str(int(value+80))
+	Options.sfx_volume = value
 
 func _on_text_speed_slider_value_changed(value: float) -> void:
 	if find_child("TextSpeedSlider").value == 101.0:

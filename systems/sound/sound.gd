@@ -8,6 +8,7 @@ const sfx := {
 	"distortion-nailbiter":"res://game/audio/sfx/533847__tosha73__distortion-guitar-power-chord-e.wav",
 	"phone-vibration":"res://game/audio/sfx/688629__corycoolguy__cell-notification-vibrate.ogg",
 	"bottle-clink":"res://game/audio/sfx/608709__somatik7__bottles-2.wav",
+	"notification":"res://game/audio/sfx/542015__rob_marion__gasp_ui_notification_3.wav",
 }
 
 const music := {
@@ -28,6 +29,8 @@ const music := {
 
 var current_track_name:String
 
+var bgm_player:AudioStreamPlayer
+
 func serialize() -> Dictionary:
 	var data := {}
 	
@@ -38,22 +41,44 @@ func serialize() -> Dictionary:
 func deserialize(data:Dictionary):
 	play_bgm(data.get("current_track_name", ""))
 
+func sync_volume():
+	if not bgm_player:
+		return
+	bgm_player.volume_db = Options.music_volume
+
 func set_bgm_volume(db:float):
-	$BGM.volume_db = db
+	if not bgm_player:
+		return
+	bgm_player.volume_db = db
 
 func play_bgm(track_name:String, fade_in:=0.0):
 	if current_track_name == track_name:
 		return
 	current_track_name = track_name
-	$BGM.stream = load(music.get(track_name, ""))
+	if not bgm_player:
+		bgm_player = AudioStreamPlayer.new()
+		add_child(bgm_player)
 	if fade_in > 0.0:
+		var new_player = AudioStreamPlayer.new()
+		add_child(new_player)
+		new_player.stream = load(music.get(track_name, ""))
 		var t = create_tween()
-		$BGM.volume_db = -80
-		t.tween_property($BGM, "volume_db", Options.music_volume, fade_in)
-	$BGM.play()
+		new_player.volume_db = -80
+		t.tween_property(new_player, "volume_db", Options.music_volume, fade_in)
+		t.parallel()
+		t.tween_property(bgm_player, "volume_db", -80, fade_in)
+		new_player.play()
+		t.tween_callback(set_bgm_player.bind(new_player))
+	else:
+		bgm_player.stream = load(music.get(track_name, ""))
+		bgm_player.play()
+
+func set_bgm_player(player:AudioStreamPlayer):
+	bgm_player.queue_free()
+	bgm_player = player
 
 func play(soundName:String, randomPitch := false) -> AudioStreamPlayer:
-	var s = load(sfx.get(soundName, ""))
+	var s = load(sfx.get(soundName, soundName))
 	if not s:
 		print("Sound \"" + soundName + "\" is not defined") 
 		return null
