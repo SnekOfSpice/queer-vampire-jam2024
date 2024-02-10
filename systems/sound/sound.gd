@@ -6,7 +6,7 @@ const sfx := {
 	"dialup":"res://game/audio/sfx/545495__ienba__notification.wav",
 	"distortion-grime":"res://game/audio/sfx/336254__deleted_user_5959249__guitar-b1-chord.wav",
 	"distortion-nailbiter":"res://game/audio/sfx/533847__tosha73__distortion-guitar-power-chord-e.wav",
-	"phone-vibration":"res://game/audio/sfx/688629__corycoolguy__cell-notification-vibrate.ogg",
+	"phone-vibration":"res://game/audio/sfx/vibrate_amped.ogg",
 	"bottle-clink":"res://game/audio/sfx/608709__somatik7__bottles-2.wav",
 	"notification":"res://game/audio/sfx/542015__rob_marion__gasp_ui_notification_3.wav",
 }
