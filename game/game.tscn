@@ -68,6 +68,11 @@ character_name = "starry"
 [node name="Icy-Aloe" parent="Characters" instance=ExtResource("2_5j4u0")]
 character_name = "icy-aloe"
 
+[node name="Mom" parent="Characters" instance=ExtResource("2_5j4u0")]
+character_name = "mom"
+position_preference = "right"
+height = -5
+
 [node name="CharacterPositions" type="Node2D" parent="."]
 
 [node name="Left" type="Node2D" parent="CharacterPositions"]

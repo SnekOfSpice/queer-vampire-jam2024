@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://k107v18q8nny"]
+[gd_scene load_steps=17 format=3 uid="uid://k107v18q8nny"]
 
 [ext_resource type="Script" path="res://game/main_scene.gd" id="1_8qkgv"]
 [ext_resource type="PackedScene" uid="uid://bb8yvsx0g14vl" path="res://addons/dialog-parser/src/line_reader.tscn" id="1_wgwtm"]
@@ -14,6 +14,8 @@
 [ext_resource type="PackedScene" uid="uid://bjw5wm6l5gqkx" path="res://game/cheats.tscn" id="9_troos"]
 [ext_resource type="Texture2D" uid="uid://b8ov45buo53h7" path="res://game/backgrounds/club-trail.png" id="10_s44yj"]
 [ext_resource type="Script" path="res://game/HistoryLabelScrollContainer.gd" id="10_vugvq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3oqcc"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mm5ej"]
 bg_color = Color(0.133333, 0.133333, 0.133333, 0.290196)
@@ -32,7 +34,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_8qkgv")
-start_page_index = 30
+start_page_index = 13
 
 [node name="GameViewportContainer" type="SubViewportContainer" parent="."]
 layout_mode = 1
@@ -233,8 +235,10 @@ offset_bottom = 9.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_3oqcc")
 
 [node name="FullTextBackground" type="TextureRect" parent="Dialog/Control/FullTextContainer"]
+z_index = -1
 layout_mode = 2
 texture = ExtResource("10_s44yj")
 

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://da7h20iu263lb"
+path="res://.godot/imported/GugsSuggs - Music For Streams Vol. 1 - 03 Away From Keyboard.ogg-6b0c9b0fcb5c38a9784b985cfdfa37c9.oggvorbisstr"
+
+[deps]
+
+source_file="res://game/audio/music/GugsSuggs - Music For Streams Vol. 1 - 03 Away From Keyboard.ogg"
+dest_files=["res://.godot/imported/GugsSuggs - Music For Streams Vol. 1 - 03 Away From Keyboard.ogg-6b0c9b0fcb5c38a9784b985cfdfa37c9.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

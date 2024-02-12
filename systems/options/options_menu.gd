@@ -13,7 +13,6 @@ func build_from_options():
 	if not Parser.line_reader.auto_continue:
 		find_child("AutoDelaySlider").value = find_child("AutoDelaySlider").max_value
 	else:
-		find_child("AutoDelaySlider").value = Parser.line_reader.auto_continue_delay-1
 		find_child("AutoDelaySlider").value = Parser.line_reader.auto_continue_delay
 	
 	find_child("ProgressSaveLabel").modulate.a = 0.0

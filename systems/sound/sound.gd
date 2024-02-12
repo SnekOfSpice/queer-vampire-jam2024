@@ -9,6 +9,8 @@ const sfx := {
 	"phone-vibration":"res://game/audio/sfx/vibrate_amped.ogg",
 	"bottle-clink":"res://game/audio/sfx/608709__somatik7__bottles-2.wav",
 	"notification":"res://game/audio/sfx/542015__rob_marion__gasp_ui_notification_3.wav",
+	"phone-call":"res://game/audio/sfx/276609__mickleness__notification-bumptious.wav",
+	"motivation-sting":"res://game/audio/sfx/metaspirit_vanish.ogg",
 }
 
 const music := {
@@ -25,7 +27,16 @@ const music := {
 	"crowd":"res://game/audio/music/Nadrisk - Wounded by Light.ogg",
 	"parents":"res://game/audio/music/OTHERTHINKER - DANDELION - 05 THE FOX IN THE TOPHAT WHISPERED INTO THE EAR OF THE RABBIT -I WELCOME YOU WITH MY BARBED WIRE HABIT-.ogg",
 	"rain":"res://game/audio/music/380152__bonnyorbit__rain-and-thunder-by-a-window.ogg",
+	"silly-food-discussion":"res://game/audio/music/GugsSuggs - Music For Streams Vol. 1 - 06 Smooth Brain Hour.ogg",
+	"alcoholism":"res://game/audio/music/смерть в летнюю полночь - где же твои крылья, Ча - 05 отчего твоя душа болит, Чайка -Tape Mastering-.ogg",
+	"christmas":"res://game/audio/music/смерть в летнюю полночь - где же твои крылья, Ча - 01 когда же это было, Чайка -Tape Mastering-.ogg",
+	"lonely-in-forest":"res://game/audio/music/467867__haiku1996__improvisation-on-piano-ii.ogg",
+	"metaspirit2":"res://game/audio/music/OTHERTHINKER - DANDELION - 01 MY SKIN DRIPS LIKE SOME THICKENED INK.ogg",
+	"idle":"res://game/audio/music/Monplaisir - Sur Tout Le Trajet - 03 Sur Tout Le Retour.ogg",
 }
+# unused but good
+#"res://game/audio/music/GugsSuggs - Music For Streams Vol. 1 - 03 Away From Keyboard.ogg"
+#"res://game/audio/music/GugsSuggs - Music For Streams Vol. 1 - 07 Take It Easy Tonight.ogg"
 
 var current_track_name:String
 

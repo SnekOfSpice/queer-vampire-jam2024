@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dhyub0lb1qqon"
+path="res://.godot/imported/Monplaisir - Sur Tout Le Trajet - 03 Sur Tout Le Retour.ogg-e46971172045250a61fe037e72432db3.oggvorbisstr"
+
+[deps]
+
+source_file="res://game/audio/music/Monplaisir - Sur Tout Le Trajet - 03 Sur Tout Le Retour.ogg"
+dest_files=["res://.godot/imported/Monplaisir - Sur Tout Le Trajet - 03 Sur Tout Le Retour.ogg-e46971172045250a61fe037e72432db3.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

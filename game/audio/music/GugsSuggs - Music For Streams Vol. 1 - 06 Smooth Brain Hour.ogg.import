@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://j4v3etmacemo"
+path="res://.godot/imported/GugsSuggs - Music For Streams Vol. 1 - 06 Smooth Brain Hour.ogg-87d7f0b0095bc624525e39eee4f04872.oggvorbisstr"
+
+[deps]
+
+source_file="res://game/audio/music/GugsSuggs - Music For Streams Vol. 1 - 06 Smooth Brain Hour.ogg"
+dest_files=["res://.godot/imported/GugsSuggs - Music For Streams Vol. 1 - 06 Smooth Brain Hour.ogg-87d7f0b0095bc624525e39eee4f04872.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

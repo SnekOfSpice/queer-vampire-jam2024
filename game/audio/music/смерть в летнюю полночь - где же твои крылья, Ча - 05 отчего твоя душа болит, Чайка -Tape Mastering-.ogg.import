@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dktm13y47obmb"
+path="res://.godot/imported/смерть в летнюю полночь - где же твои крылья, Ча - 05 отчего твоя душа болит, Чайка -Tape Mastering-.ogg-8b7a0688bf6024206eff24e0cd3e41d2.oggvorbisstr"
+
+[deps]
+
+source_file="res://game/audio/music/смерть в летнюю полночь - где же твои крылья, Ча - 05 отчего твоя душа болит, Чайка -Tape Mastering-.ogg"
+dest_files=["res://.godot/imported/смерть в летнюю полночь - где же твои крылья, Ча - 05 отчего твоя душа болит, Чайка -Tape Mastering-.ogg-8b7a0688bf6024206eff24e0cd3e41d2.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

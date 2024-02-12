@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cnk53mahk2m"
+path="res://.godot/imported/смерть в летнюю полночь - где же твои крылья, Ча - 01 когда же это было, Чайка -Tape Mastering-.ogg-1ceb943a3eb951d31b1905b573cd21f9.oggvorbisstr"
+
+[deps]
+
+source_file="res://game/audio/music/смерть в летнюю полночь - где же твои крылья, Ча - 01 когда же это было, Чайка -Tape Mastering-.ogg"
+dest_files=["res://.godot/imported/смерть в летнюю полночь - где же твои крылья, Ча - 01 когда же это было, Чайка -Tape Mastering-.ogg-1ceb943a3eb951d31b1905b573cd21f9.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

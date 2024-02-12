@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ca6k0ny0fd1iq"
+path="res://.godot/imported/GugsSuggs - Music For Streams Vol. 1 - 07 Take It Easy Tonight.ogg-eb37c18f55718771d20cd7309568d890.oggvorbisstr"
+
+[deps]
+
+source_file="res://game/audio/music/GugsSuggs - Music For Streams Vol. 1 - 07 Take It Easy Tonight.ogg"
+dest_files=["res://.godot/imported/GugsSuggs - Music For Streams Vol. 1 - 07 Take It Easy Tonight.ogg-eb37c18f55718771d20cd7309568d890.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

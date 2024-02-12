@@ -37,5 +37,4 @@ func handle_event(event_name:String, event_args:Dictionary):
 #	prints("event in char ", event_name, " - ", event_args)
 	match event_name:
 		"new_actor_speaking":
-			printt(event_args.get("actor_name"), character_name)
 			find_child("Active").modulate.a = 1.0 if event_args.get("actor_name") == character_name else 0.0

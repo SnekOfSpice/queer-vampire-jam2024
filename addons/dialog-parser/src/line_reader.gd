@@ -357,9 +357,19 @@ func read_new_line(new_line: Dictionary):
 	text_container.visible = line_type == Parser.LineType.Text or (line_type == Parser.LineType.Choice and show_text_during_choices)
 	showing_text = line_type == Parser.LineType.Text
 	choice_container.visible = line_type == Parser.LineType.Choice
+	
+	# register facts
+	var facts = line_data.get("facts")
+	printt(line_type, facts)
+	for f in facts.keys():
+		Parser.change_fact(f, facts.get(f))
+	
 	match line_type:
 		Parser.LineType.Text:
 			using_dialog_syntax = line_data.get("content").get("use_dialog_syntax", false)
+			if str(content).is_empty():
+				emit_signal("line_finished", line_index)
+				return
 			if using_dialog_syntax:
 				var lines = content.split("[]>")
 				dialog_actors.clear()
@@ -403,10 +413,7 @@ func read_new_line(new_line: Dictionary):
 			instruction_handler.wrapper_execute(instruction_name, args, delay_before, delay_after)
 			
 			
-	# register facts
-	var facts = line_data.get("facts")
-	for f in facts.keys():
-		Parser.change_fact(f, facts.get(f))
+	
 	
 	
 func get_end_of_chunk_position() -> int:
@@ -433,6 +440,9 @@ func _process(delta: float) -> void:
 			text_content.visible_characters = get_end_of_chunk_position()
 		else:
 			text_content.visible_ratio += (float(text_speed) / text_content.text.length()) * delta
+			# fast text speed can make it go over the end  of the chunk
+			if text_content.visible_characters > get_end_of_chunk_position():
+				text_content.visible_characters = get_end_of_chunk_position()
 	elif remaining_auto_pause_duration > 0 and next_pause_type == PauseTypes.Auto:
 		var last_dur = remaining_auto_pause_duration
 		remaining_auto_pause_duration -= delta

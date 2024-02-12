@@ -76,6 +76,12 @@
 		"ask icy about herself": false,
 		"ask icy about police": false,
 		"ask icy about psychiatry": false,
+		"capra drive: morality": false,
+		"capra drive: negative": false,
+		"capra drive: positive": false,
+		"capra evaluation: future": false,
+		"capra evaluation: past": false,
+		"capra evaluation: present": false,
 		"chose beer at bar": false,
 		"chose soda at bar": false,
 		"conviction to kill": false,
@@ -87,6 +93,7 @@
 		"hot dogs are not sandwiches": false,
 		"hot dogs are sandwiches": false,
 		"invited to first concert via vc": false,
+		"joins band late": false,
 		"jump in 1": false,
 		"jump in 2": false,
 		"jump in blunder 1": false,
@@ -2441,7 +2448,7 @@
 							},
 							{
 								"name": "new_bgm",
-								"value": "metaspirit"
+								"value": "none"
 							},
 							{
 								"name": "hide_characters",
@@ -2666,7 +2673,7 @@
 							""
 						],
 						"active_actors_title": "characters",
-						"content": "[]>metaspirit:I'm the metaspirit of vampires.\n[]>capra:Come again?<mp> Once more? <mp>Metaspirit? <mp>So I'm an actual vampire?\n[]>metaspirit:Of course you are. <mp>I've been there since the first cases of vampirism emerged with you humans.\n[]>capra:You're so casually... <ap>casual about all of this... <mp>Are you god?\n[]>metaspirit:In some languages. <ap>In some time periods.\n[]>capra{capra-emotion|hung-over}:This is too much for me. Especially right now. <ap>At the moment. Now, in the present. <mp>Can't you see I'm downsizing my brain and lifespan?\n[]>metaspirit:I do not get drawn out at special points. <mp>Vampires do not summon me.\n[]>capra:So... <mp>I am delusional? Am I psychotic?\n[]>metaspirit:That is between you and your therapist.\n[]>capra:Also also, like. Respond to half of what I say you... fuck. <mp>I hate rhetorics. <ap>Rhetorical questions. <lc>Can you actually see me drink?\n[]>metaspirit:Of course.\n[]>capra:Then please leave me alone, if you're not going to kill me.\n[]>capra{capra-emotion|spiraling}:Kill me. I should kill myself, actually.\n[]>capra{capra-emotion|anger}:GO FUCK YOURSELF NOT-GOD!\n[]>capra{capra-emotion|spiraling}:AAAAAA.\n[]>metaspirit:I just wanted to let you know of my existence.\n[]>capra{capra-emotion|neutral}:Yes. Sorry. I'm fine.\n[]>metaspirit:I've had worse reactions.\n[]>capra:You're not the first cryptic apparition in my vision. <mp>Just a very... <ap> persistent one.\n[]>metaspirit:You may have seen me at some point eventually. <ap>Like I said. I'm just a tether from you, or what you may call your soul, to any vampirism to ever exist across spacetime.\n[]>capra:...<lc>...<lc>.<ap>.<ap>.<ap>That's messed up.\n[]>capra:So why again? <lc>Why are you here right now?\n[]>metaspirit:It seems that you would be considered to have deteriorating mental health. According to. <ap>Everyone around you. And whatever it is, it's also strengthening other things.\n[]>capra:So... I am psychotic. Got it.\n[]>metaspirit:If that's what you call it.\n[]>capra:Point being?\n[]>metaspirit:Vampires are not a dying breed. We have always been there and will always coexist with humans. We are human. <mp>Some would disagree.<lc>But we are continuously being hunted. \n[]>capra:So how come I can see you? <ap> And how come not everyone can see you? <lc>Not even... <ap>all vampires? <mp>How many seeing vampires are there anyways?\n[]>metaspirit:Like I said, you dragged me out. Imagine rotating a cube. You cannot see all sides at once. Some sides are me. Some are other things you may never know. <mp> That cube is floating through a spiderweb in which you are caught your entire life. It may pass through you. Your inner self has to intersect with that path. And the road to that intersection is lined with what humans often call mental illness.\n[]>capra{capra-emotion|drunk}:Uh huh. <lc>I'll just... <mp>Cube.\n[]>capra{capra-emotion|hung-over}:I am so wasted. No more imagining.\n[]>metaspirit:Whatever you imagine. You will not be more powerful than the ties of community.\n[]>capra:You talk in riddles.\n[]>metaspirit:You will know.\n[]>metaspirit:Until again, Capra.\n[]>capra:I already forgot... <mp>Did forget your name. <mp>I'm sorry.\n[]>narrator:And then the tequila in your empty stomach claims you for the night.",
+						"content": "[]>metaspirit:I'm the metaspirit of vampires.\n[]>capra:Come again?<mp> Once more? <mp>Metaspirit? <mp>So I'm an actual vampire?\n[]>metaspirit:Of course you are. <mp>I've been there since the first cases of vampirism emerged with you humans.\n[]>capra:You're so casually... <ap>casual about all of this... <mp>Are you god?\n[]>metaspirit:In some languages. <ap>In some time periods.\n[]>capra{capra-emotion|hung-over}:This is too much for me. Especially right now. <ap>At the moment. Now, in the present. <mp>Can't you see I'm downsizing my brain and lifespan?\n[]>metaspirit:I do not get drawn out at special points. <mp>Vampires do not summon me.\n[]>capra:So... <mp>I am delusional? Am I psychotic?\n[]>metaspirit:That is between you and your therapist.\n[]>capra:Also also, like. Respond to half of what I say you... fuck. <mp>I hate rhetorics. <ap>Rhetorical questions. <lc>Can you actually see me drink?\n[]>metaspirit:Of course.\n[]>capra:Then please leave me alone, if you're not going to kill me.\n[]>capra{capra-emotion|spiraling}:Kill me. I should kill myself, actually.\n[]>capra{capra-emotion|anger}:GO FUCK YOURSELF NOT-GOD!\n[]>capra{capra-emotion|spiraling}:AAAAAA.\n[]>metaspirit:I just wanted to let you know of my existence.\n[]>capra{capra-emotion|neutral}:Yes. Sorry. I'm fine.\n[]>metaspirit:I've had worse reactions.\n[]>capra:You're not the first cryptic apparition in my vision. <mp>Just a very... <ap> persistent one.\n[]>metaspirit:You may have seen me at some point eventually. <ap>Like I said. I'm just a tether from you, or what you may call your soul, to any vampirism to ever exist across spacetime.\n[]>capra:...<lc>...<lc>.<ap>.<ap>.<ap>That's messed up.\n[]>capra:So why again? <lc>Why are you here right now?\n[]>metaspirit:It seems that you would be considered to have deteriorating mental health. According to. <ap>Everyone around you. And whatever it is, it's also strengthening other things.\n[]>capra:So... I am psychotic. Got it.\n[]>metaspirit:If that's what you call it.\n[]>capra:Point being?\n[]>metaspirit:Vampires...\n[]>capra:Actually, hold that thought. Lets not do this in the place where I usually piss and vomit.",
 						"selected_actor_dropdown_index": 0,
 						"use_dialog_syntax": true
 					},
@@ -2677,6 +2684,94 @@
 					"line_type": 0,
 					"meta.is_head_editable": true,
 					"meta.line_index": 10,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"active_actors": [
+							"narrator",
+							"capra",
+							"rider",
+							"icy-aloe",
+							"starry",
+							"angel",
+							"crosscull",
+							"mom",
+							"dad",
+							"metaspirit",
+							"therapist",
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms",
+							"bouncer",
+							""
+						],
+						"active_actors_title": "characters",
+						"content": "[]>narrator:And with the determination of an ancient phalanx, you strut into your living room.\n[]>capra{capra-emotion|content}:Heh.\n[]>narrator:It is there again. Or already?\n[]>capra{capra-emotion|anger}:FUCK.\n[]>narrator:You point at it.\n[]>capra:Where were you? <ap>...<ap>Yes. <ap>Vampires. Spit it out.\n[]>metaspirit:Vampires are not a dying breed. We have always been there and will always coexist with humans. We are human. <mp>Some would disagree.<lc>But we are continuously being hunted. \n[]>capra:So how come I can see you? <ap> And how come not everyone can see you? <lc>Not even... <ap>all vampires? <mp>How many seeing vampires are there anyways?\n[]>metaspirit:Like I said, you dragged me out. Imagine rotating a cube. You cannot see all sides at once. Some sides are me. Some are other things you may never know. <mp> That cube is floating through a spiderweb in which you are caught your entire life. It may pass through you. Your inner self has to intersect with that path. And the road to that intersection is lined with what humans often call mental illness.\n[]>capra{capra-emotion|drunk}:Uh huh. <lc>I'll just... <mp>Cube.\n[]>capra{capra-emotion|hung-over}:I am so wasted. No more imagining.\n[]>metaspirit:Whatever you imagine. You will not be more powerful than the ties of community.\n[]>capra:You talk in riddles.\n[]>metaspirit:You will know.\n[]>capra{capra-emotion|drunk}:Shu... Sure.\n[]>metaspirit:Until again, Capra.\n[]>capra:I already forgot... <mp>Did forget your name. <mp>I'm sorry.\n[]>narrator:And then the tequila in your otherwise empty stomach claims you for the night.",
+						"selected_actor_dropdown_index": 0,
+						"use_dialog_syntax": true
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 0,
+					"meta.is_head_editable": true,
+					"meta.line_index": 11,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"active_actors": [
+							"narrator",
+							"capra",
+							"rider",
+							"icy-aloe",
+							"starry",
+							"angel",
+							"crosscull",
+							"mom",
+							"dad",
+							"metaspirit",
+							"therapist",
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms",
+							"bouncer",
+							""
+						],
+						"active_actors_title": "characters",
+						"content": "",
+						"selected_actor_dropdown_index": 0,
+						"use_dialog_syntax": true
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 0,
+					"meta.is_head_editable": true,
+					"meta.line_index": 12,
 					"meta.visible": true
 				}
 			],
@@ -2769,7 +2864,7 @@
 							""
 						],
 						"active_actors_title": "characters",
-						"content": "[]>capra{capra-emotion|neutral}:Since you now live in my head-\n[]>metaspirit:I've always lived there, if you desire that wording.\n[]>capra:Whatever.\n[]>metaspirit:But you having that first mirror fail on you made me visible.\n[]>capra:And I shooed you away then.\n[]>metaspirit:It worked for about five months.\n[]>capra:Yeah yeah... now leave me alone.\n[]>metaspirit:vanpiric meditations have always held great power. take for instance the powers of premonition some witches wield. some vampires can drag out the future innately.\n[]>capra:aren't there only vanishingly few of those?\n[]>metaspirit: You have been to the dentist. How do they fix your teeth? By drilling away the rotten parts, and every so slightly more to anchor the filling.\n[]>capra: So... you being here is bad? is that right?\n[]>metaspirit: not necessarily. You just erode a bit of extraneous reality in exchange for a refined part of your own.\n[]>capra: I dont think i understand.\n[]>metaspirit: reality may crumble evermore. it will do so unrelenrtingly anyways.\n[]>capra: Not... not as if there's been anything worthwhile about it.\n[]>metaspirit: You are such a cynical one. <lc> Yet, you will build a great temple. \n[]>capra: I doubt that. I'm sorry, I really do hehe.\n[]>metaspirit: in time, Capra.\n[]>capra{capra-emotion|hung-over}:Okay so... I'm hung over and building a temple. I have an inner sanctuary but you... I don't want you there. <lc>Please leave.\n[]>metaspirit:I'm afraid I can't. All vampires see me, one way or another. I tie you all together.\n[]>capra: Sooo... You're like a demon?\n[]>metaspirit: Perhaps.Your language is restrictive like that. I could also be called the collective unconscious, the shared cultural web tying everything together. I'm the realization that you are a vampire.\n[]>capra: But the only other vampires I know are online. I'm a neet.\n[]>metaspirit: And there is no culture within that? No shared customs?\n[]>capra: We have our rituals... But you can't be meaning to tell me that this is like this for every vampire out there.\n[]>metaspirit: Not like this of course.\n[]>capra:You're no sleep paralysis demon. Not a vision of the end. <lc>Just a god.\n[]>capra{capra-emotion|sad}:Now please leave me alone.\n[]>metaspirit:...\n[]>metaspirit:...\n[]>capra:Please go. You make it so difficult to relax. <ap>It's... exhausting already.\n[]>capra{capra-emotion|hung-over}:Very.\n[]>metaspirit:Very well. I leave now you to go back to lobotomizing yourself on social media. Enjoy your time there.",
+						"content": "[]>capra{capra-emotion|neutral}:Since you now live in my head-\n[]>metaspirit:I've always lived there, if you desire that wording.\n[]>capra:Whatever.\n[]>metaspirit:But you having that first mirror fail on you made me visible.\n[]>capra:And I shooed you away then.\n[]>metaspirit:It worked for about five months.\n[]>capra:Yeah yeah... now leave me alone.\n[]>metaspirit:vanpiric meditations have always held great power. take for instance the powers of premonition some witches wield. some vampires can drag out the future innately.\n[]>capra:aren't there only vanishingly few of those?\n[]>metaspirit: You have been to the dentist. How do they fix your teeth? By drilling away the rotten parts, and every so slightly more to anchor the filling.\n[]>capra: So... you being here is bad? is that right?\n[]>metaspirit: not necessarily. You just erode a bit of extraneous reality in exchange for a refined part of your own.\n[]>capra: I dont think i understand.\n[]>metaspirit: reality may crumble evermore. it will do so unrelenrtingly anyways.\n[]>capra: Not... not as if there's been anything worthwhile about it.\n[]>metaspirit: You are such a cynical one. <lc> Yet, you will build a great temple. \n[]>capra: I doubt that. I'm sorry, I really do hehe.\n[]>metaspirit: in time, Capra.\n[]>capra{capra-emotion|hung-over}:Okay so... I'm hung over and building a temple. I have an inner sanctuary but you... I don't want you there. <lc>Please leave.\n[]>metaspirit:I'm afraid I can't. All vampires see me, one way or another. I tie you all together.\n[]>capra: Sooo... You're like a demon?\n[]>metaspirit: Perhaps.Your language is restrictive like that. I could also be called the collective unconscious, the shared cultural web tying everything together. I'm the realization that you are a vampire.\n[]>capra: But the only other vampires I know are online. I'm a neet. <lc>...<mp>A neet without the umemployed part, but still functionally useless. Also my job is killing me. <mp>I'm a neet with reduced free time.\n[]>metaspirit: And there is no culture within that? No shared customs?\n[]>capra: We have our rituals... But you can't be meaning to tell me that this is like this for every vampire out there.\n[]>metaspirit: Not like this of course.\n[]>capra:You're no sleep paralysis demon. Not a vision of the end. <lc>Just a god.\n[]>capra{capra-emotion|sad}:Now please leave me alone.\n[]>metaspirit:...\n[]>metaspirit:...\n[]>capra:Please go. You make it so difficult to relax. <ap>It's... exhausting already.\n[]>capra{capra-emotion|hung-over}:Very.\n[]>metaspirit:Very well. I leave now you to go back to lobotomizing yourself on social media. Enjoy your time there.",
 						"selected_actor_dropdown_index": 0,
 						"use_dialog_syntax": true
 					},
@@ -2848,7 +2943,7 @@
 							""
 						],
 						"active_actors_title": "characters",
-						"content": "[]>capra{capra-emotion|neutral}:Thank you.<lc>Just what in the hell. Why me?\n[]>narrator:You pull out your phone.",
+						"content": "[]>capra{capra-emotion|neutral}:Thank you.<lc>Just what in the hell. Why me?\n[]>narrator:But there is nothing but silence giving you answer.\n[]>capra{capra-emotion|sad}:Man...\n[]>narrator:You pull out your phone. Might as well get back to doing what you loathe a bit less.",
 						"selected_actor_dropdown_index": 0,
 						"use_dialog_syntax": true
 					},
@@ -4178,7 +4273,7 @@
 							""
 						],
 						"active_actors_title": "characters",
-						"content": "[]>narrator:You always try to stay informed. You have some vague knowledge of what's going on.\n[]>capra{capra-emotion|content}:\"Staying informed\" is a form of mental self-harm!\n[]>narrator:Yet, you open four different social media tabs.\n[]>capra: And you know I'm good at that.\n[]>narrator{capra-emotion|neutral}:Ugh.",
+						"content": "[]>narrator:You always try to stay informed. You have some vague knowledge of what's going on.\n[]>capra{capra-emotion|content}:\"Staying informed\" is a form of mental self-harm!\n[]>narrator:Yet, you open four different social media tabs.\n[]>capra: And you know I'm good at that.\n[]>capra{capra-emotion|neutral}:Ugh.",
 						"selected_actor_dropdown_index": 0,
 						"use_dialog_syntax": true
 					},
@@ -4354,7 +4449,7 @@
 							""
 						],
 						"active_actors_title": "characters",
-						"content": "[]>narrator:The thread continues. Calls for ceasefires are compared to suicide.\n[]>capra{capra-emotion|hung-over}:Just kill yourselves.\n[]>yearnfarms:Imagine amputating someone while they are chained up in your basement. Forever yours.\n[]>capra:Would also absolve them from working retail... should be done to be. <ap>Someone please.\n[]>narrator:It goes on like this.",
+						"content": "[]>narrator:The thread continues. Calls for ceasefires are compared to suicide.\n[]>capra{capra-emotion|hung-over}:Just kill yourselves.\n[]>yearnfarms:Imagine amputating someone while they are chained up in your basement. Forever yours.\n[]>capra{capra-emotion|content}:Would also absolve them from working retail... should be done to be. <ap>Someone please.\n[]>narrator:It goes on like this.",
 						"selected_actor_dropdown_index": 0,
 						"use_dialog_syntax": true
 					},
@@ -4457,7 +4552,7 @@
 							""
 						],
 						"active_actors_title": "characters",
-						"content": "[]>metaspirit:Capra.\n[]>narrator:Your blood freezes over once again. <mp>You never expected your sleep paralysis demons to be this lucid.\n[]>capra{capra-emotion|spiraling}:Why are you in my life?\n[]>therapist:Are you planning on rotting in your bed forever?\n[]>capra{capra-emotion|hung-over}:Tact. Don't touch my heart like that. I just woke up.\n[]>metaspirit:There is naught to touch. <ap>And that's the problem.\n[]>capra:Leave me alone. Go away.\n[]>narrator:You pull your blanket over yourself. <lc>It does not vanish from your vision.\n[]>capra{capra-emotion|spiraling}:WHY DO YOU LIVE INSIDE MY EYES?\n[]>metaspirit:Because I am not bound to your physical reality.\n[]>capra{capra-emotion|anger}:Fuck off. I'll get up in a bit.\n[]>metaspirit:Capra. When you look into the future, do you want to see a shriveled and frail body?\n[]>capra:No. This is already horrible.\n[]>metaspirit:So grab my hand then. Grasp the future. The non vampires won't know a lick about it.\n[]>narrator:You reach out. <mp>In the infinite fraction of the moment and point of contact, it vanishes.",
+						"content": "[]>metaspirit:Capra.\n[]>narrator:Your blood freezes over once again. <mp>You never expected your sleep paralysis demons to be this lucid.\n[]>capra{capra-emotion|spiraling}:Why are you in my life?\n[]>metaspirit:Are you planning on rotting in your bed forever?\n[]>capra{capra-emotion|hung-over}:Tact. Don't touch my heart like that. I just woke up.\n[]>metaspirit:There is naught to touch. <ap>And that's the problem.\n[]>capra:Leave me alone. Go away.\n[]>narrator:You pull your blanket over yourself. <lc>It does not vanish from your vision.\n[]>capra{capra-emotion|spiraling}:WHY DO YOU LIVE INSIDE MY EYES?\n[]>metaspirit:Because I am not bound to your physical reality.\n[]>capra{capra-emotion|anger}:Fuck off. I'll get up in a bit.\n[]>metaspirit:Capra. When you look into the future, do you want to see a shriveled and frail body?\n[]>capra:No. This is already horrible.\n[]>metaspirit:So grab my hand then. Grasp the future. The non vampires won't know a lick about it.\n[]>narrator:You reach out. <mp>In the infinite fraction of the moment and point of contact, it vanishes.",
 						"selected_actor_dropdown_index": 0,
 						"use_dialog_syntax": true
 					},
@@ -4468,6 +4563,37 @@
 					"line_type": 0,
 					"meta.is_head_editable": true,
 					"meta.line_index": 1,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"content": [
+							{
+								"name": "key",
+								"value": "motivation-sting"
+							}
+						],
+						"delay.after": 0,
+						"delay.before": 0,
+						"name": "play-sfx"
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 2,
+					"meta.is_head_editable": true,
+					"meta.line_index": 2,
 					"meta.visible": true
 				},
 				{
@@ -4502,7 +4628,7 @@
 					"header": [],
 					"line_type": 2,
 					"meta.is_head_editable": true,
-					"meta.line_index": 2,
+					"meta.line_index": 3,
 					"meta.visible": true
 				},
 				{
@@ -4536,7 +4662,7 @@
 							""
 						],
 						"active_actors_title": "characters",
-						"content": "[]>capra{capra-emotion|neutral}: I hate how it has no sound.<lc>Maybe I should go do something with my life. With my fellow vampires. Just this once.",
+						"content": "[]>capra{capra-emotion|neutral}: I hate how this feels like nothing.<lc>Maybe I should go do something with my life. With my fellow vampires. Just this once.",
 						"selected_actor_dropdown_index": 0,
 						"use_dialog_syntax": true
 					},
@@ -4546,7 +4672,7 @@
 					"header": [],
 					"line_type": 0,
 					"meta.is_head_editable": true,
-					"meta.line_index": 3,
+					"meta.line_index": 4,
 					"meta.visible": true
 				}
 			],
@@ -5421,6 +5547,78 @@
 						"behavior": 0,
 						"behavior_key": "Show",
 						"facts": {
+							"jump in blunder 2": true,
+							"stayed silent 1": true
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"content": [
+							{
+								"name": "name",
+								"value": "capra"
+							},
+							{
+								"name": "visible",
+								"value": "true"
+							}
+						],
+						"delay.after": 0,
+						"delay.before": 0,
+						"name": "character-visible"
+					},
+					"facts": {
+						"rejected in vc": true
+					},
+					"header": [],
+					"line_type": 2,
+					"meta.is_head_editable": true,
+					"meta.line_index": 18,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+							"jump in blunder 1": true,
+							"stayed silent 2": true
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"content": [
+							{
+								"name": "name",
+								"value": "capra"
+							},
+							{
+								"name": "visible",
+								"value": "true"
+							}
+						],
+						"delay.after": 0,
+						"delay.before": 0,
+						"name": "character-visible"
+					},
+					"facts": {
+						"rejected in vc": true
+					},
+					"header": [],
+					"line_type": 2,
+					"meta.is_head_editable": true,
+					"meta.line_index": 19,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
 							"jump in blunder 1": true,
 							"jump in blunder 2": true
 						},
@@ -5458,7 +5656,7 @@
 					"header": [],
 					"line_type": 0,
 					"meta.is_head_editable": true,
-					"meta.line_index": 18,
+					"meta.line_index": 20,
 					"meta.visible": true
 				},
 				{
@@ -5502,7 +5700,7 @@
 					"header": [],
 					"line_type": 0,
 					"meta.is_head_editable": true,
-					"meta.line_index": 19,
+					"meta.line_index": 21,
 					"meta.visible": true
 				},
 				{
@@ -5546,7 +5744,7 @@
 					"header": [],
 					"line_type": 0,
 					"meta.is_head_editable": true,
-					"meta.line_index": 20,
+					"meta.line_index": 22,
 					"meta.visible": true
 				},
 				{
@@ -5590,7 +5788,7 @@
 					"header": [],
 					"line_type": 0,
 					"meta.is_head_editable": true,
-					"meta.line_index": 21,
+					"meta.line_index": 23,
 					"meta.visible": true
 				},
 				{
@@ -5656,7 +5854,7 @@
 					"header": [],
 					"line_type": 1,
 					"meta.is_head_editable": true,
-					"meta.line_index": 22,
+					"meta.line_index": 24,
 					"meta.visible": true
 				},
 				{
@@ -5700,7 +5898,7 @@
 					"header": [],
 					"line_type": 0,
 					"meta.is_head_editable": true,
-					"meta.line_index": 23,
+					"meta.line_index": 25,
 					"meta.visible": true
 				}
 			],
@@ -5711,6 +5909,41 @@
 		},
 		"14": {
 			"lines": [
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"content": [
+							{
+								"name": "track_name",
+								"value": "alcoholism"
+							},
+							{
+								"name": "fade_in_time",
+								"value": "2.0"
+							}
+						],
+						"delay.after": 0,
+						"delay.before": 0,
+						"name": "play-bgm"
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 2,
+					"meta.is_head_editable": true,
+					"meta.line_index": 0,
+					"meta.visible": true
+				},
 				{
 					"conditionals": {
 						"behavior": 0,
@@ -5734,7 +5967,7 @@
 					"header": [],
 					"line_type": 2,
 					"meta.is_head_editable": true,
-					"meta.line_index": 0,
+					"meta.line_index": 1,
 					"meta.visible": true
 				},
 				{
@@ -5778,7 +6011,7 @@
 					"header": [],
 					"line_type": 0,
 					"meta.is_head_editable": true,
-					"meta.line_index": 1,
+					"meta.line_index": 2,
 					"meta.visible": true
 				},
 				{
@@ -5829,7 +6062,7 @@
 					"header": [],
 					"line_type": 2,
 					"meta.is_head_editable": true,
-					"meta.line_index": 2,
+					"meta.line_index": 3,
 					"meta.visible": true
 				},
 				{
@@ -5873,7 +6106,7 @@
 					"header": [],
 					"line_type": 0,
 					"meta.is_head_editable": true,
-					"meta.line_index": 3,
+					"meta.line_index": 4,
 					"meta.visible": true
 				},
 				{
@@ -5904,7 +6137,7 @@
 					"header": [],
 					"line_type": 2,
 					"meta.is_head_editable": true,
-					"meta.line_index": 4,
+					"meta.line_index": 5,
 					"meta.visible": true
 				},
 				{
@@ -5948,11 +6181,11 @@
 					"header": [],
 					"line_type": 0,
 					"meta.is_head_editable": true,
-					"meta.line_index": 5,
+					"meta.line_index": 6,
 					"meta.visible": true
 				}
 			],
-			"next": 23,
+			"next": 6,
 			"number": 14,
 			"page_key": "alcoholism",
 			"terminate": false
@@ -7416,7 +7649,7 @@
 							""
 						],
 						"active_actors_title": "characters",
-						"content": "[]>icy-aloe{icy-aloe-emotion|neutral}:It'll start soon.",
+						"content": "[]>icy-aloe{icy-aloe-emotion|neutral}:It'll start soon.\n[]>narrator:The band is setting up on stage.",
 						"selected_actor_dropdown_index": 0,
 						"use_dialog_syntax": true
 					},
@@ -7649,7 +7882,7 @@
 							""
 						],
 						"active_actors_title": "characters",
-						"content": "[]>narrator{capra-emotion|spiraling}:Grime's set shreds. Hard. Your ears hurt within two songs.",
+						"content": "[]>narrator:Grime goes hard.<lc>Icy Aloe and Rider both snap back and forth with the rumbling bass of the percussion.\n[]>capra{capra-emotion|sad}:Hhg.\n[]>narrator:Don't choke on your anxiety.\n[]>capra:I'll just focus on the band. And focus on the lights. And the music.\n[]>narrator:You are basically frozen in place. <lc>And you remain like this. <mp>And remain. <mp>And remain.\n[]>narrator{capra-emotion|spiraling}:Starry taps you on your shoulder.\n[]>narrator:It's too loud to make out their words, but a questioning look and a hand going from thumbs-up to thumbs-down, back and forth, makes the question clear.<lc>You politely shrug and nod.<lc>They give you a thumbs up and a smile back. <mp>Then you turn back to face the stage. <lc>The overhead lights are bright enough to blind you whenever they shine near your sensitive eyes.\n[]>narrator:...\n[]>narrator:You end up closing them for a good chunk of the set.",
 						"selected_actor_dropdown_index": 0,
 						"use_dialog_syntax": true
 					},
@@ -7660,50 +7893,6 @@
 					"line_type": 0,
 					"meta.is_head_editable": true,
 					"meta.line_index": 21,
-					"meta.visible": true
-				},
-				{
-					"conditionals": {
-						"behavior": 0,
-						"behavior_key": "Show",
-						"facts": {
-
-						},
-						"operand": 0,
-						"operand_args": [],
-						"operand_key": "AND"
-					},
-					"content": {
-						"active_actors": [
-							"narrator",
-							"capra",
-							"rider",
-							"icy-aloe",
-							"starry",
-							"angel",
-							"crosscull",
-							"mom",
-							"dad",
-							"metaspirit",
-							"therapist",
-							"gas-station-clerk",
-							"doomfeed",
-							"yearnfarms",
-							"bouncer",
-							""
-						],
-						"active_actors_title": "characters",
-						"content": "[]>narrator:Grime goes hard.<lc>Icy Aloe and Rider both snap back and forth with the rumbling bass of the percussion.\n[]>capra{capra-emotion|sad}:Hhg.\n[]>narrator:Don't choke on your anxiety.\n[]>capra:I'll just focus on the band. And focus on the lights. And the music.\n[]>narrator:You are basically frozen in place. <lc>And you remain like this. <mp>And remain. <mp>And remain.\n[]>narrator{capra-emotion|spiraling}:Starry taps you on your shoulder.\n[]>narrator:It's too loud to make out their words, but a questioning look and a hand going from thumbs-up to thumbs-down, back and forth, makes the question clear.<lc>You politely shrug and nod.<lc>They give you a thumbs up and a smile back.",
-						"selected_actor_dropdown_index": 0,
-						"use_dialog_syntax": true
-					},
-					"facts": {
-
-					},
-					"header": [],
-					"line_type": 0,
-					"meta.is_head_editable": true,
-					"meta.line_index": 22,
 					"meta.visible": true
 				},
 				{
@@ -7738,7 +7927,7 @@
 					"header": [],
 					"line_type": 2,
 					"meta.is_head_editable": true,
-					"meta.line_index": 23,
+					"meta.line_index": 22,
 					"meta.visible": true
 				},
 				{
@@ -7773,7 +7962,7 @@
 					"header": [],
 					"line_type": 2,
 					"meta.is_head_editable": true,
-					"meta.line_index": 24,
+					"meta.line_index": 23,
 					"meta.visible": true
 				},
 				{
@@ -7817,7 +8006,102 @@
 					"header": [],
 					"line_type": 0,
 					"meta.is_head_editable": true,
+					"meta.line_index": 24,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"content": [
+							{
+								"name": "fade_in",
+								"value": "1.0"
+							},
+							{
+								"name": "sustain",
+								"value": "0.0"
+							},
+							{
+								"name": "fade_out",
+								"value": "1.0"
+							},
+							{
+								"name": "new_background",
+								"value": "none"
+							},
+							{
+								"name": "new_bgm",
+								"value": "none"
+							},
+							{
+								"name": "hide_characters",
+								"value": "false"
+							}
+						],
+						"delay.after": 0,
+						"delay.before": 0,
+						"name": "black-fade"
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 2,
+					"meta.is_head_editable": true,
 					"meta.line_index": 25,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"active_actors": [
+							"narrator",
+							"capra",
+							"rider",
+							"icy-aloe",
+							"starry",
+							"angel",
+							"crosscull",
+							"mom",
+							"dad",
+							"metaspirit",
+							"therapist",
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms",
+							"bouncer",
+							""
+						],
+						"active_actors_title": "characters",
+						"content": "[]>icy-aloe:We're gonna head into the pit with Nailbiter. <mp>You gotta join us.\n[]>capra:I don't think that's for me. Sorry.",
+						"selected_actor_dropdown_index": 0,
+						"use_dialog_syntax": true
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 0,
+					"meta.is_head_editable": true,
+					"meta.line_index": 26,
 					"meta.visible": true
 				},
 				{
@@ -7852,7 +8136,7 @@
 					"header": [],
 					"line_type": 2,
 					"meta.is_head_editable": true,
-					"meta.line_index": 26,
+					"meta.line_index": 27,
 					"meta.visible": true
 				},
 				{
@@ -7883,7 +8167,7 @@
 					"header": [],
 					"line_type": 2,
 					"meta.is_head_editable": true,
-					"meta.line_index": 27,
+					"meta.line_index": 28,
 					"meta.visible": true
 				},
 				{
@@ -7927,7 +8211,7 @@
 					"header": [],
 					"line_type": 0,
 					"meta.is_head_editable": true,
-					"meta.line_index": 28,
+					"meta.line_index": 29,
 					"meta.visible": true
 				},
 				{
@@ -7962,7 +8246,7 @@
 					"header": [],
 					"line_type": 2,
 					"meta.is_head_editable": true,
-					"meta.line_index": 29,
+					"meta.line_index": 30,
 					"meta.visible": true
 				},
 				{
@@ -7996,7 +8280,7 @@
 							""
 						],
 						"active_actors_title": "characters",
-						"content": "[]>narrator:The music now is even louder.",
+						"content": "[]>narrator{capra-emotion|spiraling}:The music now is even louder. Nailbiter's set shreds. Hard. ",
 						"selected_actor_dropdown_index": 0,
 						"use_dialog_syntax": true
 					},
@@ -8006,7 +8290,7 @@
 					"header": [],
 					"line_type": 0,
 					"meta.is_head_editable": true,
-					"meta.line_index": 30,
+					"meta.line_index": 31,
 					"meta.visible": true
 				},
 				{
@@ -8041,7 +8325,7 @@
 					"header": [],
 					"line_type": 2,
 					"meta.is_head_editable": true,
-					"meta.line_index": 31,
+					"meta.line_index": 32,
 					"meta.visible": true
 				},
 				{
@@ -8076,7 +8360,7 @@
 					"header": [],
 					"line_type": 2,
 					"meta.is_head_editable": true,
-					"meta.line_index": 32,
+					"meta.line_index": 33,
 					"meta.visible": true
 				},
 				{
@@ -8110,7 +8394,7 @@
 							""
 						],
 						"active_actors_title": "characters",
-						"content": "[]>narrator:The opening song pulls in half of the venue into a massive mosh pit in the center, including Rider and Icy Aloe.\n[]>narrator:Eventually, after an encore of two songs, spanning almost 10 more minutes, the stage techs emerge and start deconstructing the stage.",
+						"content": "[]>narrator:The opening song pulls in half of the venue into a massive mosh pit in the center, including Rider and Icy Aloe.\n[]>narrator:Your ears hurt within two songs.",
 						"selected_actor_dropdown_index": 0,
 						"use_dialog_syntax": true
 					},
@@ -8120,7 +8404,102 @@
 					"header": [],
 					"line_type": 0,
 					"meta.is_head_editable": true,
-					"meta.line_index": 33,
+					"meta.line_index": 34,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"content": [
+							{
+								"name": "fade_in",
+								"value": "1.0"
+							},
+							{
+								"name": "sustain",
+								"value": "0.0"
+							},
+							{
+								"name": "fade_out",
+								"value": "1.0"
+							},
+							{
+								"name": "new_background",
+								"value": "none"
+							},
+							{
+								"name": "new_bgm",
+								"value": "none"
+							},
+							{
+								"name": "hide_characters",
+								"value": "false"
+							}
+						],
+						"delay.after": 0,
+						"delay.before": 0,
+						"name": "black-fade"
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 2,
+					"meta.is_head_editable": true,
+					"meta.line_index": 35,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"active_actors": [
+							"narrator",
+							"capra",
+							"rider",
+							"icy-aloe",
+							"starry",
+							"angel",
+							"crosscull",
+							"mom",
+							"dad",
+							"metaspirit",
+							"therapist",
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms",
+							"bouncer",
+							""
+						],
+						"active_actors_title": "characters",
+						"content": "[]>narrator:Eventually, after an encore of two songs, spanning almost 10 more minutes, the stage techs emerge and start deconstructing the stage.",
+						"selected_actor_dropdown_index": 0,
+						"use_dialog_syntax": true
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 0,
+					"meta.is_head_editable": true,
+					"meta.line_index": 36,
 					"meta.visible": true
 				},
 				{
@@ -8155,7 +8534,7 @@
 					"header": [],
 					"line_type": 2,
 					"meta.is_head_editable": true,
-					"meta.line_index": 34,
+					"meta.line_index": 37,
 					"meta.visible": true
 				},
 				{
@@ -8190,7 +8569,7 @@
 					"header": [],
 					"line_type": 2,
 					"meta.is_head_editable": true,
-					"meta.line_index": 35,
+					"meta.line_index": 38,
 					"meta.visible": true
 				},
 				{
@@ -8225,7 +8604,7 @@
 					"header": [],
 					"line_type": 2,
 					"meta.is_head_editable": true,
-					"meta.line_index": 36,
+					"meta.line_index": 39,
 					"meta.visible": true
 				},
 				{
@@ -8260,7 +8639,7 @@
 					"header": [],
 					"line_type": 2,
 					"meta.is_head_editable": true,
-					"meta.line_index": 37,
+					"meta.line_index": 40,
 					"meta.visible": true
 				},
 				{
@@ -8295,7 +8674,7 @@
 					"header": [],
 					"line_type": 2,
 					"meta.is_head_editable": true,
-					"meta.line_index": 38,
+					"meta.line_index": 41,
 					"meta.visible": true
 				},
 				{
@@ -8330,7 +8709,7 @@
 					"header": [],
 					"line_type": 2,
 					"meta.is_head_editable": true,
-					"meta.line_index": 39,
+					"meta.line_index": 42,
 					"meta.visible": true
 				},
 				{
@@ -8374,7 +8753,7 @@
 					"header": [],
 					"line_type": 0,
 					"meta.is_head_editable": true,
-					"meta.line_index": 40,
+					"meta.line_index": 43,
 					"meta.visible": true
 				},
 				{
@@ -8408,7 +8787,7 @@
 							""
 						],
 						"active_actors_title": "characters",
-						"content": "[]>starry:I think they'll kick us out in a few minutes. Angel and Crosscull are probably also waiting for us, if they haven't left yet.\n[]>icy-aloe:True.\n[]>rider:Well then let's go.\n[]>narrator:You depart. While walking through the entryway, Rider falls back to you.",
+						"content": "[]>starry:I think they'll kick us out in a few minutes. Angel and Crosscull are probably also waiting for us, if they haven't left yet.\n[]>icy-aloe:True.\n[]>rider:Well then let's go.\n[]>capra{capra-emotion|neutral}:Uh wait. Where have you two even been?\n[]>rider:We just talked to a few people here.\n[]>narrator:Girders and amplifiers get moved about around you.\n[]>starry:Yeah, we really need to bounce.\n[]>narrator: With Starry leading the way, the four of you head towards the exit.\n[]>narrator:As you depart and walk through the entryway, Rider falls back to you.",
 						"selected_actor_dropdown_index": 0,
 						"use_dialog_syntax": true
 					},
@@ -8418,7 +8797,7 @@
 					"header": [],
 					"line_type": 0,
 					"meta.is_head_editable": true,
-					"meta.line_index": 41,
+					"meta.line_index": 44,
 					"meta.visible": true
 				},
 				{
@@ -8453,7 +8832,7 @@
 					"header": [],
 					"line_type": 2,
 					"meta.is_head_editable": true,
-					"meta.line_index": 42,
+					"meta.line_index": 45,
 					"meta.visible": true
 				},
 				{
@@ -8488,7 +8867,7 @@
 					"header": [],
 					"line_type": 2,
 					"meta.is_head_editable": true,
-					"meta.line_index": 43,
+					"meta.line_index": 46,
 					"meta.visible": true
 				},
 				{
@@ -8532,7 +8911,7 @@
 					"header": [],
 					"line_type": 0,
 					"meta.is_head_editable": true,
-					"meta.line_index": 44,
+					"meta.line_index": 47,
 					"meta.visible": true
 				},
 				{
@@ -8567,7 +8946,7 @@
 					"header": [],
 					"line_type": 2,
 					"meta.is_head_editable": true,
-					"meta.line_index": 45,
+					"meta.line_index": 48,
 					"meta.visible": true
 				},
 				{
@@ -8602,7 +8981,7 @@
 					"header": [],
 					"line_type": 2,
 					"meta.is_head_editable": true,
-					"meta.line_index": 46,
+					"meta.line_index": 49,
 					"meta.visible": true
 				},
 				{
@@ -8646,7 +9025,7 @@
 					"header": [],
 					"line_type": 0,
 					"meta.is_head_editable": true,
-					"meta.line_index": 47,
+					"meta.line_index": 50,
 					"meta.visible": true
 				}
 			],
@@ -11384,7 +11763,7 @@
 						"content": [
 							{
 								"name": "screen",
-								"value": "voice-chat"
+								"value": "voice-call"
 							}
 						],
 						"delay.after": 0,
@@ -11440,6 +11819,41 @@
 						"behavior": 0,
 						"behavior_key": "Show",
 						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"content": [
+							{
+								"name": "name",
+								"value": "rider"
+							},
+							{
+								"name": "visible",
+								"value": "true"
+							}
+						],
+						"delay.after": 0,
+						"delay.before": 0,
+						"name": "character-visible"
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 2,
+					"meta.is_head_editable": true,
+					"meta.line_index": 7,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
 							"went to first concert": false
 						},
 						"operand": 1,
@@ -11466,7 +11880,7 @@
 							""
 						],
 						"active_actors_title": "characters",
-						"content": "[]>rider: Ayo.\n[]>capra: Hi...\n[]>rider: we haven't met before right\n[]>narrator:this was SUCH a big mistake\n[]>capra: yea... I mean no. Well, We haven't. \n[]>rider: gotcha \n[]>rider: im rider. I just came from.a concert with a few friends\n[]>capra: What kind of concert\n[]>rider: doomed hardcore, if you're familiar with that \n[]>capra: Not really. what is that?\n[]>rider: oh just music. thick and thumpy and loud yk.\n[]>narrator:talk more\n[]>rider:nuclear infanticide?",
+						"content": "[]>rider: Ayo.\n[]>capra: Hi...\n[]>rider: We haven't met before, right?\n[]>narrator: This was SUCH a big mistake\n[]>capra: Yea... I mean no. Well, We haven't. \n[]>rider: Gotcha.<lc>Who are you?\n[]>capra{capra-emotion|spiraling}:Uhhh... Capra. I joined here some time ago because I saw the invite link around my area.\n[]>rider:Did you just join?\n[]>capra{capra-emotion|anger}:No. Like I said, a while back. <ap>...<ap>Just took a while to work up courage to call with someone here.\n[]>rider: im rider. I just came from.a concert with a few friends\n[]>capra: What kind of concert\n[]>rider: doomed hardcore, if you're familiar with that \n[]>capra: Not really. what is that?\n[]>rider: oh just music. thick and thumpy and loud yk.\n[]>narrator:talk more\n[]>rider:nuclear infanticide?",
 						"selected_actor_dropdown_index": 0,
 						"use_dialog_syntax": true
 					},
@@ -11476,7 +11890,7 @@
 					"header": [],
 					"line_type": 0,
 					"meta.is_head_editable": true,
-					"meta.line_index": 7,
+					"meta.line_index": 8,
 					"meta.visible": true
 				},
 				{
@@ -11520,7 +11934,7 @@
 					"header": [],
 					"line_type": 0,
 					"meta.is_head_editable": true,
-					"meta.line_index": 8,
+					"meta.line_index": 9,
 					"meta.visible": true
 				},
 				{
@@ -11555,7 +11969,7 @@
 					"header": [],
 					"line_type": 2,
 					"meta.is_head_editable": true,
-					"meta.line_index": 9,
+					"meta.line_index": 10,
 					"meta.visible": true
 				},
 				{
@@ -11599,7 +12013,7 @@
 					"header": [],
 					"line_type": 0,
 					"meta.is_head_editable": true,
-					"meta.line_index": 10,
+					"meta.line_index": 11,
 					"meta.visible": true
 				},
 				{
@@ -11634,7 +12048,7 @@
 					"header": [],
 					"line_type": 2,
 					"meta.is_head_editable": true,
-					"meta.line_index": 11,
+					"meta.line_index": 12,
 					"meta.visible": true
 				},
 				{
@@ -11678,7 +12092,7 @@
 					"header": [],
 					"line_type": 0,
 					"meta.is_head_editable": true,
-					"meta.line_index": 12,
+					"meta.line_index": 13,
 					"meta.visible": true
 				},
 				{
@@ -11722,7 +12136,7 @@
 					"header": [],
 					"line_type": 0,
 					"meta.is_head_editable": true,
-					"meta.line_index": 13,
+					"meta.line_index": 14,
 					"meta.visible": true
 				},
 				{
@@ -11766,7 +12180,7 @@
 					"header": [],
 					"line_type": 0,
 					"meta.is_head_editable": true,
-					"meta.line_index": 14,
+					"meta.line_index": 15,
 					"meta.visible": true
 				},
 				{
@@ -11792,7 +12206,7 @@
 					"header": [],
 					"line_type": 2,
 					"meta.is_head_editable": true,
-					"meta.line_index": 15,
+					"meta.line_index": 16,
 					"meta.visible": true
 				},
 				{
@@ -11838,7 +12252,7 @@
 					"header": [],
 					"line_type": 1,
 					"meta.is_head_editable": true,
-					"meta.line_index": 16,
+					"meta.line_index": 17,
 					"meta.visible": true
 				},
 				{
@@ -11882,7 +12296,7 @@
 					"header": [],
 					"line_type": 0,
 					"meta.is_head_editable": true,
-					"meta.line_index": 17,
+					"meta.line_index": 18,
 					"meta.visible": true
 				}
 			],
@@ -11893,6 +12307,41 @@
 		},
 		"21": {
 			"lines": [
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"content": [
+							{
+								"name": "style",
+								"value": "fullscreen"
+							},
+							{
+								"name": "variant",
+								"value": "desire"
+							}
+						],
+						"delay.after": 0,
+						"delay.before": 0,
+						"name": "set-display-style"
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 2,
+					"meta.is_head_editable": true,
+					"meta.line_index": 0,
+					"meta.visible": true
+				},
 				{
 					"conditionals": {
 						"behavior": 0,
@@ -11924,7 +12373,7 @@
 							""
 						],
 						"active_actors_title": "characters",
-						"content": "[]>metaspirit:We need to talk",
+						"content": "[]>narrator:[center]On Desire.[/center]",
 						"selected_actor_dropdown_index": 0,
 						"use_dialog_syntax": true
 					},
@@ -11934,7 +12383,304 @@
 					"header": [],
 					"line_type": 0,
 					"meta.is_head_editable": true,
-					"meta.line_index": 0,
+					"meta.line_index": 1,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"content": [
+							{
+								"name": "style",
+								"value": "regular"
+							},
+							{
+								"name": "variant",
+								"value": "none"
+							}
+						],
+						"delay.after": 0,
+						"delay.before": 0,
+						"name": "set-display-style"
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 2,
+					"meta.is_head_editable": true,
+					"meta.line_index": 2,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"active_actors": [
+							"narrator",
+							"capra",
+							"rider",
+							"icy-aloe",
+							"starry",
+							"angel",
+							"crosscull",
+							"mom",
+							"dad",
+							"metaspirit",
+							"therapist",
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms",
+							"bouncer",
+							""
+						],
+						"active_actors_title": "characters",
+						"content": "[]>metaspirit:We need to talk. <mp>There's the possibility, not the certainty, but a possibility that you will need to make some difficult choices in the future.\n[]>capra{capra-emotion|anger}:Huh? <ap>Would you please elaborate?\n[]>metaspirit:And you are required to know who you are. Why you are.<lc>What do you use to inform your choices?",
+						"selected_actor_dropdown_index": 0,
+						"use_dialog_syntax": true
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 0,
+					"meta.is_head_editable": true,
+					"meta.line_index": 3,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"auto_switch": false,
+						"choices": [
+							{
+								"choice_text.disabled": "",
+								"choice_text.enabled": "What disturbs me least",
+								"choice_text.enabled_as_default": true,
+								"conditionals": {
+									"behavior": 0,
+									"behavior_key": "Show",
+									"facts": {
+
+									},
+									"operand": 0,
+									"operand_args": [],
+									"operand_key": "AND"
+								},
+								"do_jump_page": false,
+								"facts": {
+									"capra drive: negative": true
+								},
+								"target_page": 0
+							},
+							{
+								"choice_text.disabled": "",
+								"choice_text.enabled": "What gives me most joy",
+								"choice_text.enabled_as_default": true,
+								"conditionals": {
+									"behavior": 0,
+									"behavior_key": "Show",
+									"facts": {
+
+									},
+									"operand": 0,
+									"operand_args": [],
+									"operand_key": "AND"
+								},
+								"do_jump_page": false,
+								"facts": {
+									"capra drive: positive": true
+								},
+								"target_page": 0
+							},
+							{
+								"choice_text.disabled": "",
+								"choice_text.enabled": "What feels right and correct",
+								"choice_text.enabled_as_default": true,
+								"conditionals": {
+									"behavior": 0,
+									"behavior_key": "Show",
+									"facts": {
+
+									},
+									"operand": 0,
+									"operand_args": [],
+									"operand_key": "AND"
+								},
+								"do_jump_page": false,
+								"facts": {
+									"capra drive: morality": true
+								},
+								"target_page": 0
+							}
+						],
+						"meta.do_jump_page": true
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 1,
+					"meta.is_head_editable": true,
+					"meta.line_index": 4,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+							"capra drive: negative": true
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"active_actors": [
+							"narrator",
+							"capra",
+							"rider",
+							"icy-aloe",
+							"starry",
+							"angel",
+							"crosscull",
+							"mom",
+							"dad",
+							"metaspirit",
+							"therapist",
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms",
+							"bouncer",
+							""
+						],
+						"active_actors_title": "characters",
+						"content": "[]>capra{capra-emotion|neutral}:Whatever disturbs me least, I guess. <mp>I'm sorry to say I don't have many aspirations besides not suffering.\n[]>metaspirit:Pain avoidance...\n[]>capra:Kind of.",
+						"selected_actor_dropdown_index": 0,
+						"use_dialog_syntax": true
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 0,
+					"meta.is_head_editable": true,
+					"meta.line_index": 5,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+							"capra drive: positive": true
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"active_actors": [
+							"narrator",
+							"capra",
+							"rider",
+							"icy-aloe",
+							"starry",
+							"angel",
+							"crosscull",
+							"mom",
+							"dad",
+							"metaspirit",
+							"therapist",
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms",
+							"bouncer",
+							""
+						],
+						"active_actors_title": "characters",
+						"content": "[]>capra{capra-emotion|content}:Whatever will give me most joy. Headstrong optimism.\n[]>metaspirit:It is difficult to believe.\n[]>capra{capra-emotion|sad}:I'll admit being clinically depressed is making it hard to do that on most days. <ap>But when you allow me to make an actual, informed decision, I'll only focus on what I gain from it.",
+						"selected_actor_dropdown_index": 0,
+						"use_dialog_syntax": true
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 0,
+					"meta.is_head_editable": true,
+					"meta.line_index": 6,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+							"capra drive: morality": true
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"active_actors": [
+							"narrator",
+							"capra",
+							"rider",
+							"icy-aloe",
+							"starry",
+							"angel",
+							"crosscull",
+							"mom",
+							"dad",
+							"metaspirit",
+							"therapist",
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms",
+							"bouncer",
+							""
+						],
+						"active_actors_title": "characters",
+						"content": "[]>capra:I guess... I have my moral compass?\n[]>metaspirit:Which is informed by?\n[]>capra:What feels right, I guess?\n[]>metaspirit:A blind hedonist...\n[]>capra{capra-emotion|sad}:Well... not really. I will do things that feel bad to me if I think they are correct for society. <mp>It's part of the reason why I would also never kill myself with a train or truck. That can scar people for life.",
+						"selected_actor_dropdown_index": 0,
+						"use_dialog_syntax": true
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 0,
+					"meta.is_head_editable": true,
+					"meta.line_index": 7,
 					"meta.visible": true
 				}
 			],
@@ -12487,7 +13233,7 @@
 								"facts": {
 									"Xmas: parents": true
 								},
-								"target_page": 25
+								"target_page": 27
 							},
 							{
 								"choice_text.disabled": "",
@@ -12507,7 +13253,7 @@
 								"facts": {
 									"Xmas: band": true
 								},
-								"target_page": 30
+								"target_page": 32
 							},
 							{
 								"choice_text.disabled": "",
@@ -12527,7 +13273,27 @@
 								"facts": {
 									"Xmas: swag": true
 								},
-								"target_page": 34
+								"target_page": 36
+							},
+							{
+								"choice_text.disabled": "",
+								"choice_text.enabled": "Throw yourself into uncertainty, go to the concert Rider mentioned",
+								"choice_text.enabled_as_default": true,
+								"conditionals": {
+									"behavior": 0,
+									"behavior_key": "Show",
+									"facts": {
+										"motivated to be included": true
+									},
+									"operand": 0,
+									"operand_args": [],
+									"operand_key": "AND"
+								},
+								"do_jump_page": true,
+								"facts": {
+
+								},
+								"target_page": 32
 							}
 						],
 						"meta.do_jump_page": true
@@ -12542,7 +13308,7 @@
 					"meta.visible": true
 				}
 			],
-			"next": 25,
+			"next": 27,
 			"number": 23,
 			"page_key": "christmas evening",
 			"terminate": false
@@ -12605,34 +13371,21 @@
 						"operand_key": "AND"
 					},
 					"content": {
-						"active_actors": [
-							"narrator",
-							"capra",
-							"rider",
-							"icy-aloe",
-							"starry",
-							"angel",
-							"crosscull",
-							"mom",
-							"dad",
-							"metaspirit",
-							"therapist",
-							"gas-station-clerk",
-							"doomfeed",
-							"yearnfarms",
-							"bouncer",
-							""
+						"content": [
+							{
+								"name": "key",
+								"value": "phone-call"
+							}
 						],
-						"active_actors_title": "characters",
-						"content": "[]>narrator:Your parents call you. They are angry",
-						"selected_actor_dropdown_index": 0,
-						"use_dialog_syntax": true
+						"delay.after": 0,
+						"delay.before": 0,
+						"name": "play-sfx"
 					},
 					"facts": {
 
 					},
 					"header": [],
-					"line_type": 0,
+					"line_type": 2,
 					"meta.is_head_editable": true,
 					"meta.line_index": 1,
 					"meta.visible": true
@@ -12642,7 +13395,7 @@
 						"behavior": 0,
 						"behavior_key": "Show",
 						"facts": {
-							"alcoholic": true
+							"plan to go to parents": true
 						},
 						"operand": 0,
 						"operand_args": [],
@@ -12668,7 +13421,7 @@
 							""
 						],
 						"active_actors_title": "characters",
-						"content": "[]>narrator:you drinmk more",
+						"content": "[]>narrator:A call. <mp>Your mom.\n[]>mom{mom-emotion|phone}:Where are you? Did something happen to you?\n[]>capra{capra-emotion|hung-over}:No, mom.\n[]>mom:To think my own son would stand up his parents on christmas.\n[]>capra{capra-emotion|neutral}:I'm sorry.\n[]>mom:Do you at least have an explanation?\n[]>capra:I just didn't feel like going outside.\n[]>mom:That takes the cake. Well I hope you are happy like that.\n[]>capra:Thank you. <mp>Merry christmas.\n[]>mom:To you too. Goodbye.\n[]>capra:Bye.",
 						"selected_actor_dropdown_index": 0,
 						"use_dialog_syntax": true
 					},
@@ -12679,6 +13432,1350 @@
 					"line_type": 0,
 					"meta.is_head_editable": true,
 					"meta.line_index": 2,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+							"plan to go to parents": true
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"content": [
+							{
+								"name": "name",
+								"value": "mom"
+							},
+							{
+								"name": "visible",
+								"value": "false"
+							}
+						],
+						"delay.after": 0,
+						"delay.before": 0,
+						"name": "character-visible"
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 2,
+					"meta.is_head_editable": true,
+					"meta.line_index": 3,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+							"plan to go to parents": true
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"active_actors": [
+							"narrator",
+							"capra",
+							"rider",
+							"icy-aloe",
+							"starry",
+							"angel",
+							"crosscull",
+							"mom",
+							"dad",
+							"metaspirit",
+							"therapist",
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms",
+							"bouncer",
+							""
+						],
+						"active_actors_title": "characters",
+						"content": "[]>narrator:Telling you parents you'll be there on christmas and then not showing up. Great.\n[]>capra{capra-emotion|hung-over}:Not like it matters anyways.",
+						"selected_actor_dropdown_index": 0,
+						"use_dialog_syntax": true
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 0,
+					"meta.is_head_editable": true,
+					"meta.line_index": 4,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"active_actors": [
+							"narrator",
+							"capra",
+							"rider",
+							"icy-aloe",
+							"starry",
+							"angel",
+							"crosscull",
+							"mom",
+							"dad",
+							"metaspirit",
+							"therapist",
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms",
+							"bouncer",
+							""
+						],
+						"active_actors_title": "characters",
+						"content": "[]>narrator:Maybe a little drink won't hurt now.",
+						"selected_actor_dropdown_index": 0,
+						"use_dialog_syntax": true
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 0,
+					"meta.is_head_editable": true,
+					"meta.line_index": 5,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"content": [
+							{
+								"name": "key",
+								"value": "bottle-clink"
+							}
+						],
+						"delay.after": 0,
+						"delay.before": 0,
+						"name": "play-sfx"
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 2,
+					"meta.is_head_editable": true,
+					"meta.line_index": 6,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"active_actors": [
+							"narrator",
+							"capra",
+							"rider",
+							"icy-aloe",
+							"starry",
+							"angel",
+							"crosscull",
+							"mom",
+							"dad",
+							"metaspirit",
+							"therapist",
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms",
+							"bouncer",
+							""
+						],
+						"active_actors_title": "characters",
+						"content": "[]>capra{capra-emotion|content}:It definitely won't.\n[]>narrator:Vodka, tequila, rum, and cola all find their way into your glass, and then you find solace with your two-thirds-complete long island ice tea.",
+						"selected_actor_dropdown_index": 0,
+						"use_dialog_syntax": true
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 0,
+					"meta.is_head_editable": true,
+					"meta.line_index": 7,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"content": [
+							{
+								"name": "background_name",
+								"value": "capra-bedroom"
+							},
+							{
+								"name": "fade_in_time",
+								"value": "1.0"
+							}
+						],
+						"delay.after": 0,
+						"delay.before": 0,
+						"name": "set-background"
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 2,
+					"meta.is_head_editable": true,
+					"meta.line_index": 8,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"active_actors": [
+							"narrator",
+							"capra",
+							"rider",
+							"icy-aloe",
+							"starry",
+							"angel",
+							"crosscull",
+							"mom",
+							"dad",
+							"metaspirit",
+							"therapist",
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms",
+							"bouncer",
+							""
+						],
+						"active_actors_title": "characters",
+						"content": "[]>narrator:You set yourself down on your bed, face directed up at the ceiling. The sudden rush of numbness from the lack of food and excess of spirits in your body makes the deafening silence more bearable.",
+						"selected_actor_dropdown_index": 0,
+						"use_dialog_syntax": true
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 0,
+					"meta.is_head_editable": true,
+					"meta.line_index": 9,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"auto_switch": true,
+						"choices": [
+							{
+								"choice_text.disabled": "",
+								"choice_text.enabled": "choice label",
+								"choice_text.enabled_as_default": true,
+								"conditionals": {
+									"behavior": 0,
+									"behavior_key": "Show",
+									"facts": {
+										"met metaspirit": true
+									},
+									"operand": 0,
+									"operand_args": [],
+									"operand_key": "AND"
+								},
+								"do_jump_page": true,
+								"facts": {
+
+								},
+								"target_page": 25
+							},
+							{
+								"choice_text.disabled": "",
+								"choice_text.enabled": "choice label",
+								"choice_text.enabled_as_default": true,
+								"conditionals": {
+									"behavior": 0,
+									"behavior_key": "Show",
+									"facts": {
+										"met metaspirit": false
+									},
+									"operand": 0,
+									"operand_args": [],
+									"operand_key": "AND"
+								},
+								"do_jump_page": true,
+								"facts": {
+
+								},
+								"target_page": 26
+							}
+						],
+						"meta.do_jump_page": true
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 1,
+					"meta.is_head_editable": true,
+					"meta.line_index": 10,
+					"meta.visible": true
+				}
+			],
+			"next": 25,
+			"number": 24,
+			"page_key": "alone on christmas",
+			"terminate": false
+		},
+		"25": {
+			"lines": [
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"content": [
+							{
+								"name": "track_name",
+								"value": "metaspirit2"
+							},
+							{
+								"name": "fade_in_time",
+								"value": "2.0"
+							}
+						],
+						"delay.after": 0,
+						"delay.before": 0,
+						"name": "play-bgm"
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 2,
+					"meta.is_head_editable": true,
+					"meta.line_index": 0,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"content": [
+							{
+								"name": "style",
+								"value": "fullscreen"
+							},
+							{
+								"name": "variant",
+								"value": "premonition"
+							}
+						],
+						"delay.after": 0,
+						"delay.before": 0,
+						"name": "set-display-style"
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 2,
+					"meta.is_head_editable": true,
+					"meta.line_index": 1,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"active_actors": [
+							"narrator",
+							"capra",
+							"rider",
+							"icy-aloe",
+							"starry",
+							"angel",
+							"crosscull",
+							"mom",
+							"dad",
+							"metaspirit",
+							"therapist",
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms",
+							"bouncer",
+							""
+						],
+						"active_actors_title": "characters",
+						"content": "[]>narrator:[center]On Temporality and Premonition[/center]",
+						"selected_actor_dropdown_index": 0,
+						"use_dialog_syntax": true
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 0,
+					"meta.is_head_editable": true,
+					"meta.line_index": 2,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"content": [
+							{
+								"name": "style",
+								"value": "default"
+							},
+							{
+								"name": "variant",
+								"value": "none"
+							}
+						],
+						"delay.after": 0,
+						"delay.before": 0,
+						"name": "set-display-style"
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 2,
+					"meta.is_head_editable": true,
+					"meta.line_index": 3,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"active_actors": [
+							"narrator",
+							"capra",
+							"rider",
+							"icy-aloe",
+							"starry",
+							"angel",
+							"crosscull",
+							"mom",
+							"dad",
+							"metaspirit",
+							"therapist",
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms",
+							"bouncer",
+							""
+						],
+						"active_actors_title": "characters",
+						"content": "[]>metaspirit:You are doing disastrously unwell.\n[]>capra{capra-emotion|anger}:No shit.\n[]>metaspirit:Where are your decisions evaluated?\n[]>capra:Nowhere? <mp>The universe doesn't care.\n[]>metaspirit:No, Capra. You are your own person. When do you decide to evaluate your choices?",
+						"selected_actor_dropdown_index": 0,
+						"use_dialog_syntax": true
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 0,
+					"meta.is_head_editable": true,
+					"meta.line_index": 4,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"auto_switch": false,
+						"choices": [
+							{
+								"choice_text.disabled": "",
+								"choice_text.enabled": "The past",
+								"choice_text.enabled_as_default": true,
+								"conditionals": {
+									"behavior": 0,
+									"behavior_key": "Show",
+									"facts": {
+
+									},
+									"operand": 0,
+									"operand_args": [],
+									"operand_key": "AND"
+								},
+								"do_jump_page": false,
+								"facts": {
+									"capra evaluation: past": true
+								},
+								"target_page": 0
+							},
+							{
+								"choice_text.disabled": "",
+								"choice_text.enabled": "The present",
+								"choice_text.enabled_as_default": true,
+								"conditionals": {
+									"behavior": 0,
+									"behavior_key": "Show",
+									"facts": {
+
+									},
+									"operand": 0,
+									"operand_args": [],
+									"operand_key": "AND"
+								},
+								"do_jump_page": false,
+								"facts": {
+									"capra evaluation: present": true
+								},
+								"target_page": 0
+							},
+							{
+								"choice_text.disabled": "",
+								"choice_text.enabled": "The future",
+								"choice_text.enabled_as_default": true,
+								"conditionals": {
+									"behavior": 0,
+									"behavior_key": "Show",
+									"facts": {
+
+									},
+									"operand": 0,
+									"operand_args": [],
+									"operand_key": "AND"
+								},
+								"do_jump_page": false,
+								"facts": {
+									"capra evaluation: future": true
+								},
+								"target_page": 0
+							}
+						],
+						"meta.do_jump_page": true
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 1,
+					"meta.is_head_editable": true,
+					"meta.line_index": 5,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+							"capra evaluation: past": true
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"active_actors": [
+							"narrator",
+							"capra",
+							"rider",
+							"icy-aloe",
+							"starry",
+							"angel",
+							"crosscull",
+							"mom",
+							"dad",
+							"metaspirit",
+							"therapist",
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms",
+							"bouncer",
+							""
+						],
+						"active_actors_title": "characters",
+						"content": "[]>capra:The past.",
+						"selected_actor_dropdown_index": 0,
+						"use_dialog_syntax": true
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 0,
+					"meta.is_head_editable": true,
+					"meta.line_index": 6,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+							"capra drive: positive": true,
+							"capra evaluation: past": true
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"active_actors": [
+							"narrator",
+							"capra",
+							"rider",
+							"icy-aloe",
+							"starry",
+							"angel",
+							"crosscull",
+							"mom",
+							"dad",
+							"metaspirit",
+							"therapist",
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms",
+							"bouncer",
+							""
+						],
+						"active_actors_title": "characters",
+						"content": "[]>capra:My life is too much for me. I just look at what was good in the past and replicate that.",
+						"selected_actor_dropdown_index": 0,
+						"use_dialog_syntax": true
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 0,
+					"meta.is_head_editable": true,
+					"meta.line_index": 7,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+							"capra drive: negative": true,
+							"capra evaluation: past": true
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"active_actors": [
+							"narrator",
+							"capra",
+							"rider",
+							"icy-aloe",
+							"starry",
+							"angel",
+							"crosscull",
+							"mom",
+							"dad",
+							"metaspirit",
+							"therapist",
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms",
+							"bouncer",
+							""
+						],
+						"active_actors_title": "characters",
+						"content": "[]>capra{capra-emotion|sad}: I got regrets\n[]>metaspirit:Just don't get eclipsed by your past ",
+						"selected_actor_dropdown_index": 0,
+						"use_dialog_syntax": true
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 0,
+					"meta.is_head_editable": true,
+					"meta.line_index": 8,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+							"capra drive: morality": true,
+							"capra evaluation: past": true
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"active_actors": [
+							"narrator",
+							"capra",
+							"rider",
+							"icy-aloe",
+							"starry",
+							"angel",
+							"crosscull",
+							"mom",
+							"dad",
+							"metaspirit",
+							"therapist",
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms",
+							"bouncer",
+							""
+						],
+						"active_actors_title": "characters",
+						"content": "[]>capra:our past contrxtualizes our present decisions ",
+						"selected_actor_dropdown_index": 0,
+						"use_dialog_syntax": true
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 0,
+					"meta.is_head_editable": true,
+					"meta.line_index": 9,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+							"capra evaluation: present": true
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"active_actors": [
+							"narrator",
+							"capra",
+							"rider",
+							"icy-aloe",
+							"starry",
+							"angel",
+							"crosscull",
+							"mom",
+							"dad",
+							"metaspirit",
+							"therapist",
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms",
+							"bouncer",
+							""
+						],
+						"active_actors_title": "characters",
+						"content": "[]>capra:the past cannot be altered, the future is yet to be certain. the present is the only relevant thing.",
+						"selected_actor_dropdown_index": 0,
+						"use_dialog_syntax": true
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 0,
+					"meta.is_head_editable": true,
+					"meta.line_index": 10,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+							"capra drive: positive": true,
+							"capra evaluation: present": true
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"active_actors": [
+							"narrator",
+							"capra",
+							"rider",
+							"icy-aloe",
+							"starry",
+							"angel",
+							"crosscull",
+							"mom",
+							"dad",
+							"metaspirit",
+							"therapist",
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms",
+							"bouncer",
+							""
+						],
+						"active_actors_title": "characters",
+						"content": "[]>capra:idk I just do what feels good",
+						"selected_actor_dropdown_index": 0,
+						"use_dialog_syntax": true
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 0,
+					"meta.is_head_editable": true,
+					"meta.line_index": 11,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+							"capra drive: negative": true,
+							"capra evaluation: present": true
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"active_actors": [
+							"narrator",
+							"capra",
+							"rider",
+							"icy-aloe",
+							"starry",
+							"angel",
+							"crosscull",
+							"mom",
+							"dad",
+							"metaspirit",
+							"therapist",
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms",
+							"bouncer",
+							""
+						],
+						"active_actors_title": "characters",
+						"content": "[]>capra:but as long as you minimize friction, it should never come up.\n[]>metaspirit:but it can compound. just like your drug habits.\n[]>capra:Then I'll kill myself when it comes back to haunt me.",
+						"selected_actor_dropdown_index": 0,
+						"use_dialog_syntax": true
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 0,
+					"meta.is_head_editable": true,
+					"meta.line_index": 12,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+							"capra drive: morality": true,
+							"capra evaluation: present": true
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"active_actors": [
+							"narrator",
+							"capra",
+							"rider",
+							"icy-aloe",
+							"starry",
+							"angel",
+							"crosscull",
+							"mom",
+							"dad",
+							"metaspirit",
+							"therapist",
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms",
+							"bouncer",
+							""
+						],
+						"active_actors_title": "characters",
+						"content": "[]>capra:I have all the info I need before me. the second I decide I'll reach the other side of that decision",
+						"selected_actor_dropdown_index": 0,
+						"use_dialog_syntax": true
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 0,
+					"meta.is_head_editable": true,
+					"meta.line_index": 13,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+							"capra evaluation: future": true
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"active_actors": [
+							"narrator",
+							"capra",
+							"rider",
+							"icy-aloe",
+							"starry",
+							"angel",
+							"crosscull",
+							"mom",
+							"dad",
+							"metaspirit",
+							"therapist",
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms",
+							"bouncer",
+							""
+						],
+						"active_actors_title": "characters",
+						"content": "[]>capra:The future.\n[]>metaspirit:quite typical for those with presentimental proclivities",
+						"selected_actor_dropdown_index": 0,
+						"use_dialog_syntax": true
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 0,
+					"meta.is_head_editable": true,
+					"meta.line_index": 14,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+							"capra drive: positive": true,
+							"capra evaluation: future": true
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"active_actors": [
+							"narrator",
+							"capra",
+							"rider",
+							"icy-aloe",
+							"starry",
+							"angel",
+							"crosscull",
+							"mom",
+							"dad",
+							"metaspirit",
+							"therapist",
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms",
+							"bouncer",
+							""
+						],
+						"active_actors_title": "characters",
+						"content": "[]>capra: draw 1 out and burn away the rest. aspirations-driven",
+						"selected_actor_dropdown_index": 0,
+						"use_dialog_syntax": true
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 0,
+					"meta.is_head_editable": true,
+					"meta.line_index": 15,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+							"capra drive: negative": true,
+							"capra evaluation: future": true
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"active_actors": [
+							"narrator",
+							"capra",
+							"rider",
+							"icy-aloe",
+							"starry",
+							"angel",
+							"crosscull",
+							"mom",
+							"dad",
+							"metaspirit",
+							"therapist",
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms",
+							"bouncer",
+							""
+						],
+						"active_actors_title": "characters",
+						"content": "[]>capra:eventually, I'd like to cease to be. until then, I'll just focus on how much burden I can take away from my future self.",
+						"selected_actor_dropdown_index": 0,
+						"use_dialog_syntax": true
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 0,
+					"meta.is_head_editable": true,
+					"meta.line_index": 16,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+							"capra drive: morality": true,
+							"capra evaluation: future": true
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"active_actors": [
+							"narrator",
+							"capra",
+							"rider",
+							"icy-aloe",
+							"starry",
+							"angel",
+							"crosscull",
+							"mom",
+							"dad",
+							"metaspirit",
+							"therapist",
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms",
+							"bouncer",
+							""
+						],
+						"active_actors_title": "characters",
+						"content": "[]>capra:I constantly think about the impact of my actions on others. it gets intrusive sometimes.",
+						"selected_actor_dropdown_index": 0,
+						"use_dialog_syntax": true
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 0,
+					"meta.is_head_editable": true,
+					"meta.line_index": 17,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"active_actors": [
+							"narrator",
+							"capra",
+							"rider",
+							"icy-aloe",
+							"starry",
+							"angel",
+							"crosscull",
+							"mom",
+							"dad",
+							"metaspirit",
+							"therapist",
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms",
+							"bouncer",
+							""
+						],
+						"active_actors_title": "characters",
+						"content": "[]>capra:Please let me get back to languishing now... I'd really like that.",
+						"selected_actor_dropdown_index": 0,
+						"use_dialog_syntax": true
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 0,
+					"meta.is_head_editable": true,
+					"meta.line_index": 18,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"content": [
+							{
+								"name": "name",
+								"value": "metaspirit"
+							},
+							{
+								"name": "visible",
+								"value": "false"
+							}
+						],
+						"delay.after": 0,
+						"delay.before": 0,
+						"name": "character-visible"
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 2,
+					"meta.is_head_editable": true,
+					"meta.line_index": 19,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"auto_switch": true,
+						"choices": [
+							{
+								"choice_text.disabled": "",
+								"choice_text.enabled": "choice label",
+								"choice_text.enabled_as_default": true,
+								"conditionals": {
+									"behavior": 0,
+									"behavior_key": "Show",
+									"facts": {
+										"Xmas: alone": true
+									},
+									"operand": 0,
+									"operand_args": [],
+									"operand_key": "AND"
+								},
+								"do_jump_page": true,
+								"facts": {
+
+								},
+								"target_page": 26
+							}
+						],
+						"meta.do_jump_page": true
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 1,
+					"meta.is_head_editable": true,
+					"meta.line_index": 20,
+					"meta.visible": true
+				}
+			],
+			"next": 27,
+			"number": 25,
+			"page_key": "second metaspirit evaluation",
+			"terminate": false
+		},
+		"26": {
+			"lines": [
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"active_actors": [
+							"narrator",
+							"capra",
+							"rider",
+							"icy-aloe",
+							"starry",
+							"angel",
+							"crosscull",
+							"mom",
+							"dad",
+							"metaspirit",
+							"therapist",
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms",
+							"bouncer",
+							""
+						],
+						"active_actors_title": "characters",
+						"content": "[]>narrator:The evening has gone on long enough.",
+						"selected_actor_dropdown_index": 0,
+						"use_dialog_syntax": true
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 0,
+					"meta.is_head_editable": true,
+					"meta.line_index": 0,
 					"meta.visible": true
 				},
 				{
@@ -12713,7 +14810,119 @@
 							""
 						],
 						"active_actors_title": "characters",
-						"content": "[]>narrator:visit rider you idiot",
+						"content": "[]>narrator:Just as you are about to head to bed, you get a text from Icy Aloe inviting you over. ",
+						"selected_actor_dropdown_index": 0,
+						"use_dialog_syntax": true
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 0,
+					"meta.is_head_editable": true,
+					"meta.line_index": 1,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"auto_switch": false,
+						"choices": [
+							{
+								"choice_text.disabled": "",
+								"choice_text.enabled": "Stay at home.",
+								"choice_text.enabled_as_default": true,
+								"conditionals": {
+									"behavior": 0,
+									"behavior_key": "Show",
+									"facts": {
+
+									},
+									"operand": 0,
+									"operand_args": [],
+									"operand_key": "AND"
+								},
+								"do_jump_page": true,
+								"facts": {
+
+								},
+								"target_page": 53
+							},
+							{
+								"choice_text.disabled": "",
+								"choice_text.enabled": "Head over to them.",
+								"choice_text.enabled_as_default": true,
+								"conditionals": {
+									"behavior": 0,
+									"behavior_key": "Show",
+									"facts": {
+										"knows icy-aloe": true,
+										"mingled with band": true
+									},
+									"operand": 1,
+									"operand_args": [],
+									"operand_key": "OR"
+								},
+								"do_jump_page": false,
+								"facts": {
+									"joins band late": true
+								},
+								"target_page": 0
+							}
+						],
+						"meta.do_jump_page": true
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 1,
+					"meta.is_head_editable": true,
+					"meta.line_index": 2,
+					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+							"alcoholic": true,
+							"joins band late": true
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"active_actors": [
+							"narrator",
+							"capra",
+							"rider",
+							"icy-aloe",
+							"starry",
+							"angel",
+							"crosscull",
+							"mom",
+							"dad",
+							"metaspirit",
+							"therapist",
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms",
+							"bouncer",
+							""
+						],
+						"active_actors_title": "characters",
+						"content": "[]>narrator:liquid courage",
 						"selected_actor_dropdown_index": 0,
 						"use_dialog_syntax": true
 					},
@@ -12725,14 +14934,59 @@
 					"meta.is_head_editable": true,
 					"meta.line_index": 3,
 					"meta.visible": true
+				},
+				{
+					"conditionals": {
+						"behavior": 0,
+						"behavior_key": "Show",
+						"facts": {
+							"alcoholic": false,
+							"joins band late": true
+						},
+						"operand": 0,
+						"operand_args": [],
+						"operand_key": "AND"
+					},
+					"content": {
+						"active_actors": [
+							"narrator",
+							"capra",
+							"rider",
+							"icy-aloe",
+							"starry",
+							"angel",
+							"crosscull",
+							"mom",
+							"dad",
+							"metaspirit",
+							"therapist",
+							"gas-station-clerk",
+							"doomfeed",
+							"yearnfarms",
+							"bouncer",
+							""
+						],
+						"active_actors_title": "characters",
+						"content": "[]>narrator:social anxiety",
+						"selected_actor_dropdown_index": 0,
+						"use_dialog_syntax": true
+					},
+					"facts": {
+
+					},
+					"header": [],
+					"line_type": 0,
+					"meta.is_head_editable": true,
+					"meta.line_index": 4,
+					"meta.visible": true
 				}
 			],
-			"next": 23,
-			"number": 24,
-			"page_key": "alone on christmas",
+			"next": 28,
+			"number": 26,
+			"page_key": "final activity alone on christmas",
 			"terminate": false
 		},
-		"25": {
+		"27": {
 			"lines": [
 				{
 					"conditionals": {
@@ -13866,7 +16120,7 @@
 								"facts": {
 
 								},
-								"target_page": 26
+								"target_page": 28
 							}
 						],
 						"meta.do_jump_page": true
@@ -13912,7 +16166,7 @@
 								"facts": {
 
 								},
-								"target_page": 27
+								"target_page": 29
 							},
 							{
 								"choice_text.disabled": "",
@@ -13932,7 +16186,7 @@
 								"facts": {
 
 								},
-								"target_page": 26
+								"target_page": 28
 							}
 						],
 						"meta.do_jump_page": true
@@ -13947,12 +16201,12 @@
 					"meta.visible": true
 				}
 			],
-			"next": 26,
-			"number": 25,
+			"next": 28,
+			"number": 27,
 			"page_key": "Visiting Parents",
 			"terminate": false
 		},
-		"26": {
+		"28": {
 			"lines": [
 				{
 					"conditionals": {
@@ -14138,12 +16392,12 @@
 					"meta.visible": true
 				}
 			],
-			"next": 28,
-			"number": 26,
+			"next": 30,
+			"number": 28,
 			"page_key": "let parents drone on",
 			"terminate": false
 		},
-		"27": {
+		"29": {
 			"lines": [
 				{
 					"conditionals": {
@@ -14383,12 +16637,12 @@
 					"meta.visible": true
 				}
 			],
-			"next": 28,
-			"number": 27,
+			"next": 30,
+			"number": 29,
 			"page_key": "confront parents",
 			"terminate": false
 		},
-		"28": {
+		"30": {
 			"lines": [
 				{
 					"conditionals": {
@@ -14626,7 +16880,7 @@
 								"facts": {
 
 								},
-								"target_page": 29
+								"target_page": 31
 							},
 							{
 								"choice_text.disabled": "",
@@ -14681,12 +16935,12 @@
 					"meta.visible": true
 				}
 			],
-			"next": 29,
-			"number": 28,
+			"next": 31,
+			"number": 30,
 			"page_key": "Leaving parents place",
 			"terminate": false
 		},
-		"29": {
+		"31": {
 			"lines": [
 				{
 					"conditionals": {
@@ -14808,7 +17062,7 @@
 								"facts": {
 
 								},
-								"target_page": 49
+								"target_page": 51
 							},
 							{
 								"choice_text.disabled": "",
@@ -14931,12 +17185,12 @@
 					"meta.visible": true
 				}
 			],
-			"next": 30,
-			"number": 29,
+			"next": 32,
+			"number": 31,
 			"page_key": "going home after christmas",
 			"terminate": false
 		},
-		"30": {
+		"32": {
 			"lines": [
 				{
 					"conditionals": {
@@ -15445,12 +17699,12 @@
 					"meta.visible": true
 				}
 			],
-			"next": 31,
-			"number": 30,
+			"next": 33,
+			"number": 32,
 			"page_key": "confrontation with bouncer",
 			"terminate": false
 		},
-		"31": {
+		"33": {
 			"lines": [
 				{
 					"conditionals": {
@@ -15497,12 +17751,12 @@
 					"meta.visible": true
 				}
 			],
-			"next": 32,
-			"number": 31,
+			"next": 34,
+			"number": 33,
 			"page_key": "way home to rider",
 			"terminate": false
 		},
-		"32": {
+		"34": {
 			"lines": [
 				{
 					"conditionals": {
@@ -15792,7 +18046,7 @@
 								"facts": {
 
 								},
-								"target_page": 33
+								"target_page": 35
 							}
 						],
 						"meta.do_jump_page": true
@@ -15851,12 +18105,12 @@
 					"meta.visible": true
 				}
 			],
-			"next": 39,
-			"number": 32,
+			"next": 41,
+			"number": 34,
 			"page_key": "band weed afterparty / concert alternative",
 			"terminate": false
 		},
-		"33": {
+		"35": {
 			"lines": [
 				{
 					"conditionals": {
@@ -16210,12 +18464,12 @@
 					"meta.visible": true
 				}
 			],
-			"next": 35,
-			"number": 33,
+			"next": 37,
+			"number": 35,
 			"page_key": "metaspirit in riders bathroom",
 			"terminate": false
 		},
-		"34": {
+		"36": {
 			"lines": [
 				{
 					"conditionals": {
@@ -16870,12 +19124,12 @@
 					"meta.visible": true
 				}
 			],
-			"next": 35,
-			"number": 34,
+			"next": 37,
+			"number": 36,
 			"page_key": "travel to club",
 			"terminate": false
 		},
-		"35": {
+		"37": {
 			"lines": [
 				{
 					"conditionals": {
@@ -17048,7 +19302,7 @@
 								"facts": {
 									"did speed with angel": true
 								},
-								"target_page": 36
+								"target_page": 38
 							},
 							{
 								"choice_text.disabled": "",
@@ -17068,7 +19322,7 @@
 								"facts": {
 									"did speed with angel": false
 								},
-								"target_page": 37
+								"target_page": 39
 							},
 							{
 								"choice_text.disabled": "",
@@ -17178,7 +19432,7 @@
 								"facts": {
 									"did speed with angel": true
 								},
-								"target_page": 36
+								"target_page": 38
 							},
 							{
 								"choice_text.disabled": "",
@@ -17198,7 +19452,7 @@
 								"facts": {
 									"did speed with angel": false
 								},
-								"target_page": 37
+								"target_page": 39
 							}
 						],
 						"meta.do_jump_page": true
@@ -17213,12 +19467,12 @@
 					"meta.visible": true
 				}
 			],
-			"next": 37,
-			"number": 35,
+			"next": 39,
+			"number": 37,
 			"page_key": "swag party",
 			"terminate": false
 		},
-		"36": {
+		"38": {
 			"lines": [
 				{
 					"conditionals": {
@@ -17309,12 +19563,12 @@
 					"meta.visible": true
 				}
 			],
-			"next": 38,
-			"number": 36,
+			"next": 40,
+			"number": 38,
 			"page_key": "do speed with angel",
 			"terminate": false
 		},
-		"37": {
+		"39": {
 			"lines": [
 				{
 					"conditionals": {
@@ -17440,12 +19694,12 @@
 					"meta.visible": true
 				}
 			],
-			"next": 39,
-			"number": 37,
+			"next": 41,
+			"number": 39,
 			"page_key": "don't do speed with angel",
 			"terminate": false
 		},
-		"38": {
+		"40": {
 			"lines": [
 				{
 					"conditionals": {
@@ -17492,12 +19746,12 @@
 					"meta.visible": true
 				}
 			],
-			"next": 39,
-			"number": 38,
+			"next": 41,
+			"number": 40,
 			"page_key": "leave club",
 			"terminate": false
 		},
-		"39": {
+		"41": {
 			"lines": [
 				{
 					"conditionals": {
@@ -17951,12 +20205,12 @@
 					"meta.visible": true
 				}
 			],
-			"next": 40,
-			"number": 39,
+			"next": 42,
+			"number": 41,
 			"page_key": "angel and crosscull arrive at riders",
 			"terminate": false
 		},
-		"40": {
+		"42": {
 			"lines": [
 				{
 					"conditionals": {
@@ -18078,7 +20332,7 @@
 								"facts": {
 									"went outside with icy": true
 								},
-								"target_page": 41
+								"target_page": 43
 							},
 							{
 								"choice_text.disabled": "",
@@ -18098,7 +20352,7 @@
 								"facts": {
 									"went outside with icy": false
 								},
-								"target_page": 42
+								"target_page": 44
 							}
 						],
 						"meta.do_jump_page": true
@@ -18113,12 +20367,12 @@
 					"meta.visible": true
 				}
 			],
-			"next": 41,
-			"number": 40,
+			"next": 43,
+			"number": 42,
 			"page_key": "full house at riders",
 			"terminate": false
 		},
-		"41": {
+		"43": {
 			"lines": [
 				{
 					"conditionals": {
@@ -18722,12 +20976,12 @@
 					"meta.visible": true
 				}
 			],
-			"next": 43,
-			"number": 41,
+			"next": 45,
+			"number": 43,
 			"page_key": "do speed with icy",
 			"terminate": false
 		},
-		"42": {
+		"44": {
 			"lines": [
 				{
 					"conditionals": {
@@ -18941,12 +21195,12 @@
 					"meta.visible": true
 				}
 			],
-			"next": 43,
-			"number": 42,
+			"next": 45,
+			"number": 44,
 			"page_key": "don't do speed with icy",
 			"terminate": false
 		},
-		"43": {
+		"45": {
 			"lines": [
 				{
 					"conditionals": {
@@ -19186,12 +21440,12 @@
 					"meta.visible": true
 				}
 			],
-			"next": 44,
-			"number": 43,
+			"next": 46,
+			"number": 45,
 			"page_key": "icy returns to group",
 			"terminate": false
 		},
-		"44": {
+		"46": {
 			"lines": [
 				{
 					"conditionals": {
@@ -19260,7 +21514,7 @@
 								"facts": {
 
 								},
-								"target_page": 45
+								"target_page": 47
 							}
 						],
 						"meta.do_jump_page": true
@@ -19582,12 +21836,12 @@
 					"meta.visible": true
 				}
 			],
-			"next": 46,
-			"number": 44,
+			"next": 48,
+			"number": 46,
 			"page_key": "amphetamine review in riders bathroom",
 			"terminate": false
 		},
-		"45": {
+		"47": {
 			"lines": [
 				{
 					"conditionals": {
@@ -19921,12 +22175,12 @@
 					"meta.visible": true
 				}
 			],
-			"next": 46,
-			"number": 45,
+			"next": 48,
+			"number": 47,
 			"page_key": "amph review with metaspirit",
 			"terminate": false
 		},
-		"46": {
+		"48": {
 			"lines": [
 				{
 					"conditionals": {
@@ -20061,12 +22315,12 @@
 					"meta.visible": true
 				}
 			],
-			"next": 47,
-			"number": 46,
+			"next": 49,
+			"number": 48,
 			"page_key": "come back from speed pissing",
 			"terminate": false
 		},
-		"47": {
+		"49": {
 			"lines": [
 				{
 					"conditionals": {
@@ -20113,12 +22367,12 @@
 					"meta.visible": true
 				}
 			],
-			"next": 48,
-			"number": 47,
+			"next": 50,
+			"number": 49,
 			"page_key": "talk with icy",
 			"terminate": false
 		},
-		"48": {
+		"50": {
 			"lines": [
 				{
 					"conditionals": {
@@ -20244,19 +22498,19 @@
 					"meta.visible": true
 				}
 			],
-			"next": 50,
-			"number": 48,
+			"next": 52,
+			"number": 50,
 			"page_key": "end of night after rider hangout",
 			"terminate": false
 		},
-		"49": {
+		"51": {
 			"lines": [],
-			"next": 50,
-			"number": 49,
+			"next": 52,
+			"number": 51,
 			"page_key": "killing parents",
 			"terminate": false
 		},
-		"50": {
+		"52": {
 			"lines": [
 				{
 					"conditionals": {
@@ -20595,12 +22849,19 @@
 					"meta.visible": true
 				}
 			],
-			"next": 51,
-			"number": 50,
+			"next": 53,
+			"number": 52,
 			"page_key": "END community",
 			"terminate": true
 		},
-		"51": {
+		"53": {
+			"lines": [],
+			"next": 54,
+			"number": 53,
+			"page_key": "lonely scenery",
+			"terminate": false
+		},
+		"54": {
 			"lines": [
 				{
 					"conditionals": {
@@ -20762,7 +23023,7 @@
 				}
 			],
 			"next": 2,
-			"number": 51,
+			"number": 54,
 			"page_key": "END doom",
 			"terminate": true
 		}
