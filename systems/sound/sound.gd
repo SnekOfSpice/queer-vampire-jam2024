@@ -11,6 +11,7 @@ const sfx := {
 	"notification":"res://game/audio/sfx/542015__rob_marion__gasp_ui_notification_3.wav",
 	"phone-call":"res://game/audio/sfx/276609__mickleness__notification-bumptious.wav",
 	"motivation-sting":"res://game/audio/sfx/metaspirit_vanish.ogg",
+	"bus-halting":"res://game/audio/sfx/498447__16hpanskagalantic_pavel__the-bus-is-braking.wav",
 }
 
 const music := {
