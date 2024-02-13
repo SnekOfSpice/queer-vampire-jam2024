@@ -56,6 +56,10 @@ func execute(instruction_name, args):
 			var screen :String = args.get("screen")
 			GameState.game.set_is_pc_on(true)
 			GameState.game.set_pc_screen(screen)
+		"set-emotion":
+			for c in get_tree().get_nodes_in_group("character"):
+				if c.character_name == "":
+					c.set_current_emotion(args.get("emo", "neutral"))
 
 
 func _on_black_instruction_completed() -> void:

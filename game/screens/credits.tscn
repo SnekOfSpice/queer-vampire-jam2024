@@ -73,11 +73,11 @@ text = "[i]Onyx Heart created for the [url=https://itch.io/jam/queer-vampire]Que
 Writing, Programming, Background Art by Snek ([url]https://snekofspice.itch.io/[/url])
 Character Artwork by deadpsyche ([url]https://deadpsyche.carrd.co/[/url])
 
-
 [b]Music[/b]
-Omniman - The Reek of Madness (Free Music Archive) (CC BY)
-Omniman - Feedback (Free Music Archive) (CC BY)
-Sif - Kiln (CC BY 3.0 Deed)
+Omniman - The Reek of Madness (Free Music Archive)
+Omniman - Feedback (Free Music Archive)
+Koi-discovery - Noise-hydrogen
+Sif - Kiln
 Monplaisir - Fermons une plage
 Monplaisir - Sur Tout Le Retour
 OTHERTHINKER - THE FOX IN THE TOPHAT WHISPERED INTO THE EAR OF THE RABBIT \"I WELCOME YOU WITH MY BARBED WIRE HABIT\"
@@ -89,7 +89,7 @@ Anonymous420 - Commercial Break for my little sponge brain
 Anonymous420 - Slowly, draining me, until there is nothing, nothing else except a painbuilt body
 смерть в летнюю полночь - когда же это было, Чайка [Tape Mastering]
 смерть в летнюю полночь - отчего твоя душа болит, Чайка [Tape Mastering]
-
+смерть в летнюю полночь - где же твои крылья, Чайка [Tape Mastering]
 
 [b]Additional Visuals[/b]
 voice chat profile pictures via opengameart.org:
@@ -99,7 +99,7 @@ bevouliin.com - Red Beetle Pixelart Sprites
 megowhat - Little Lamb
 n4 - Seamless Space / Stars
 Beast - 5 Static Enemy Sprites
-Phone icons from Flaticon.com (Creative Squad, vectorsmarket15, Tempo_doloe)"
+Phone icons from Flaticon.com (Creative Squad, vectorsmarket15, Tempo_doloe, Amazona Adorada, srip)"
 
 [connection signal="pressed" from="MarginContainer/CloseButton" to="." method="_on_close_button_pressed"]
 [connection signal="meta_clicked" from="VBoxContainer/CenterContainer/RichTextLabel" to="." method="_on_rich_text_label_meta_clicked"]

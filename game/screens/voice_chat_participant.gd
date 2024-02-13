@@ -8,8 +8,9 @@ var user_names := {
 	"crosscull": "x-x",
 	"angel": "real",
 	"rider": "notrider",
-	"starry": "starry | they",
-	"icy-aloe": "ICY"
+	"starry": "starry",
+	"icy-aloe": "Icy | she/they",
+	"para" : "Rogue"
 }
 
 func serialize() -> Dictionary:

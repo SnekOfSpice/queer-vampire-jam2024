@@ -34,6 +34,8 @@ const music := {
 	"lonely-in-forest":"res://game/audio/music/467867__haiku1996__improvisation-on-piano-ii.ogg",
 	"metaspirit2":"res://game/audio/music/OTHERTHINKER - DANDELION - 01 MY SKIN DRIPS LIKE SOME THICKENED INK.ogg",
 	"idle":"res://game/audio/music/Monplaisir - Sur Tout Le Trajet - 03 Sur Tout Le Retour.ogg",
+	"sentimental-talk":"res://game/audio/music/смерть в летнюю полночь - где же твои крылья, Ча - 03 где же твои крылья, Чайка -Tape Mastering-.ogg",
+	"walk-outside":"res://game/audio/music/Koi-discovery-Noise-hydrogen.ogg",
 }
 # unused but good
 #"res://game/audio/music/GugsSuggs - Music For Streams Vol. 1 - 03 Away From Keyboard.ogg"
