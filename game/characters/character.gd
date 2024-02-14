@@ -14,6 +14,9 @@ func _ready() -> void:
 	visible = false
 	$Sprite.scale.x *= 0.65
 	$Sprite.scale.y *= 0.65
+	if character_name == "therapist":
+		$Sprite.scale.x *= 0.48
+		$Sprite.scale.y *= 0.48
 
 func on_visibility_changed():
 	if GameState.game:
@@ -45,6 +48,10 @@ func handle_event(event_name:String, event_args:Dictionary):
 				
 
 func set_current_emotion(emo_name:String):
+	if visible:
+		printt(character_name, emo_name)
+	if visible and emo_name == "invisible": # the joys of gamejam hacks
+		visible = false
 	current_emotion = emo_name
 	$Sprite.texture = load(str("res://game/characters/sprites/", character_name, "/", emo_name, ".png"))
 

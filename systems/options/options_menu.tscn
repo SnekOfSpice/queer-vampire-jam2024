@@ -96,7 +96,9 @@ text = "Speed"
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 focus_mode = 0
+min_value = 1.0
 max_value = 101.0
+value = 1.0
 
 [node name="TextSpeedLabel" type="Label" parent="CenterContainer/VBoxContainer/GridContainer2"]
 layout_mode = 2

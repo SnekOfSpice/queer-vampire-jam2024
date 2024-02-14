@@ -11,7 +11,7 @@ func _ready() -> void:
 		Parser.line_reader.auto_continue = false
 		Parser.line_reader.auto_continue_delay = 0.0
 		find_child("Cheats").init()
-		set_screen(Const.GAME_SCREEN_MAIN_MENU)
+		set_screen(Const.GAME_SCREEN_GAME)
 		if screen == Const.GAME_SCREEN_GAME:
 			Parser.reset_and_start(start_page_index)
 	find_child("FullTextContainer").visible = false

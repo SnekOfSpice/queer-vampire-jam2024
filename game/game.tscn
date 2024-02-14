@@ -31,7 +31,7 @@ offset_right = 124.777
 offset_bottom = 216.076
 
 [node name="TherapyOverlay" type="Sprite2D" parent="PC"]
-position = Vector2(870, 372)
+position = Vector2(879, 368)
 scale = Vector2(0.613, 0.613)
 texture = ExtResource("5_5eca3")
 
@@ -84,4 +84,4 @@ position = Vector2(1067, 477)
 [node name="Anchors" type="Node2D" parent="CharacterPositions"]
 
 [node name="Therapist" type="Node2D" parent="CharacterPositions/Anchors"]
-position = Vector2(931, 453)
+position = Vector2(858, 347)

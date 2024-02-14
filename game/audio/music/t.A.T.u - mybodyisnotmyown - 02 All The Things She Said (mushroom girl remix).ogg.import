@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://imp4gf1i0v5j"
+path="res://.godot/imported/t.A.T.u - mybodyisnotmyown - 02 All The Things She Said (mushroom girl remix).ogg-c31d6d7962c17a64e25df8724f809cfd.oggvorbisstr"
+
+[deps]
+
+source_file="res://game/audio/music/t.A.T.u - mybodyisnotmyown - 02 All The Things She Said (mushroom girl remix).ogg"
+dest_files=["res://.godot/imported/t.A.T.u - mybodyisnotmyown - 02 All The Things She Said (mushroom girl remix).ogg-c31d6d7962c17a64e25df8724f809cfd.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

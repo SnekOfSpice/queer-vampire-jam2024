@@ -12,6 +12,7 @@ const sfx := {
 	"phone-call":"res://game/audio/sfx/276609__mickleness__notification-bumptious.wav",
 	"motivation-sting":"res://game/audio/sfx/metaspirit_vanish.ogg",
 	"bus-halting":"res://game/audio/sfx/498447__16hpanskagalantic_pavel__the-bus-is-braking.wav",
+	"train-screech":"res://game/audio/sfx/333006__michael_kur95__train-braking-01.ogg",
 }
 
 const music := {
@@ -22,7 +23,7 @@ const music := {
 	"capra-bedroom":"res://game/audio/music/718333__josefpres__piano-loops-083-efect-2-octave-long-loop-120-bpm.ogg",
 	"capra-bedroom-intro":"res://game/audio/music/Anonymous420 - How capitalism will end - 03 Commercial Break for my little sponge brain.ogg",
 	"metaspirit1":"res://game/audio/music/Anonymous420 - How capitalism will end - 04 Slowly, draining me, until there is nothing, nothing else except a painbuilt body.ogg",
-	"party":"res://game/audio/music/611305__szegvari__new-york-cyberpunk-synh-analogue-drums-bass-dance-retro-atmo-ambience-pad-drone-cinematic-action-music-surround.ogg",
+	"party":"res://game/audio/music/611305__szegvari__new-york-cyberpunk-synth-analogue-drums-bass-dance-retro-atmo-ambience-pad-drone-cinematic-action-music-surround.ogg",
 	"panic":"res://game/audio/music/Sif - Darkstalker - 02 Kiln.ogg",
 	"shanties":"res://game/audio/music/699371__immergomedia__campfire-guitar-alternate-take.ogg",
 	"crowd":"res://game/audio/music/Nadrisk - Wounded by Light.ogg",
@@ -36,6 +37,8 @@ const music := {
 	"idle":"res://game/audio/music/Monplaisir - Sur Tout Le Trajet - 03 Sur Tout Le Retour.ogg",
 	"sentimental-talk":"res://game/audio/music/смерть в летнюю полночь - где же твои крылья, Ча - 03 где же твои крылья, Чайка -Tape Mastering-.ogg",
 	"walk-outside":"res://game/audio/music/Koi-discovery-Noise-hydrogen.ogg",
+	"travel-to-club":"res://game/audio/music/GugsSuggs - Music For Streams Vol. 1 - 07 Take It Easy Tonight.ogg",
+	"speed":"res://game/audio/music/t.A.T.u - mybodyisnotmyown - 02 All The Things She Said (mushroom girl remix).ogg",
 }
 # unused but good
 #"res://game/audio/music/GugsSuggs - Music For Streams Vol. 1 - 03 Away From Keyboard.ogg"

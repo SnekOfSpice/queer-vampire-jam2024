@@ -20,7 +20,7 @@ func wrapper_execute(instruction_name, args, delay_before := 0.0, delay_after :=
 	
 	if delay_after > 0.0:
 		await get_tree().create_timer(delay_after).timeout
-	print("after")
+#	print("after")
 	emit_signal("set_input_lock", false)
 	emit_signal("instruction_wrapped_completed")
 

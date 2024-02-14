@@ -360,7 +360,7 @@ func read_new_line(new_line: Dictionary):
 	
 	# register facts
 	var facts = line_data.get("facts")
-	printt(line_type, facts)
+#	printt(line_type, facts)
 	for f in facts.keys():
 		Parser.change_fact(f, facts.get(f))
 	

@@ -111,26 +111,47 @@ func set_character_visible(character_name: String, value:bool):
 
 func arrange_characters():
 	var left_count := 0
+	var not_left_count := 0
 	var right_count := 0
 	var neutral_count := 0
+	var visible_characters := []
 	for c in $Characters.get_children():
-		if not c.visible:
-			continue
-		if c.position_preference.begins_with("anchor-"):
-			var anchor_name :String= c.position_preference.trim_prefix("anchor-")
-			var anchor_position = $CharacterPositions/Anchors.find_child(anchor_name.capitalize())
-			c.position = anchor_position.position
-		elif c.position_preference == "left":
-			c.position = $CharacterPositions/Left.position + Vector2(240, 0) * left_count
-			c.z_index = 10 - left_count
-			left_count += 1
-		elif c.position_preference == "right":
-			c.position = $CharacterPositions/Right.position - Vector2(240, 0) * right_count
-			c.z_index = 10 - right_count
-			right_count += 1
-		else:
-			var mid = ($CharacterPositions/Left.position + $CharacterPositions/Right.position) * 0.5
-			c.position = mid + Vector2(140, 0) * (neutral_count * 1 if neutral_count % 2 == 0 else -1)
-			c.z_index = 10 - neutral_count
-			neutral_count += 1
-		c.position.y -= c.height
+		if c.visible:
+			visible_characters.append(c)
+	
+	if visible_characters.size() <= 3:
+		for c in visible_characters:
+			if c.position_preference.begins_with("anchor-"):
+				var anchor_name :String= c.position_preference.trim_prefix("anchor-")
+				var anchor_position = $CharacterPositions/Anchors.find_child(anchor_name.capitalize())
+				c.position = anchor_position.position
+			elif c.position_preference == "left":
+				c.position = $CharacterPositions/Left.position + Vector2(240, 0) * left_count
+				c.z_index = 10 - left_count
+				left_count += 1
+			elif c.position_preference == "right":
+				c.position = $CharacterPositions/Right.position - Vector2(240, 0) * right_count
+				c.z_index = 10 - right_count
+				right_count += 1
+			else:
+				var mid = ($CharacterPositions/Left.position + $CharacterPositions/Right.position) * 0.5
+				c.position = mid + Vector2(140, 0) * (neutral_count * 1 if neutral_count % 2 == 0 else -1)
+				c.z_index = 10 - neutral_count
+				neutral_count += 1
+			c.position.y -= c.height
+	else:
+		
+		for c in visible_characters:
+			if c.position_preference == "left":
+				c.position = $CharacterPositions/Left.position + Vector2(240, 0) * left_count
+				c.z_index = 10 - left_count
+				left_count += 1
+		
+		var available_space :float= 920 - 70 * left_count
+		var space_per_character = available_space / float(visible_characters.size() - left_count)
+		for c in visible_characters:
+			if c.position_preference == "left":
+				continue
+			c.z_index = 10 - not_left_count
+			c.position = $CharacterPositions/Right.position - Vector2(space_per_character, 0) * not_left_count
+			not_left_count += 1
