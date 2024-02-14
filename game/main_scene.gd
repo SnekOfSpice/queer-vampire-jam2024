@@ -11,7 +11,7 @@ func _ready() -> void:
 		Parser.line_reader.auto_continue = false
 		Parser.line_reader.auto_continue_delay = 0.0
 		find_child("Cheats").init()
-		set_screen(Const.GAME_SCREEN_GAME)
+		set_screen(Const.GAME_SCREEN_MAIN_MENU)
 		if screen == Const.GAME_SCREEN_GAME:
 			Parser.reset_and_start(start_page_index)
 	find_child("FullTextContainer").visible = false
@@ -32,10 +32,15 @@ func handle_event(event_name: String, event_args: Dictionary):
 			set_screen(Const.GAME_SCREEN_MAIN_MENU)
 
 func toggle_option_screen():
+	if find_child("History").visible:
+		find_child("History").visible = false
+		return
 	if screen == Const.GAME_SCREEN_OPTIONS:
+		Options.save_options_to_file()
 		set_screen(last_screen)
 		if screen == Const.GAME_SCREEN_GAME:
 			Parser.paused = false
+			set_history_visible(false)
 	else:
 		set_screen(Const.GAME_SCREEN_OPTIONS)
 		Parser.paused = true

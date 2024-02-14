@@ -31,7 +31,7 @@ func execute(instruction_name, args):
 			if GameState.game.is_pc_on:
 				if GameState.game.pc_screen == "voice-call":
 					GameState.game.add_to_voice_call(args.get("name"))
-				if args.get("name") == "therapist":
+				if args.get("name") == "therapist": # the joys of gamejam hacks
 					GameState.game.set_character_visible(args.get("name"), vis)
 			else:
 				GameState.game.set_character_visible(args.get("name"), vis)

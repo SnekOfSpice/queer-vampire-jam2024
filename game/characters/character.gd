@@ -48,10 +48,6 @@ func handle_event(event_name:String, event_args:Dictionary):
 				
 
 func set_current_emotion(emo_name:String):
-	if visible:
-		printt(character_name, emo_name)
-	if visible and emo_name == "invisible": # the joys of gamejam hacks
-		visible = false
 	current_emotion = emo_name
 	$Sprite.texture = load(str("res://game/characters/sprites/", character_name, "/", emo_name, ".png"))
 
