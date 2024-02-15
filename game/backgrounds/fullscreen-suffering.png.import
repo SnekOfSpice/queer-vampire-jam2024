@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ckb7cb50w51mh"
-path="res://.godot/imported/share-the-body.png-2050bbab38c54942dc7095a798dece9c.ctex"
+uid="uid://br0vviilvinvb"
+path="res://.godot/imported/fullscreen-suffering.png-51ad336325d95f086f4be23c2a58143a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game/backgrounds/fullscreen_text/share-the-body.png"
-dest_files=["res://.godot/imported/share-the-body.png-2050bbab38c54942dc7095a798dece9c.ctex"]
+source_file="res://game/backgrounds/fullscreen-suffering.png"
+dest_files=["res://.godot/imported/fullscreen-suffering.png-51ad336325d95f086f4be23c2a58143a.ctex"]
 
 [params]
 

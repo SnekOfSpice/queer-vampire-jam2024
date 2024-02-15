@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2cajcn0jgbgc"
-path="res://.godot/imported/premonition.png-4038e7cc078d4b945a1b75e21cf41330.ctex"
+uid="uid://r2crnd3a58t2"
+path="res://.godot/imported/fullscreen-motivation.png-093ddc4e196970b3f6314fbb97dcabb5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game/backgrounds/fullscreen_text/premonition.png"
-dest_files=["res://.godot/imported/premonition.png-4038e7cc078d4b945a1b75e21cf41330.ctex"]
+source_file="res://game/backgrounds/fullscreen-motivation.png"
+dest_files=["res://.godot/imported/fullscreen-motivation.png-093ddc4e196970b3f6314fbb97dcabb5.ctex"]
 
 [params]
 
