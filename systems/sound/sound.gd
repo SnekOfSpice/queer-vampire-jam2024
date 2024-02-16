@@ -40,6 +40,8 @@ const music := {
 	"walk-outside":"res://game/audio/music/Koi-discovery-Noise-hydrogen.ogg",
 	"travel-to-club":"res://game/audio/music/GugsSuggs - Music For Streams Vol. 1 - 07 Take It Easy Tonight.ogg",
 	"speed":"res://game/audio/music/t.A.T.u - mybodyisnotmyown - 02 All The Things She Said (mushroom girl remix).ogg",
+	"capra-winddown":"res://game/audio/music/mushroom girl - mybodyisnotmyown - 01 mybodyisnotmyown.ogg",
+	"lonely-in-forest-panic":"res://game/audio/music/Vivian Vulpine - Our Forbidden Love - Misery in Lieu - 02 Misery in Lieu.ogg",
 }
 # unused but good
 #"res://game/audio/music/GugsSuggs - Music For Streams Vol. 1 - 03 Away From Keyboard.ogg"

@@ -90,7 +90,7 @@ func set_text_content(style:String, variant:String):
 	if style =="fullscreen":
 		$LineReader.text_container = find_child("FullTextContainer")
 		$LineReader.text_content = find_child("FullText")
-		find_child("FullTextBackground").texture = load(str("res://game/backgrounds/fullscreen_text/", variant, ".png"))
+		find_child("FullTextBackground").texture = load(str("res://game/backgrounds/fullscreen-", variant, ".png"))
 	else:
 		$LineReader.text_container = find_child("TextContainer")
 		$LineReader.text_content = find_child("BottomText")
