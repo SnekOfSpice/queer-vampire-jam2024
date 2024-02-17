@@ -113,10 +113,13 @@ property_for_name = "character"
 name_for_blank_name = "narrator"
 name_map = {
 "angel": "Angel",
+"bouncer": "Bouncer",
 "capra": "Capra",
 "crosscull": "Crosscull",
 "dad": "Dad",
 "doomfeed": "Doomfeed",
+"gas-station-clerk": "Late-Night Gas Station Employee",
+"gas-station-clert": "Late-Night Gas Station Employee",
 "icy-aloe": "Icy Aloe",
 "mom": "Mom",
 "rider": "Rider",

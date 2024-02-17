@@ -17,7 +17,7 @@ const sfx := {
 
 const music := {
 	"main-menu":"res://game/audio/music/Monplaisir - Sur Tout Le Trajet - 02 Fermons une plage.ogg",
-	"concert-ambient":"res://game/audio/music/504648__tosha73__the-hubbub-of-the-crowd-before-the-concert.ogg",
+	"concert-ambient":"res://game/audio/music/untitled.ogg",
 	"grime":"res://game/audio/music/Omniman-Feedback.ogg",
 	"nailbiter":"res://game/audio/music/Omniman-The-Reek-of-Madness.ogg",
 	"capra-bedroom":"res://game/audio/music/718333__josefpres__piano-loops-083-efect-2-octave-long-loop-120-bpm.ogg",
