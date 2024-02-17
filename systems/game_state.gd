@@ -1,7 +1,8 @@
 extends Node
 
 var game: Game
-
+var screen:String
+var last_screen:String
 
 func serialize() -> Dictionary:
 	var data := {}

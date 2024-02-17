@@ -42,6 +42,13 @@ const music := {
 	"speed":"res://game/audio/music/t.A.T.u - mybodyisnotmyown - 02 All The Things She Said (mushroom girl remix).ogg",
 	"capra-winddown":"res://game/audio/music/mushroom girl - mybodyisnotmyown - 01 mybodyisnotmyown.ogg",
 	"lonely-in-forest-panic":"res://game/audio/music/Vivian Vulpine - Our Forbidden Love - Misery in Lieu - 02 Misery in Lieu.ogg",
+	"killing-psychosis":"res://game/audio/music/723927__jalastram__dark_ambient_026.ogg",
+	"killing":"res://game/audio/music/465551__gis_sweden__electronic-minute-no-257-some-flute-maybe.ogg",
+	"after-killing":"res://game/audio/music/723930__logicmoon__city-nights.ogg",
+	"bouncer":"res://game/audio/music/458557__doctor_dreamchip__arturia-acid-2019-02-04.ogg",
+	"ending-doom":"res://game/audio/music/330210__erokia__ambient-wave-2-stretched.ogg",
+	"ending-shade":"res://game/audio/music/556806__doctor_dreamchip__circuit-7-synth-4.ogg",
+	"rider-apartment":"res://game/audio/music/652558__angelorizzo__filo-chillare-ar04-2_46.ogg",
 }
 # unused but good
 #"res://game/audio/music/GugsSuggs - Music For Streams Vol. 1 - 03 Away From Keyboard.ogg"
@@ -73,6 +80,9 @@ func set_bgm_volume(db:float):
 
 func play_bgm(track_name:String, fade_in:=0.0):
 	if current_track_name == track_name:
+		return
+	if not music.has(track_name):
+		push_warning(str("\"", track_name, "\" isn't defined!"))
 		return
 	current_track_name = track_name
 	if not bgm_player:

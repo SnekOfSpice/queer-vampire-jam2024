@@ -27,6 +27,8 @@ func serialize() -> Dictionary:
 		participants[c.character_name] = c.serialize()
 	data["participants"] = participants
 	
+	prints("background in data", background)
+	prints("serializing data with ", data)
 	return data
 
 func deserialize(data:Dictionary):

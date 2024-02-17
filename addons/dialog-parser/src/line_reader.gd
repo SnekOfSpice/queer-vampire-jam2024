@@ -484,6 +484,8 @@ func _process(delta: float) -> void:
 	if auto_continue:
 		if not line_type == Parser.LineType.Text:
 			return
+		if pause_types.is_empty() or next_pause_position_index < 0:
+			return
 		if pause_types[next_pause_position_index] == PauseTypes.Auto:
 			return
 		if text_content.visible_characters >= pause_positions[next_pause_position_index] - 4 * next_pause_position_index or text_content.visible_characters == -1:

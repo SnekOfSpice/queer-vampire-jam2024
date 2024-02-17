@@ -57,11 +57,15 @@ func _on_close_options_button_pressed() -> void:
 
 
 func _on_main_menu_button_pressed() -> void:
+	if GameState.last_screen == Const.GAME_SCREEN_GAME:
+		Options.save_gamestate()
 	Options.save_options_to_file()
 	emit_signal("to_main_menu")
 
 
 func _on_quit_game_button_pressed() -> void:
+	if GameState.last_screen == Const.GAME_SCREEN_GAME:
+		Options.save_gamestate()
 	Options.save_options_to_file()
 	emit_signal("quit")
 

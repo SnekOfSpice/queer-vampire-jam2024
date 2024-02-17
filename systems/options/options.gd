@@ -36,7 +36,10 @@ func load_options_from_file():
 	set_music_volume(config.get_value("preferences", "music_volume", 0))
 	sfx_volume = config.get_value("preferences", "sfx_volume", 0)
 	Parser.line_reader.apply_preferences(config.get_value("preferences", "line_reader", {}))
-	set_fullscreen(config.get_value("preferences", "fullscreen", true))
+	var become_fullscreen :bool=config.get_value("preferences", "fullscreen", true)
+	var is_fullscreen:bool = DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_FULLSCREEN
+	if become_fullscreen != is_fullscreen:
+		set_fullscreen(become_fullscreen)
 
 func set_fullscreen(value:bool):
 	fullscreen = value

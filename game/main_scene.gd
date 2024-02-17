@@ -24,7 +24,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("f1") and dev_mode:
 		find_child("Cheats").visible = not find_child("Cheats").visible
-	if Input.is_action_just_pressed("ui_cancel"):
+	if Input.is_action_just_pressed("ui_cancel"):# or Input.is_action_just_pressed("rclick"):
 		toggle_option_screen()
 
 func handle_event(event_name: String, event_args: Dictionary):
@@ -61,12 +61,15 @@ func load_game():
 func set_history_visible(value:bool):
 	Parser.paused = value
 	find_child("History").visible = value
+	find_child("ButtonsContainer").visible = not value
 	if find_child("History").visible:
 		find_child("HistoryLabel").text = Parser.build_history_string()
 
 func set_screen(screen:String):
 	last_screen = self.screen
 	self.screen = screen
+	GameState.screen = screen
+	GameState.last_screen = last_screen
 	var screen_name = screen.trim_prefix("game-screen-")
 	screen_name = screen_name.replace("-", " ")
 	screen_name = screen_name.capitalize()
@@ -76,10 +79,11 @@ func set_screen(screen:String):
 			continue
 		c.visible = c.name == str(screen_name, "ViewportContainer")
 	$Dialog.visible = screen == Const.GAME_SCREEN_GAME
+	find_child("ButtonsContainer").visible = screen == Const.GAME_SCREEN_GAME
 	
 	match self.screen:
 		Const.GAME_SCREEN_MAIN_MENU:
-			Options.save_gamestate()
+#			Options.save_gamestate()
 			Sound.play_bgm("main-menu")
 			find_child("MainMenu").set_load_button_visible(Options.does_savegame_exist())
 		Const.GAME_SCREEN_OPTIONS:
@@ -96,10 +100,11 @@ func set_text_content(style:String, variant:String):
 		$LineReader.text_content = find_child("BottomText")
 
 func quit_game():
-	Options.save_gamestate()
 	Options.save_options_to_file()
 	get_tree().quit()
 
 
 func _on_line_reader_line_reader_ready() -> void:
 	Options.load_options_from_file()
+#	if dev_mode:
+#		Options.set_fullscreen(false)
