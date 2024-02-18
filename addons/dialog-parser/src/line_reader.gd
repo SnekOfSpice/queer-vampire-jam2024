@@ -292,6 +292,7 @@ func advance():
 	if auto_continue:
 		auto_continue_duration = auto_continue_delay
 	if showing_text:
+		
 		if text_content.visible_ratio >= 1.0:
 			if chunk_index >= line_chunks.size() - 1:
 				if dialog_line_index >= dialog_lines.size() - 1:
@@ -304,7 +305,6 @@ func advance():
 				remaining_advance_delay = advance_available_delay
 				read_next_chunk()
 		else:
-			
 			if next_pause_position_index < pause_positions.size():
 				text_content.visible_characters = get_end_of_chunk_position() 
 				if next_pause_type != PauseTypes.EoL:
@@ -432,7 +432,7 @@ func _process(delta: float) -> void:
 	if Parser.paused:
 		return
 	
-	
+#	printt("vis:", text_content.visible_characters, " chunk end:", get_end_of_chunk_position())
 	if next_pause_position_index < pause_positions.size() and next_pause_position_index != -1:
 		find_next_pause()
 	if text_content.visible_characters < get_end_of_chunk_position():
@@ -441,8 +441,7 @@ func _process(delta: float) -> void:
 		else:
 			text_content.visible_ratio += (float(text_speed) / text_content.text.length()) * delta
 			# fast text speed can make it go over the end  of the chunk
-			if text_content.visible_characters > get_end_of_chunk_position():
-				text_content.visible_characters = get_end_of_chunk_position()
+			text_content.visible_characters = min(text_content.visible_characters, get_end_of_chunk_position())
 	elif remaining_auto_pause_duration > 0 and next_pause_type == PauseTypes.Auto:
 		var last_dur = remaining_auto_pause_duration
 		remaining_auto_pause_duration -= delta
@@ -450,7 +449,6 @@ func _process(delta: float) -> void:
 			next_pause_position_index += 1
 			find_next_pause()
 			remaining_auto_pause_duration = auto_pause_duration * (1.0 + (1-(text_speed / (MAX_TEXT_SPEED - 1))))
-
 	
 	if show_advance_available:
 		if remaining_advance_delay <= 0.0:
@@ -480,17 +478,33 @@ func _process(delta: float) -> void:
 	characters_visible_so_far = new_characters_visible_so_far
 	
 	last_visible_ratio = text_content.visible_ratio
-	
+#	prints("auto pause dir ", remaining_auto_pause_duration)
 	if auto_continue:
 		if not line_type == Parser.LineType.Text:
 			return
 		if pause_types.is_empty() or next_pause_position_index < 0:
 			return
 		if pause_types[next_pause_position_index] == PauseTypes.Auto:
+			# bug here
 			return
+#			remaining_auto_pause_duration -= delta
+#			if remaining_auto_pause_duration > 0:
+#				return
+#			else:
+#				remaining_auto_pause_duration = auto_pause_duration
+#				advance()
+#				return
+#		prints("auto pause dir ", remaining_auto_pause_duration)
+#		prints(
+#			"vis", text_content.visible_characters, 
+#			"pause at", pause_positions[next_pause_position_index] - 4 * next_pause_position_index,
+#			"length", text_content.text.length()
+#			)
 		if text_content.visible_characters >= pause_positions[next_pause_position_index] - 4 * next_pause_position_index or text_content.visible_characters == -1:
+#			printt("hi ", auto_continue_duration)
 			auto_continue_duration -= delta
 			if auto_continue_duration <= 0.0:
+				
 				advance()
 
 func remove_spaces_and_send_word_read_event(word: String):
@@ -562,6 +576,23 @@ func read_next_chunk():
 	pause_positions.clear()
 	pause_types.clear()
 	var new_text : String = line_chunks[chunk_index]
+	
+	while new_text.begins_with(" "):
+		new_text = new_text.trim_prefix(" ")
+	while new_text.begins_with("<lc>"):
+		new_text = new_text.trim_prefix("<lc>")
+	while new_text.begins_with("<ap>"):
+		new_text = new_text.trim_prefix("<ap>")
+	while new_text.begins_with("<mp>"):
+		new_text = new_text.trim_prefix("<mp>")
+	while new_text.ends_with(" "):
+		new_text = new_text.trim_suffix(" ")
+	while new_text.ends_with("<lc>"):
+		new_text = new_text.trim_suffix("<lc>")
+	while new_text.ends_with("<ap>"):
+		new_text = new_text.trim_suffix("<ap>")
+	while new_text.ends_with("<mp>"):
+		new_text = new_text.trim_suffix("<mp>")
 	
 	# replace var and func calls
 	var scan_index := 0

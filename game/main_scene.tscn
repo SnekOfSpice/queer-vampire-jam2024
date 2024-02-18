@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://k107v18q8nny"]
+[gd_scene load_steps=18 format=3 uid="uid://k107v18q8nny"]
 
 [ext_resource type="Script" path="res://game/main_scene.gd" id="1_8qkgv"]
 [ext_resource type="PackedScene" uid="uid://bb8yvsx0g14vl" path="res://addons/dialog-parser/src/line_reader.tscn" id="1_wgwtm"]
@@ -16,6 +16,9 @@
 [ext_resource type="Script" path="res://game/HistoryLabelScrollContainer.gd" id="10_vugvq"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3oqcc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o6fiy"]
+bg_color = Color(0.0156863, 0.0666667, 0.133333, 0.576471)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mm5ej"]
 bg_color = Color(0.133333, 0.133333, 0.133333, 0.290196)
@@ -222,7 +225,11 @@ custom_minimum_size = Vector2(900, 600)
 layout_mode = 2
 mouse_filter = 2
 
-[node name="FullText" type="RichTextLabel" parent="Dialog/Control/FullTextContainer/CenterContainer"]
+[node name="PanelContainer" type="PanelContainer" parent="Dialog/Control/FullTextContainer/CenterContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_o6fiy")
+
+[node name="FullText" type="RichTextLabel" parent="Dialog/Control/FullTextContainer/CenterContainer/PanelContainer"]
 custom_minimum_size = Vector2(900, 600)
 layout_mode = 2
 mouse_filter = 2

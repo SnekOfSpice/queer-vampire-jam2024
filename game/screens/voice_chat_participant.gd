@@ -14,11 +14,18 @@ var user_names := {
 }
 
 func serialize() -> Dictionary:
-	return {"character_name": character_name, "replaced_map_name": replaced_map_name}
+	var result := {}
+	
+	result["character_name"] = character_name
+	result["replaced_map_name"] = replaced_map_name
+	result["active_modulate"] = find_child("Active").modulate.a
+	
+	return result
 
 func deserialize(data:Dictionary):
 	set_character_name(data.get("character_name", ""))
 	replaced_map_name = data.get("replaced_map_name", "")
+	find_child("Active").modulate.a = data.get("active_modulate", 0.0)
 
 func _ready() -> void:
 	tree_exiting.connect(restore_name_map_entry)

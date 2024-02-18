@@ -53,11 +53,10 @@ func execute(instruction_name, args):
 			emit_signal("set_text_content", args.get("style"), args.get("variant"))
 		"close-pc":
 			GameState.game.set_is_pc_on(false)
-			Sound.play("leave-noise")
 		"open-pc":
 			var screen :String = args.get("screen")
-			GameState.game.set_is_pc_on(true)
 			GameState.game.set_pc_screen(screen)
+			GameState.game.set_is_pc_on(true)
 		"set-emotion":
 			for c in get_tree().get_nodes_in_group("character"):
 				if c.character_name == "":

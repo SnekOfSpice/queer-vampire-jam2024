@@ -36,7 +36,7 @@ func handle_event(event_name: String, event_args: Dictionary):
 
 func toggle_option_screen():
 	if find_child("History").visible:
-		find_child("History").visible = false
+		set_history_visible(false)
 		return
 	if screen == Const.GAME_SCREEN_OPTIONS:
 		Options.save_options_to_file()
@@ -52,6 +52,7 @@ func start_new_game():
 	set_screen(Const.GAME_SCREEN_GAME)
 	Parser.reset_and_start(0)
 	DialogLogger.start_new_log()
+	GameState.game.set_all_characters_visible(false)
 
 func load_game():
 	set_screen(Const.GAME_SCREEN_GAME)
@@ -65,10 +66,10 @@ func set_history_visible(value:bool):
 	if find_child("History").visible:
 		find_child("HistoryLabel").text = Parser.build_history_string()
 
-func set_screen(screen:String):
-	last_screen = self.screen
-	self.screen = screen
-	GameState.screen = screen
+func set_screen(new_screen:String):
+	last_screen = screen
+	screen = new_screen
+	GameState.screen = new_screen
 	GameState.last_screen = last_screen
 	var screen_name = screen.trim_prefix("game-screen-")
 	screen_name = screen_name.replace("-", " ")

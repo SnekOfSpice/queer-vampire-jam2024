@@ -53,3 +53,7 @@ func _on_page_spin_box_value_changed(value: float) -> void:
 	var data = Parser.page_data
 	var page = data.get(int(find_child("PageSpinBox").value))
 	find_child("LineSpinBox").max_value = page.get("lines").size()
+
+
+func _on_read_line_button_pressed() -> void:
+	Parser.line_reader.emit_signal("line_finished", Parser.line_reader.line_index)

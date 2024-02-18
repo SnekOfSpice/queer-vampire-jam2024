@@ -73,6 +73,14 @@ character_name = "mom"
 position_preference = "right"
 height = -5
 
+[node name="Dad" parent="Characters" instance=ExtResource("2_5j4u0")]
+character_name = "dad"
+position_preference = "right"
+
+[node name="Bouncer" parent="Characters" instance=ExtResource("2_5j4u0")]
+character_name = "bouncer"
+position_preference = "right"
+
 [node name="CharacterPositions" type="Node2D" parent="."]
 
 [node name="Left" type="Node2D" parent="CharacterPositions"]

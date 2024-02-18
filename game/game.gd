@@ -43,12 +43,15 @@ func deserialize(data:Dictionary):
 	
 	var participants = data.get("participants", {})
 	for part in participants:
-		var participant = add_to_voice_call(part)
-		participant.deserialize(participants.get(part, {}))
+		var participant = add_to_voice_call(part) # capra returns null
+		if participant:
+			participant.deserialize(participants.get(part, {}))
 
 func set_is_pc_on(value:bool):
 	$PC.visible = value
 	is_pc_on = value
+	if is_pc_on and pc_screen == "voice-chat":
+		Sound.play("leave-noise")
 	if value:
 		for c in $Characters.get_children():
 			if c.character_name != "capra":
@@ -56,6 +59,8 @@ func set_is_pc_on(value:bool):
 	else:
 		for c in find_child("VCParticipantContainer").get_children():
 			c.queue_free()
+		if Parser.line_reader:
+			Parser.line_reader.set_actor_name("capra", "Capra")
 
 func set_pc_screen(screen:String):
 	pc_screen = screen
