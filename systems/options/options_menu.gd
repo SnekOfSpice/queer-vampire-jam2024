@@ -16,7 +16,27 @@ func build_from_options():
 		find_child("AutoDelaySlider").value = Parser.line_reader.auto_continue_delay
 	
 	find_child("ProgressSaveLabel").modulate.a = 0.0
+	find_child("MainMenuButton").visible = GameState.last_screen == Const.GAME_SCREEN_GAME
+	find_child("QuitGameButton").visible = GameState.last_screen == Const.GAME_SCREEN_GAME
 	
+	update_labels()
+	
+
+func update_labels():
+	find_child("MusicVolumeLabel").text = str(int(Options.music_volume+80))
+	find_child("SFXVolumeLabel").text = str(int(Options.sfx_volume+80))
+	
+	if find_child("TextSpeedSlider").value == 101.0:
+		find_child("TextSpeedLabel").text = "Instant"
+	else:
+		find_child("TextSpeedLabel").text = str(int(Parser.line_reader.text_speed))
+		
+	if find_child("AutoDelaySlider").value == find_child("AutoDelaySlider").max_value:
+		find_child("AutoDelayLabel").text = "Manual"
+		Parser.line_reader.auto_continue = false
+	else:
+		find_child("AutoDelayLabel").text = str(Parser.line_reader.auto_continue_delay)
+		Parser.line_reader.auto_continue = true
 
 
 func _on_fullscreen_button_toggled(button_pressed: bool) -> void:
@@ -24,31 +44,23 @@ func _on_fullscreen_button_toggled(button_pressed: bool) -> void:
 
 
 func _on_music_volume_slider_value_changed(value: float) -> void:
-	find_child("MusicVolumeLabel").text = str(int(value+80))
 	Options.music_volume = value
 	Sound.sync_volume()
+	update_labels()
 
 
 func _on_sfx_volume_slider_value_changed(value: float) -> void:
-	find_child("SFXVolumeLabel").text = str(int(value+80))
 	Options.sfx_volume = value
+	update_labels()
 
 func _on_text_speed_slider_value_changed(value: float) -> void:
-	if find_child("TextSpeedSlider").value == 101.0:
-		find_child("TextSpeedLabel").text = "Instant"
-	else:
-		find_child("TextSpeedLabel").text = str(int(value))
 	Parser.line_reader.text_speed = value
+	update_labels()
 
 
 func _on_auto_delay_slider_value_changed(value: float) -> void:
-	if find_child("AutoDelaySlider").value == find_child("AutoDelaySlider").max_value:
-		find_child("AutoDelayLabel").text = "None"
-		Parser.line_reader.auto_continue = false
-	else:
-		find_child("AutoDelayLabel").text = str(value)
-		Parser.line_reader.auto_continue = true
 	Parser.line_reader.auto_continue_delay = value
+	update_labels()
 
 
 func _on_close_options_button_pressed() -> void:

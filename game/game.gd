@@ -54,7 +54,7 @@ func set_is_pc_on(value:bool):
 		Sound.play("leave-noise")
 	if value:
 		for c in $Characters.get_children():
-			if c.character_name != "capra":
+			if c.character_name != "capra" and c.character_name != "therapist":
 				c.visible = false
 	else:
 		for c in find_child("VCParticipantContainer").get_children():
@@ -145,7 +145,6 @@ func arrange_characters():
 				c.position = mid + Vector2(140, 0) * (neutral_count * 1 if neutral_count % 2 == 0 else -1)
 				c.z_index = 10 - neutral_count
 				neutral_count += 1
-			c.position.y -= c.height
 	else:
 		
 		for c in visible_characters:
@@ -162,3 +161,5 @@ func arrange_characters():
 			c.z_index = 10 - not_left_count
 			c.position = $CharacterPositions/Right.position - Vector2(space_per_character, 0) * not_left_count
 			not_left_count += 1
+	for c in visible_characters:
+		c.position.y -= c.height

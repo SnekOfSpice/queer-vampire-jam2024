@@ -13,6 +13,7 @@ const sfx := {
 	"motivation-sting":"res://game/audio/sfx/metaspirit_vanish.ogg",
 	"bus-halting":"res://game/audio/sfx/498447__16hpanskagalantic_pavel__the-bus-is-braking.wav",
 	"train-screech":"res://game/audio/sfx/333006__michael_kur95__train-braking-01.ogg",
+	"confront-parents":"res://game/audio/music/171953__thatjeffcarter__droneish.ogg",
 }
 
 const music := {
@@ -49,6 +50,7 @@ const music := {
 	"ending-doom":"res://game/audio/music/330210__erokia__ambient-wave-2-stretched.ogg",
 	"ending-shade":"res://game/audio/music/556806__doctor_dreamchip__circuit-7-synth-4.ogg",
 	"rider-apartment":"res://game/audio/music/652558__angelorizzo__filo-chillare-ar04-2_46.ogg",
+	"forest-clearing":"res://game/audio/music/220713__edtijo__melodic-metal-with-reverb-lead.ogg",
 }
 # unused but good
 #"res://game/audio/music/GugsSuggs - Music For Streams Vol. 1 - 03 Away From Keyboard.ogg"

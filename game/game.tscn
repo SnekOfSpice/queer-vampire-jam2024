@@ -41,6 +41,10 @@ texture = ExtResource("5_5eca3")
 character_name = "capra"
 position_preference = "left"
 
+[node name="Bouncer" parent="Characters" instance=ExtResource("2_5j4u0")]
+character_name = "bouncer"
+position_preference = "right"
+
 [node name="Crosscull" parent="Characters" instance=ExtResource("2_5j4u0")]
 character_name = "crosscull"
 position_preference = "right"
@@ -52,7 +56,7 @@ height = -2
 
 [node name="Metaspirit" parent="Characters" instance=ExtResource("2_5j4u0")]
 character_name = "metaspirit"
-position_preference = "right"
+position_preference = "anchor-metaspirit"
 
 [node name="Therapist" parent="Characters" instance=ExtResource("2_5j4u0")]
 character_name = "therapist"
@@ -77,10 +81,6 @@ height = -5
 character_name = "dad"
 position_preference = "right"
 
-[node name="Bouncer" parent="Characters" instance=ExtResource("2_5j4u0")]
-character_name = "bouncer"
-position_preference = "right"
-
 [node name="CharacterPositions" type="Node2D" parent="."]
 
 [node name="Left" type="Node2D" parent="CharacterPositions"]
@@ -93,3 +93,6 @@ position = Vector2(1067, 477)
 
 [node name="Therapist" type="Node2D" parent="CharacterPositions/Anchors"]
 position = Vector2(858, 347)
+
+[node name="Metaspirit" type="Node2D" parent="CharacterPositions/Anchors"]
+position = Vector2(808, 477)

@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://bf5lc777mdcur"]
+[gd_scene load_steps=4 format=3 uid="uid://bf5lc777mdcur"]
 
 [ext_resource type="Script" path="res://game/screens/tw.gd" id="1_jmahn"]
+[ext_resource type="Texture2D" uid="uid://c2g2wx1qn7lvx" path="res://game/screens/main-menu2-nologo.png" id="2_ra7bm"]
+[ext_resource type="Theme" uid="uid://dpenu1nwoa7ku" path="res://game/style/theme.tres" id="3_6du50"]
 
 [node name="TW" type="Control"]
 layout_mode = 3
@@ -10,6 +12,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_jmahn")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_ra7bm")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 layout_mode = 1
@@ -23,18 +31,23 @@ grow_vertical = 2
 layout_mode = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/CenterContainer"]
-custom_minimum_size = Vector2(500, 300)
+custom_minimum_size = Vector2(500, 351.21)
 layout_mode = 2
+theme = ExtResource("3_6du50")
 bbcode_enabled = true
 text = "[center]This game contains written descriptions and written scenes of the following topics:
 
 transphobia
 racism
 systemic discrimination
-murder
-drug use
+state repression
+alcohol consumption
+amphetamine consumption
 urination
 mentions of suicide
+murder
+
+[i]Depending on your choices, you may not see all of these.[/i]
 [/center]"
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
@@ -48,6 +61,7 @@ offset_left = -40.0
 offset_top = -40.0
 grow_horizontal = 0
 grow_vertical = 0
+theme = ExtResource("3_6du50")
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 7
 

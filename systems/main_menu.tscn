@@ -1,13 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://2adev3wrrsw5"]
+[gd_scene load_steps=4 format=3 uid="uid://2adev3wrrsw5"]
 
+[ext_resource type="Theme" uid="uid://dpenu1nwoa7ku" path="res://game/style/theme.tres" id="1_ed4ky"]
 [ext_resource type="Script" path="res://systems/main_menu.gd" id="1_g26ub"]
-[ext_resource type="Texture2D" uid="uid://dx2t57f7pcli8" path="res://game/screens/main-menu.png" id="2_8xr06"]
+[ext_resource type="Texture2D" uid="uid://dgwqn30f8qn1a" path="res://game/screens/main-menu2.png" id="3_vik8f"]
 
-[node name="MainMenu" type="Node2D"]
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+theme = ExtResource("1_ed4ky")
 script = ExtResource("1_g26ub")
 
 [node name="Main-menu" type="Sprite2D" parent="."]
-texture = ExtResource("2_8xr06")
+texture = ExtResource("3_vik8f")
 centered = false
 
 [node name="NewGameButton" type="Button" parent="."]
@@ -16,6 +20,7 @@ offset_top = 225.0
 offset_right = 330.0
 offset_bottom = 256.0
 focus_mode = 0
+theme = ExtResource("1_ed4ky")
 text = "New Game"
 
 [node name="LoadGameButton" type="Button" parent="."]
@@ -24,15 +29,15 @@ offset_top = 344.0
 offset_right = 377.0
 offset_bottom = 375.0
 focus_mode = 0
-text = "Load"
+text = "Load Game"
 
 [node name="TWButton" type="Button" parent="."]
-offset_left = 386.0
-offset_top = 529.0
-offset_right = 479.0
-offset_bottom = 560.0
+offset_left = 258.0
+offset_top = 500.0
+offset_right = 449.0
+offset_bottom = 540.0
 focus_mode = 0
-text = "tw"
+text = "Content Warning"
 
 [node name="OptionsButton" type="Button" parent="."]
 offset_left = 851.0
@@ -40,7 +45,7 @@ offset_top = 386.0
 offset_right = 944.0
 offset_bottom = 417.0
 focus_mode = 0
-text = "options"
+text = "Options"
 
 [node name="CreditsButton" type="Button" parent="."]
 offset_left = 906.0
@@ -48,7 +53,7 @@ offset_top = 234.0
 offset_right = 999.0
 offset_bottom = 265.0
 focus_mode = 0
-text = "credits"
+text = "Credits"
 
 [node name="QuitButton" type="Button" parent="."]
 offset_left = 810.0
@@ -56,7 +61,7 @@ offset_top = 530.0
 offset_right = 903.0
 offset_bottom = 561.0
 focus_mode = 0
-text = "quit"
+text = "Quit"
 
 [connection signal="pressed" from="NewGameButton" to="." method="_on_new_game_button_pressed"]
 [connection signal="pressed" from="LoadGameButton" to="." method="_on_load_game_button_pressed"]
