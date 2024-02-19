@@ -2,7 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://dpenu1nwoa7ku" path="res://game/style/theme.tres" id="1_8nn4i"]
 [ext_resource type="Script" path="res://game/screens/credits.gd" id="1_halfl"]
-[ext_resource type="Texture2D" uid="uid://dx2t57f7pcli8" path="res://game/screens/main-menu.png" id="3_l0tqk"]
+[ext_resource type="Texture2D" uid="uid://c2g2wx1qn7lvx" path="res://game/screens/main-menu2-nologo.png" id="3_cn5ta"]
 
 [node name="Credits" type="Control"]
 layout_mode = 3
@@ -21,7 +21,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_l0tqk")
+texture = ExtResource("3_cn5ta")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1

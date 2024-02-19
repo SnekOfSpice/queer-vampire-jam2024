@@ -327,15 +327,15 @@ layout_mode = 2
 size_flags_horizontal = 0
 alignment = 2
 
-[node name="MenuButton" type="Button" parent="Dialog/ButtonsContainer/VBoxContainer"]
-layout_mode = 2
-focus_mode = 0
-text = "Menu"
-
 [node name="HistoryButton" type="Button" parent="Dialog/ButtonsContainer/VBoxContainer"]
 layout_mode = 2
 focus_mode = 0
 text = "History"
+
+[node name="MenuButton" type="Button" parent="Dialog/ButtonsContainer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+text = "Menu"
 
 [node name="Cheats" parent="Dialog" instance=ExtResource("9_troos")]
 visible = false
@@ -370,6 +370,6 @@ color = Color(0.0352941, 0.0352941, 0.0392157, 1)
 [connection signal="set_actor_name" from="LineReader/InstructionHandlerCustom" to="LineReader" method="set_actor_name"]
 [connection signal="set_text_content" from="LineReader/InstructionHandlerCustom" to="." method="set_text_content"]
 [connection signal="pressed" from="Dialog/History/PanelContainer/MarginContainer/CloseHistoryButton" to="." method="set_history_visible" binds= [false]]
-[connection signal="pressed" from="Dialog/ButtonsContainer/VBoxContainer/MenuButton" to="." method="toggle_option_screen"]
 [connection signal="pressed" from="Dialog/ButtonsContainer/VBoxContainer/HistoryButton" to="." method="set_history_visible" binds= [true]]
+[connection signal="pressed" from="Dialog/ButtonsContainer/VBoxContainer/MenuButton" to="." method="toggle_option_screen"]
 [connection signal="instruction_completed" from="Black" to="LineReader/InstructionHandlerCustom" method="_on_black_instruction_completed"]
