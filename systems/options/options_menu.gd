@@ -10,14 +10,17 @@ func build_from_options():
 	find_child("MusicVolumeSlider").value = Options.music_volume
 	find_child("SFXVolumeSlider").value = Options.sfx_volume
 	find_child("TextSpeedSlider").value = Parser.line_reader.text_speed
-	if not Parser.line_reader.auto_continue:
-		find_child("AutoDelaySlider").value = find_child("AutoDelaySlider").max_value
-	else:
-		find_child("AutoDelaySlider").value = Parser.line_reader.auto_continue_delay
+	find_child("AutoDelaySlider").value = Parser.line_reader.auto_continue_delay
 	
 	find_child("ProgressSaveLabel").modulate.a = 0.0
 	find_child("MainMenuButton").visible = GameState.last_screen == Const.GAME_SCREEN_GAME
-	find_child("QuitGameButton").visible = GameState.last_screen == Const.GAME_SCREEN_GAME
+	find_child("QuitGameButton").visible = GameState.last_screen == Const.GAME_SCREEN_GAME and not OS.has_feature("web")
+	
+	find_child("PCSaveLabel").visible = GameState.game.is_pc_on
+	find_child("MainMenuButton").disabled = GameState.game.is_pc_on
+	find_child("QuitGameButton").disabled = GameState.game.is_pc_on
+	
+	find_child("AutoContinueButton").button_pressed = Parser.line_reader.auto_continue
 	
 	update_labels()
 	
@@ -31,12 +34,9 @@ func update_labels():
 	else:
 		find_child("TextSpeedLabel").text = str(int(Parser.line_reader.text_speed))
 		
-	if find_child("AutoDelaySlider").value == find_child("AutoDelaySlider").max_value:
-		find_child("AutoDelayLabel").text = "Manual"
-		Parser.line_reader.auto_continue = false
-	else:
-		find_child("AutoDelayLabel").text = str(Parser.line_reader.auto_continue_delay)
-		Parser.line_reader.auto_continue = true
+	find_child("AutoDelayLabel").text = str(Parser.line_reader.auto_continue_delay)
+	find_child("AutoDelaySlider").visible = find_child("AutoContinueButton").button_pressed
+	find_child("AutoDelayLabel").visible = find_child("AutoContinueButton").button_pressed
 
 
 func _on_fullscreen_button_toggled(button_pressed: bool) -> void:
@@ -87,3 +87,7 @@ func show_save_label():
 
 func hide_save_label():
 	find_child("ProgressSaveLabel").modulate.a = 0.0
+
+func _on_auto_continue_button_toggled(button_pressed: bool) -> void:
+	Parser.line_reader.auto_continue = button_pressed
+	update_labels()

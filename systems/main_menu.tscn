@@ -15,6 +15,7 @@ texture = ExtResource("3_vik8f")
 centered = false
 
 [node name="NewGameButton" type="Button" parent="."]
+layout_mode = 0
 offset_left = 237.0
 offset_top = 225.0
 offset_right = 330.0
@@ -24,6 +25,7 @@ theme = ExtResource("1_ed4ky")
 text = "New Game"
 
 [node name="LoadGameButton" type="Button" parent="."]
+layout_mode = 0
 offset_left = 284.0
 offset_top = 344.0
 offset_right = 377.0
@@ -32,6 +34,7 @@ focus_mode = 0
 text = "Load Game"
 
 [node name="TWButton" type="Button" parent="."]
+layout_mode = 0
 offset_left = 258.0
 offset_top = 500.0
 offset_right = 449.0
@@ -40,6 +43,7 @@ focus_mode = 0
 text = "Content Warning"
 
 [node name="OptionsButton" type="Button" parent="."]
+layout_mode = 0
 offset_left = 851.0
 offset_top = 386.0
 offset_right = 944.0
@@ -48,6 +52,7 @@ focus_mode = 0
 text = "Options"
 
 [node name="CreditsButton" type="Button" parent="."]
+layout_mode = 0
 offset_left = 906.0
 offset_top = 234.0
 offset_right = 999.0
@@ -56,6 +61,7 @@ focus_mode = 0
 text = "Credits"
 
 [node name="QuitButton" type="Button" parent="."]
+layout_mode = 0
 offset_left = 810.0
 offset_top = 530.0
 offset_right = 903.0

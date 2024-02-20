@@ -50,7 +50,7 @@ func deserialize(data:Dictionary):
 func set_is_pc_on(value:bool):
 	$PC.visible = value
 	is_pc_on = value
-	if is_pc_on and pc_screen == "voice-chat":
+	if not is_pc_on and pc_screen == "voice-chat":
 		Sound.play("leave-noise")
 	if value:
 		for c in $Characters.get_children():
@@ -117,6 +117,7 @@ func set_character_visible(character_name: String, value:bool):
 			c.visible = value
 
 func arrange_characters():
+	print("arrangins")
 	var left_count := 0
 	var not_left_count := 0
 	var right_count := 0
@@ -163,3 +164,4 @@ func arrange_characters():
 			not_left_count += 1
 	for c in visible_characters:
 		c.position.y -= c.height
+		prints("moving ", c.character_name, " to ", c.position)

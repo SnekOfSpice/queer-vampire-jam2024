@@ -44,15 +44,16 @@ position_preference = "left"
 [node name="Bouncer" parent="Characters" instance=ExtResource("2_5j4u0")]
 character_name = "bouncer"
 position_preference = "right"
+height = 25
 
 [node name="Crosscull" parent="Characters" instance=ExtResource("2_5j4u0")]
 character_name = "crosscull"
 position_preference = "right"
-height = 20
+height = 55
 
 [node name="Angel" parent="Characters" instance=ExtResource("2_5j4u0")]
 character_name = "angel"
-height = -2
+height = -14
 
 [node name="Metaspirit" parent="Characters" instance=ExtResource("2_5j4u0")]
 character_name = "metaspirit"
@@ -65,9 +66,11 @@ position_preference = "anchor-therapist"
 [node name="Rider" parent="Characters" instance=ExtResource("2_5j4u0")]
 character_name = "rider"
 position_preference = "right"
+height = 20
 
 [node name="Starry" parent="Characters" instance=ExtResource("2_5j4u0")]
 character_name = "starry"
+height = -20
 
 [node name="Icy-Aloe" parent="Characters" instance=ExtResource("2_5j4u0")]
 character_name = "icy-aloe"
@@ -75,11 +78,12 @@ character_name = "icy-aloe"
 [node name="Mom" parent="Characters" instance=ExtResource("2_5j4u0")]
 character_name = "mom"
 position_preference = "right"
-height = -5
+height = -30
 
 [node name="Dad" parent="Characters" instance=ExtResource("2_5j4u0")]
 character_name = "dad"
 position_preference = "right"
+height = 15
 
 [node name="CharacterPositions" type="Node2D" parent="."]
 

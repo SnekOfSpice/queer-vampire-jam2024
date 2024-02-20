@@ -61,6 +61,8 @@ func execute(instruction_name, args):
 			for c in get_tree().get_nodes_in_group("character"):
 				if c.character_name == "":
 					c.set_current_emotion(args.get("emo", "neutral"))
+		"reach-end":
+			GameState.reach_end(args.get("end", ""))
 
 
 func _on_black_instruction_completed() -> void:

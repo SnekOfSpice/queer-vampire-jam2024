@@ -124,15 +124,14 @@ func handle_event(event_name: String, event_args: Dictionary):
 			if append_choices_to_history:
 				call_deferred("append_to_history", str(choice_appendation_string, " ", event_args.get("choice_text")))
 
-func build_history_string() -> String:
+func build_history_string(separator_string:="\n") -> String:
 	var result  := ""
 	
 	for s in history:
 		result += s
-		result += "\n"
-		result += "\n"
+		result += separator_string
 	
-	result = result.trim_suffix("\n\n")
+	result = result.trim_suffix(separator_string)
 	
 	return result
 

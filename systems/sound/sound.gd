@@ -64,11 +64,12 @@ func serialize() -> Dictionary:
 	var data := {}
 	
 	data["current_track_name"] = current_track_name
+	data["playback_position"] = bgm_player.get_playback_position()
 	
 	return data
 
 func deserialize(data:Dictionary):
-	play_bgm(data.get("current_track_name", ""))
+	play_bgm(data.get("current_track_name", ""), 0.0, data.get("playback_position", 0.0))
 
 func sync_volume():
 	if not bgm_player:
@@ -80,7 +81,7 @@ func set_bgm_volume(db:float):
 		return
 	bgm_player.volume_db = db
 
-func play_bgm(track_name:String, fade_in:=0.0):
+func play_bgm(track_name:String, fade_in:=0.0, from:=0.0):
 	if current_track_name == track_name:
 		return
 	if not music.has(track_name):
@@ -99,11 +100,11 @@ func play_bgm(track_name:String, fade_in:=0.0):
 		t.tween_property(new_player, "volume_db", Options.music_volume, fade_in)
 		t.parallel()
 		t.tween_property(bgm_player, "volume_db", -80, fade_in)
-		new_player.play()
+		new_player.play(from)
 		t.tween_callback(set_bgm_player.bind(new_player))
 	else:
 		bgm_player.stream = load(music.get(track_name, track_name))
-		bgm_player.play()
+		bgm_player.play(from)
 
 func set_bgm_player(player:AudioStreamPlayer):
 	bgm_player.queue_free()

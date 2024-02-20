@@ -19,6 +19,12 @@ func _ready() -> void:
 	elif character_name == "metaspirit":
 		$Sprite.scale.x = 0.765
 		$Sprite.scale.y = 0.765
+	elif character_name == "bouncer":
+		$Sprite.scale.x = 0.62
+		$Sprite.scale.y = 0.62
+	elif character_name == "starry":
+		$Sprite.scale.x = 0.54
+		$Sprite.scale.y = 0.54
 	else:
 		$Sprite.scale.x = 0.57
 		$Sprite.scale.y = 0.57

@@ -14,6 +14,8 @@ func _ready() -> void:
 		set_screen(Const.GAME_SCREEN_MAIN_MENU)
 		if screen == Const.GAME_SCREEN_GAME:
 			Parser.reset_and_start(start_page_index)
+	else:
+		set_screen(Const.GAME_SCREEN_MAIN_MENU)
 	find_child("FullTextContainer").visible = false
 	find_child("Cheats").visible = false
 	find_child("OptionsMenu").build_from_options()
@@ -99,6 +101,7 @@ func set_text_content(style:String, variant:String):
 	else:
 		$LineReader.text_container = find_child("TextContainer")
 		$LineReader.text_content = find_child("BottomText")
+	$LineReader.text_content.text = ""
 
 func quit_game():
 	Options.save_options_to_file()

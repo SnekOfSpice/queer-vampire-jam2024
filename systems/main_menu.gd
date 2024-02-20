@@ -6,6 +6,9 @@ signal load_game()
 signal open_screen(screen:String)
 signal quit()
 
+func _ready() -> void:
+	find_child("QuitButton").visible = not OS.has_feature("web")
+
 func set_load_button_visible(value:bool):
 	find_child("LoadGameButton").visible = value
 

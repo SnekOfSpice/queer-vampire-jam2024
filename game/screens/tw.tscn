@@ -31,7 +31,7 @@ grow_vertical = 2
 layout_mode = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/CenterContainer"]
-custom_minimum_size = Vector2(500, 351.21)
+custom_minimum_size = Vector2(500, 369.81)
 layout_mode = 2
 theme = ExtResource("3_6du50")
 bbcode_enabled = true
@@ -45,6 +45,7 @@ alcohol consumption
 amphetamine consumption
 urination
 mentions of suicide
+mentions of eating disorders
 murder
 
 [i]Depending on your choices, you may not see all of these.[/i]
