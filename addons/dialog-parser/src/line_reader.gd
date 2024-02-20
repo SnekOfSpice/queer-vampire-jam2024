@@ -205,6 +205,14 @@ func deserialize(data: Dictionary):
 	showing_text = line_type == Parser.LineType.Text
 	choice_container.visible = line_type == Parser.LineType.Choice
 	
+	if line_type == Parser.LineType.Choice:
+		var raw_content = line_data.get("content")
+		var content = line_data.get("content").get("content")
+		var choices = line_data.get("content").get("choices")
+		var auto_switch : bool = raw_content.get("auto_switch")
+
+		build_choices(choices, auto_switch)
+		
 	set_text_content_text(data.get("text_content.text", ""))
 	update_name_label(data.get("current_raw_name", name_for_blank_name))
 

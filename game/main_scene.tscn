@@ -255,11 +255,6 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="Button" type="Button" parent="Dialog/Control/ChoiceContainer/ChoiceItemContainer"]
-layout_mode = 2
-focus_mode = 0
-text = "hello there"
-
 [node name="History" type="Control" parent="Dialog"]
 layout_mode = 3
 anchors_preset = 15
