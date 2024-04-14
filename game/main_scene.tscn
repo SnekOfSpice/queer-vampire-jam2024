@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://k107v18q8nny"]
+[gd_scene load_steps=20 format=3 uid="uid://k107v18q8nny"]
 
 [ext_resource type="Script" path="res://game/main_scene.gd" id="1_8qkgv"]
 [ext_resource type="PackedScene" uid="uid://bb8yvsx0g14vl" path="res://addons/dialog-parser/src/line_reader.tscn" id="1_wgwtm"]
@@ -14,6 +14,8 @@
 [ext_resource type="PackedScene" uid="uid://bjw5wm6l5gqkx" path="res://game/cheats.tscn" id="9_troos"]
 [ext_resource type="Texture2D" uid="uid://b8ov45buo53h7" path="res://game/backgrounds/club-trail.png" id="10_s44yj"]
 [ext_resource type="Script" path="res://game/HistoryLabelScrollContainer.gd" id="10_vugvq"]
+[ext_resource type="Texture2D" uid="uid://bmx6ecbt0s53r" path="res://icon.png" id="15_c3v3d"]
+[ext_resource type="Script" path="res://game/SaveIconLayer.gd" id="15_xmlim"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3oqcc"]
 
@@ -353,6 +355,33 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 color = Color(0.0352941, 0.0352941, 0.0392157, 1)
+
+[node name="SaveIconLayer" type="CanvasLayer" parent="."]
+script = ExtResource("15_xmlim")
+
+[node name="SaveIconLayer" type="Control" parent="SaveIconLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="SaveIconLayer/SaveIconLayer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1199.0
+offset_top = 16.0
+offset_right = 2101.0
+offset_bottom = 1478.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.03, 0.03)
+size_flags_horizontal = 8
+texture = ExtResource("15_c3v3d")
 
 [connection signal="close_options" from="OptionsViewportContainer/SubViewport/OptionsMenu" to="." method="toggle_option_screen"]
 [connection signal="quit" from="OptionsViewportContainer/SubViewport/OptionsMenu" to="." method="quit_game"]

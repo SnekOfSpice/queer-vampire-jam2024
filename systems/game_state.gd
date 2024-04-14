@@ -4,6 +4,8 @@ var game: Game
 var screen:String
 var last_screen:String
 
+var save_icon_layer
+
 func serialize() -> Dictionary:
 	var data := {}
 	

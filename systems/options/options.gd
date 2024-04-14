@@ -62,6 +62,7 @@ func save_gamestate():
 	file.store_string(JSON.stringify(data_to_save, "\t"))
 	file.close()
 	DialogLogger.save_log_history()
+	show_save_icon()
 
 func does_savegame_exist():
 	if not ResourceLoader.exists(PARSER_STATE_PATH):
@@ -69,6 +70,10 @@ func does_savegame_exist():
 	if not ResourceLoader.exists(GAME_STATE_PATH):
 		return false
 	return true
+
+func show_save_icon():
+	if GameState.save_icon_layer:
+		GameState.save_icon_layer.show_save_icon()
 
 func load_gamestate():
 	Parser.load_parser_state_from_file(PARSER_STATE_PATH)

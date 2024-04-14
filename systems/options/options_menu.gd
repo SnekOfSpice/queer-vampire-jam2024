@@ -15,10 +15,12 @@ func build_from_options():
 	find_child("ProgressSaveLabel").modulate.a = 0.0
 	find_child("MainMenuButton").visible = GameState.last_screen == Const.GAME_SCREEN_GAME
 	find_child("QuitGameButton").visible = GameState.last_screen == Const.GAME_SCREEN_GAME and not OS.has_feature("web")
+	find_child("SaveGameButton").visible = GameState.last_screen == Const.GAME_SCREEN_GAME
 	
 	find_child("PCSaveLabel").visible = GameState.game.is_pc_on
 	find_child("MainMenuButton").disabled = GameState.game.is_pc_on
 	find_child("QuitGameButton").disabled = GameState.game.is_pc_on
+	find_child("SaveGameButton").disabled = GameState.game.is_pc_on
 	
 	find_child("AutoContinueButton").button_pressed = Parser.line_reader.auto_continue
 	
@@ -91,3 +93,9 @@ func hide_save_label():
 func _on_auto_continue_button_toggled(button_pressed: bool) -> void:
 	Parser.line_reader.auto_continue = button_pressed
 	update_labels()
+
+
+func _on_save_game_button_pressed() -> void:
+	if GameState.last_screen == Const.GAME_SCREEN_GAME:
+		Options.save_gamestate()
+	Options.save_options_to_file()
